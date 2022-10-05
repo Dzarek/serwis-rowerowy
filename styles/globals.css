@@ -1,28 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap');
-/* font-family: 'Genos', sans-serif; */
-
-
 /* NOWE */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
 /* font-family: 'EB Garamond', serif; */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600&display=swap');
 /* font-family: 'Poppins', sans-serif; */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-html {
-    overflow-x: hidden;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -37,27 +22,22 @@ html {
 body {
     overflow-x: hidden;
 }
+
 
 
 .app {
+    --appBgColor: #222;
+    --primaryColor: rgb(221, 221, 221);
     --secondaryColor: #94693c;
-    --secondaryColor3: #5a270d;
-    --primaryColor: rgb(10, 10, 10);
-    --appBgColor: #fff;
-    --sectionBgColor: #fcf0e5;
-    --singleOfferBgColor: #cdb596;
-    --singleOfferTitle: #d8af7d55;
-    --faqHeaderBgColor: #e2c298;
-    --aboutMeBgColor: #f6dfc3;
-    --aboutMeHeaderBgColor: #f4ede4;
-    --contactHeaderBgColor: #f2d3b7;
-    --navigationBgColor: #3c2d25;
-    --activeNavLink: #d9b89c;
+    --secondaryColor2: #5a270d;
+    --navLinkColor: #666;
+    /* --navLinkColorHover: #1c310c; */
+    --navLinkColorHover: #294613;
+    --navBgColor: #3c2d25;
     --footerBgColor: #eee6e0;
-    --galleryContentColor: #111;
-    --logoBgMobile: rgba(255, 255, 255, 0.9);
-    --textFont: 'EB Garamond', serif;
+    --textFont: 'Changa', serif;
     --titleFont: 'Poppins', sans-serif;
+    --headerNavFont: 'Rubik Dirt', serif;
     width: 100vw;
     min-height: 100vh;
     background-color: var(--appBgColor);
@@ -68,16 +48,17 @@ body {
 
 
 .mainPage {
-    width: 90vw;
+    width: 100vw;
     min-height: 100vh;
     margin: 0 auto;
-    padding-top: 10vh;
+    padding: 10vh 5vw 0;
     position: relative;
 }
 
 @media screen and (max-width:800px) {
     .mainPage {
         width: 100vw;
+        padding: 10vh 0vw 0;
     }
 }
 
@@ -97,13 +78,6 @@ body {
 }
 
 
-
-.shortText {
-    font-size: 1.5rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-}
-
 .buttonLink {
     background: none;
     border: none;
@@ -118,38 +92,9 @@ body {
 }
 
 
-.subtitle {
-    font-size: 1.8rem;
-    text-align: center;
-    margin: 0vh auto 3vh;
-    color: var(--secondaryColor2);
-    font-weight: 600;
-    font-family: var(--titleFont);
-}
-
 .icon {
-    color: var(--secondaryColor2);
+    color: var(--navLinkColorHover);
     margin-right: 10px;
-}
-
-.details::-webkit-scrollbar {
-    width: 10px;
-}
-
-/* Track */
-.details::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-/* Handle */
-.details::-webkit-scrollbar-thumb {
-    background: var(--navigationBgColor);
-
-}
-
-/* Handle on hover */
-.details::-webkit-scrollbar-thumb:hover {
-    background: var(--secondaryColor);
 }
 
 .cookieLink {
@@ -159,18 +104,7 @@ body {
 }
 
 
-
-@keyframes singleOfferHeader {
-    0% {
-        transform: scale(1.5);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-.loading {
+/* .loading {
     margin: 30vh auto;
     display: flex;
     flex-direction: column;
@@ -185,7 +119,7 @@ body {
 .loading h2 {
     font-family: var(--titleFont);
     font-weight: 600;
-}
+} */
 
 .navHamburger {
     position: fixed;
@@ -227,4 +161,28 @@ body {
     .navHamburger2 {
         display: flex;
     }
+}
+
+
+/* SCROOL BAR */
+
+html::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+html::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+html::-webkit-scrollbar-thumb {
+    background: #3b4c3b;
+    border: 2px solid #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+html::-webkit-scrollbar-thumb:hover {
+    background: #293c29;
 }

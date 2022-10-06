@@ -28,7 +28,7 @@ body {
 .app {
     --appBgColor: #222;
     --primaryColor: rgb(221, 221, 221);
-    --secondaryColor: #94693c;
+    --secondaryColor: #77886b;
     --secondaryColor2: #5a270d;
     --navLinkColor: #666;
     /* --navLinkColorHover: #1c310c; */
@@ -68,10 +68,10 @@ body {
     align-items: center;
 }
 
-.title h2 {
+.title h1 {
     font-family: var(--titleFont);
-    font-size: 2.7rem;
-    font-weight: 600;
+    font-size: 3rem;
+    /* font-weight: 600; */
     color: var(--secondaryColor);
     text-transform: uppercase;
     letter-spacing: 5px;

@@ -1,7 +1,8 @@
 import Head from "next/head";
+import Navbar from "../components/Navbar";
 import Header from "../components/homePage/Header";
 import FirstInfo from "../components/homepage/FirstInfo";
-import Navbar from "../components/Navbar";
+import BikeService from "../components/homepage/BikeService";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Header />
       <Navbar />
       <FirstInfo />
+      <BikeService />
     </>
   );
 }

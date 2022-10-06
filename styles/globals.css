@@ -36,7 +36,7 @@ body {
     --navBgColor: #3c2d25;
     --footerBgColor: #eee6e0;
     --textFont: 'Changa', serif;
-    --titleFont: 'Poppins', sans-serif;
+    --titleFont: 'Bitter', sans-serif;
     --headerNavFont: 'Rubik Dirt', serif;
     width: 100vw;
     min-height: 100vh;
@@ -49,7 +49,7 @@ body {
 
 .mainPage {
     width: 100vw;
-    min-height: 100vh;
+    min-height: 200vh;
     margin: 0 auto;
     padding: 10vh 5vw 0;
     position: relative;
@@ -123,36 +123,40 @@ body {
 
 .navHamburger {
     position: fixed;
-    top: 0vh;
-    right: 4vw;
-    width: 50px;
-    height: 50px;
+    top: 5vh;
+    left: 5vw;
     z-index: 999999;
-    background: var(--navigationBgColor);
-    display: none;
-    font-size: 2.3rem;
-    border-radius: 0 0 10px 10px;
+    font-size: 3.5rem;
     justify-content: center;
     align-items: center;
     border: none;
     color: #fff;
+    background: transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.navHamburger:hover {
+    color: #aaa;
 }
 
 .navHamburger2 {
-    position: fixed;
-    bottom: 0vh;
-    right: 4vw;
-    width: 50px;
-    height: 50px;
+    position: absolute;
+    top: 2%;
+    right: 5%;
     z-index: 999999;
-    background: var(--navigationBgColor);
-    display: none;
-    font-size: 2rem;
-    border-radius: 10px 10px 0 0;
+    font-size: 3rem;
     justify-content: center;
     align-items: center;
     border: none;
-    color: #fff;
+    color: #222;
+    background: transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.navHamburger2:hover {
+    color: var(--navLinkColorHover)
 }
 
 @media screen and (max-width:800px) {

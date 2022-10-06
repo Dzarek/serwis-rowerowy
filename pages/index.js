@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../components/homePage/Header";
 import FirstInfo from "../components/homepage/FirstInfo";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <link rel="shortcut icon" href="/logo192.png" />
       </Head>
       <Header />
+      <Navbar />
       <FirstInfo />
     </>
   );

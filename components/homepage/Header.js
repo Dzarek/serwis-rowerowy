@@ -2,7 +2,9 @@ import styled from "styled-components";
 import Link from "next/link";
 import { HiChevronDoubleDown } from "react-icons/hi";
 import { MdOutlinePhoneAndroid, MdEmail } from "react-icons/md";
+import { FaFacebookSquare } from "react-icons/fa";
 // import { TiSpanner } from "react-icons/ti";
+import { navlinks } from "../../public/data";
 
 const headerBg = "/images/homepage/headerBg.jpg";
 const logoWhite = "/images/veloway-logoWhite.png";
@@ -13,27 +15,13 @@ const Header = () => {
       <div className="overlay"></div>
       <img className="logo" src={logoWhite} alt="" />
       <nav>
-        <Link href="/">
-          <a>Strona Główna</a>
-        </Link>
-        <Link href="/">
-          <a>O mnie</a>
-        </Link>
-        <Link href="/">
-          <a>Serwis Rowerowy</a>
-        </Link>
-        <Link href="/">
-          <a>Serwis Narciarski</a>
-        </Link>
-        <Link href="/">
-          <a>Akcesoria</a>
-        </Link>
-        <Link href="/">
-          <a>Treningi</a>
-        </Link>
-        <Link href="/">
-          <a>Kontakt</a>
-        </Link>
+        {navlinks.map((item, index) => {
+          return (
+            <Link key={index} href="/">
+              <a>{item.name}</a>
+            </Link>
+          );
+        })}
       </nav>
       <HiChevronDoubleDown className="headerArrow" />
       <p className="cytat">
@@ -49,6 +37,14 @@ const Header = () => {
           <MdEmail className="icon" />
           <p>serwisrowerowy@gmail.com</p>
         </div>
+        <a
+          // href="https://www.facebook.com/Pyszotka-Lipinki-100529712463136/?ti=as"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaFacebookSquare className="icon" />
+          <p>serwis rowerowy</p>
+        </a>
       </div>
     </Wrapper>
   );
@@ -126,9 +122,15 @@ const Wrapper = styled.div`
     font-size: 3.5rem;
     animation: arrowLower 2s ease infinite;
     @keyframes arrowLower {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
       100% {
-        bottom: 15%;
-        /* color: #fff; */
+        bottom: 12%;
+        opacity: 0;
       }
     }
   }
@@ -154,9 +156,11 @@ const Wrapper = styled.div`
       color: #111;
       text-decoration: none;
       font-size: 1.2rem;
-    }
-    div {
-      margin-left: 5vw;
+      margin-left: 3vw;
+      transition: 0.3s;
+      :hover {
+        transform: translateY(5px);
+      }
     }
   }
 `;

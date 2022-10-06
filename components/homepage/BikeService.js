@@ -3,6 +3,10 @@ import { TiSpanner } from "react-icons/ti";
 import { useEffect, useState } from "react";
 
 const bgImg = "/images/bikeService/bg.jpg";
+const img1 = "/images/bikeService/1.jpg";
+const img2 = "/images/bikeService/2.jpg";
+const img3 = "/images/bikeService/3.jpg";
+const img4 = "/images/bikeService/4.jpg";
 
 const BikeService = () => {
   const [activePakiet, setActivePakiet] = useState(null);
@@ -15,6 +19,9 @@ const BikeService = () => {
     if (activePakiet === "pro") {
       setIconClass("pakietIcon proIcon");
     }
+    if (activePakiet === "all") {
+      setIconClass("pakietIcon allIcon");
+    }
     if (activePakiet === "") {
       setIconClass("pakietIcon");
     }
@@ -22,7 +29,6 @@ const BikeService = () => {
 
   return (
     <Wrapper className="mainPage">
-      {/* <div className="bg"></div> */}
       <div className="title">
         <h1>Serwis Rowerowy</h1>
       </div>
@@ -35,10 +41,10 @@ const BikeService = () => {
         quibusdam cumque, aliquam excepturi!
       </p>
       <div className="imgContainerHorizontal">
-        <img src={bgImg} alt="" />
-        <img src={bgImg} alt="" />
-        <img src={bgImg} alt="" />
-        <img src={bgImg} alt="" />
+        <img src={img1} alt="" />
+        <img src={img2} alt="" />
+        <img src={img3} alt="" />
+        <img src={img4} alt="" />
       </div>
       <section className="pakiety">
         <div
@@ -47,7 +53,6 @@ const BikeService = () => {
           onMouseLeave={() => setActivePakiet("")}
         >
           <h2>Przegląd Podstawowy</h2>
-          <span>100 zł</span>
           <ul>
             <li>weryfikacja stanu technicznego</li>
             <li>kontrola połączeń gwintowanych</li>
@@ -56,6 +61,7 @@ const BikeService = () => {
             <li>korekta centryczności oraz pompowanie kół</li>
             <li>smarowanie napędu</li>
           </ul>
+          <span>100 zł</span>
         </div>
         <TiSpanner className={iconClass} />
         <div
@@ -64,7 +70,6 @@ const BikeService = () => {
           onMouseLeave={() => setActivePakiet("")}
         >
           <h2>Przegląd Zaawansowany</h2>
-          <span>220 zł</span>
           <ul>
             <li>weryfikacja stanu technicznego</li>
             <li>kontrola połączeń gwintowanych</li>
@@ -78,22 +83,21 @@ const BikeService = () => {
             </li>
             <li>czyszczenie i smarowanie układu napędowego</li>
           </ul>
+          <span>220 zł</span>
         </div>
       </section>
+      <button
+        className="fullPricesBtn"
+        onMouseEnter={() => setActivePakiet("all")}
+        onMouseLeave={() => setActivePakiet("")}
+      >
+        zobacz całą ofertę
+      </button>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  /* .bg { */
-  /* background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
-  background-image: url(${bgImg});
-  opacity: 0.5; */
-  /* } */
   .bikeMainInfo {
     margin: 10vh auto 0;
     width: 50vw;
@@ -103,7 +107,7 @@ const Wrapper = styled.div`
 
   .imgContainerHorizontal {
     margin: 10vh auto 0;
-    width: 80vw;
+    width: 85vw;
     height: 25vh;
     display: flex;
     justify-content: space-between;
@@ -111,6 +115,8 @@ const Wrapper = styled.div`
       width: 20%;
       height: 100%;
       object-fit: cover;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px 0 #111;
     }
   }
   .pakiety {
@@ -128,8 +134,19 @@ const Wrapper = styled.div`
       align-items: center;
       border: 2px solid var(--secondaryColor);
       padding: 2vw 5vw;
-      height: 60vh;
+      height: 70vh;
       background: #111;
+      position: relative;
+      ul {
+        margin: 4vh auto;
+      }
+      span {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.5rem;
+      }
     }
     .pakietIcon {
       font-size: 7rem;
@@ -143,6 +160,28 @@ const Wrapper = styled.div`
     }
     .proIcon {
       transform: rotate(0deg);
+    }
+    .allIcon {
+      transform: rotate(-225deg);
+    }
+  }
+  .fullPricesBtn {
+    margin: 10vh auto;
+    /* width: 20vw; */
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: var(--textFont);
+    border-radius: 5px;
+    background: #eee;
+    color: var(--navLinkColorHover);
+    display: block;
+    border: 2px solid var(--secondaryColor);
+    transition: 0.4s;
+    cursor: pointer;
+    :hover {
+      background: #111;
+      color: #eee;
     }
   }
 `;

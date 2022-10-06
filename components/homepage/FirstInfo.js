@@ -1,5 +1,5 @@
 const FirstInfo = () => {
-  return <div className="mainPage">Enter</div>;
+  return <div>Enter</div>;
 };
 
 export default FirstInfo;

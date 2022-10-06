@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { TiSpanner } from "react-icons/ti";
 import { useEffect, useState } from "react";
+import AllBikeOffer from "./AllBikeOffer";
 
 const bgImg = "/images/bikeService/bg.jpg";
 const img1 = "/images/bikeService/1.jpg";
@@ -11,6 +12,7 @@ const img4 = "/images/bikeService/4.jpg";
 const BikeService = () => {
   const [activePakiet, setActivePakiet] = useState(null);
   const [iconClass, setIconClass] = useState("pakietIcon");
+  const [showAllBikeOffer, setShowAllBikeOffer] = useState(false);
 
   useEffect(() => {
     if (activePakiet === "basic") {
@@ -90,9 +92,13 @@ const BikeService = () => {
         className="fullPricesBtn"
         onMouseEnter={() => setActivePakiet("all")}
         onMouseLeave={() => setActivePakiet("")}
+        onClick={() => setShowAllBikeOffer(true)}
       >
         zobacz całą ofertę
       </button>
+      {showAllBikeOffer && (
+        <AllBikeOffer setShowAllBikeOffer={setShowAllBikeOffer} />
+      )}
     </Wrapper>
   );
 };

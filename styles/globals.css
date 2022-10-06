@@ -27,7 +27,8 @@ body {
 
 .app {
     --appBgColor: #222;
-    --primaryColor: rgb(221, 221, 221);
+    --primaryColor: rgb(243, 243, 243);
+    --bikeBg: rgb(249, 249, 249);
     --secondaryColor: #77886b;
     --secondaryColor2: #5a270d;
     --navLinkColor: #666;

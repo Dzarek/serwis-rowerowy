@@ -8,7 +8,6 @@ import { HiMenuAlt2 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { MdOutlinePhoneAndroid, MdEmail } from "react-icons/md";
 import { FaFacebookSquare } from "react-icons/fa";
-import { TiSpanner } from "react-icons/ti";
 
 const logoImg = "/images/veloway-logo.png";
 

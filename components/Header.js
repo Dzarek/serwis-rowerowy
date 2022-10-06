@@ -4,7 +4,7 @@ import { HiChevronDoubleDown } from "react-icons/hi";
 import { MdOutlinePhoneAndroid, MdEmail } from "react-icons/md";
 import { FaFacebookSquare } from "react-icons/fa";
 // import { TiSpanner } from "react-icons/ti";
-import { navlinks } from "../../public/data";
+import { navlinks } from "../public/data";
 
 const headerBg = "/images/homepage/headerBg.jpg";
 const logoWhite = "/images/veloway-logoWhite.png";

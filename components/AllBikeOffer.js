@@ -1,14 +1,18 @@
 import styled from "styled-components";
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemButton,
+  AccordionItemHeading,
+  AccordionItemPanel,
+} from "react-accessible-accordion";
+import { MdExpandMore } from "react-icons/md";
+import { bikePrices } from "../public/data";
 
-const amortyzatoryImg = "/images/bikeService/bike/amortyzatory.png";
-const calyImg = "/images/bikeService/bike/caly.png";
-const hamulceImg = "/images/bikeService/bike/hamulce.png";
-const kolaImg = "/images/bikeService/bike/kola.png";
 const mainImg = "/images/bikeService/bike/main.png";
-const napedImg = "/images/bikeService/bike/naped.png";
-const sterowanieImg = "/images/bikeService/bike/sterowanie.png";
+const bgPrices = "/images/bikeService/bgPrices.png";
 
 const AllBikeOffer = ({ setShowAllBikeOffer }) => {
   const [bikeImage, setBikeImage] = useState(mainImg);
@@ -20,35 +24,83 @@ const AllBikeOffer = ({ setShowAllBikeOffer }) => {
 
   return (
     <Wrapper>
-      <IoClose className="closeIcon" onClick={handleClose} />
-      <img src={bikeImage} alt="rower" className="bikeImg" />
-      <div className="category" onClick={() => setBikeImage(napedImg)}>
-        <h3>Napęd</h3>
-      </div>
-      <div className="category" onClick={() => setBikeImage(kolaImg)}>
-        <h3>Koła</h3>
-      </div>
-      <div className="category" onClick={() => setBikeImage(amortyzatoryImg)}>
-        <h3>Amortyzacja</h3>
-      </div>
-      <div className="category" onClick={() => setBikeImage(hamulceImg)}>
-        <h3>Hamulce</h3>
-      </div>
-      <div className="category" onClick={() => setBikeImage(sterowanieImg)}>
-        <h3>Układ Sterowania</h3>
+      <div className="content">
+        <IoClose className="closeIcon" onClick={handleClose} />
+        <h2 className="priceTitle">Cennik Serwisu Rowerów</h2>
+        <img src={bikeImage} alt="rower" className="bikeImg" />
+        <div className="allCategories">
+          <Accordion allowZeroExpanded={true}>
+            {bikePrices.map((oneInfo) => {
+              const { title, details, id, image } = oneInfo;
+              return (
+                <AccordionItem key={id}>
+                  <div className="category" onClick={() => setBikeImage(image)}>
+                    <header>
+                      <h3>{title}</h3>
+                      <AccordionItemHeading>
+                        <AccordionItemButton>
+                          <button type="button" className="btn">
+                            <MdExpandMore />
+                          </button>
+                        </AccordionItemButton>
+                      </AccordionItemHeading>
+                    </header>
+                    <AccordionItemPanel>
+                      <ul>
+                        {details.map((item, index) => {
+                          const { info, price } = item;
+                          return (
+                            <li key={index}>
+                              <p>{info}</p>
+                              <div></div>
+                              <span>{price} zł</span>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </AccordionItemPanel>
+                  </div>
+                </AccordionItem>
+              );
+            })}
+          </Accordion>
+        </div>
+        <ul className="extraInfo">
+          <li>*Ceny nie zawierają części.</li>
+          <li>
+            **Usługi nie zawarte w cenniku oraz indywidualne są wyceniane
+            zależnie od nakładu czasu.
+          </li>
+        </ul>
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  width: 100vw;
-  min-height: 100vh;
+  background: var(--bikeBg);
+  /* background: #222; */
+  z-index: 999999999999999;
   position: fixed;
+  width: 100vw;
+  height: 100vh;
   top: 0;
   left: 0;
-  background: var(--bikeBg);
-  z-index: 999999999999999;
+  transition: 1s;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-image: url(${bgPrices});
+  background-repeat: repeat;
+  background-size: 15vw;
+  .content {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
   .closeIcon {
     position: absolute;
     top: 5vh;
@@ -57,20 +109,141 @@ const Wrapper = styled.div`
     font-size: 4rem;
     color: var(--navLinkColorHover);
     cursor: pointer;
-    transition: 0.4s;
+    transition: 0.5s;
     :hover {
+      transform: translateX(-50%) rotate(180deg);
       color: var(--secondaryColor);
     }
   }
   .bikeImg {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 70%;
+    transform: translate(-50%, -50%); */
     width: 40vw;
+    /* align-self: center; */
+    /* filter: saturate(0.7); */
+    margin-bottom: 5vh;
+    border: 2px solid var(--secondaryColor);
+    border-radius: 5px;
+    animation: partColor 1s ease-in infinite alternate;
+    @keyframes partColor {
+      100% {
+        filter: saturate(0);
+      }
+    }
   }
+  .priceTitle {
+    position: absolute;
+    top: 10vh;
+    left: 73.5%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--navLinkColorHover);
+    text-align: center;
+  }
+  .accordion__panel {
+    animation: fadein 0.5s ease-in;
+    overflow: hidden;
+  }
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
   .category {
     color: #222;
+    width: 35vw;
+    padding: 1vh 2vw;
+    background: #fff;
+    border: 2px solid var(--secondaryColor);
+    border-radius: 5px;
+    margin-bottom: 1vh;
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+      h3 {
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        @media screen and (max-width: 800px) {
+          font-size: 1.2rem;
+        }
+      }
+      .btn {
+        background: transparent;
+        border: none;
+        font-size: 1.8rem;
+        color: var(--secondaryColor);
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.4s;
+        margin-right: 20px;
+
+        @media screen and (max-width: 800px) {
+          font-size: 1.8rem;
+        }
+        :hover {
+          color: var(--secondaryColor3);
+        }
+      }
+      .icon {
+        margin-right: 10px;
+        color: var(--secondaryColor);
+      }
+    }
+    ul {
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+
+        div {
+          flex-grow: 1;
+          border-bottom: 1px solid #ddd;
+          align-self: flex-end;
+          margin: 0 5px 10px;
+        }
+        span {
+          color: var(--secondaryColor);
+          font-weight: 700;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  .extraInfo {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    /* transform: translateX(-50%); */
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 45vw;
+    list-style: none;
+    li {
+      /* width: 40%; */
+      font-weight: 500;
+      font-size: 1.15rem;
+      span {
+        opacity: 0;
+      }
+    }
   }
 `;
 

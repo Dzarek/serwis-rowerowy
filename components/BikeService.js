@@ -130,7 +130,6 @@ const Wrapper = styled.div`
     margin: 10vh auto 0;
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
 
     .onePakiet {
       width: 40%;
@@ -140,18 +139,15 @@ const Wrapper = styled.div`
       align-items: center;
       border: 2px solid var(--secondaryColor);
       padding: 2vw 5vw;
-      height: 70vh;
       background: #111;
-      position: relative;
       ul {
         margin: 4vh auto;
+        margin-bottom: 5vh;
+        width: 100%;
       }
       span {
-        position: absolute;
-        bottom: 5%;
-        left: 50%;
-        transform: translateX(-50%);
         font-size: 1.5rem;
+        margin-top: auto;
       }
     }
     .pakietIcon {

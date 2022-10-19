@@ -53,7 +53,7 @@ const AllBikeOffer = ({ setShowAllBikeOffer }) => {
                             <li key={index}>
                               <p>{info}</p>
                               <div></div>
-                              <span>{price} zł</span>
+                              <span>od {price} zł</span>
                             </li>
                           );
                         })}
@@ -183,7 +183,7 @@ const Wrapper = styled.div`
       .btn {
         background: transparent;
         border: none;
-        font-size: 1.8rem;
+        font-size: 2.5rem;
         color: var(--secondaryColor);
         display: flex;
         align-items: center;

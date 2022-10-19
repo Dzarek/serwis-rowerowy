@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 // import FirstInfo from "../components/FirstInfo";
 import BikeService from "../components/BikeService";
+import SkiService from "../components/SkiService";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Navbar />
       {/* <FirstInfo /> */}
       <BikeService />
+      <SkiService />
     </>
   );
 }

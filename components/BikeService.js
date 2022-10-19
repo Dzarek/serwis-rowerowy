@@ -63,7 +63,7 @@ const BikeService = () => {
             <li>korekta centryczności oraz pompowanie kół</li>
             <li>smarowanie napędu</li>
           </ul>
-          <span>100 zł</span>
+          <span>od 100 zł</span>
         </div>
         <TiSpanner className={iconClass} />
         <div
@@ -85,7 +85,7 @@ const BikeService = () => {
             </li>
             <li>czyszczenie i smarowanie układu napędowego</li>
           </ul>
-          <span>220 zł</span>
+          <span>od 220 zł</span>
         </div>
       </section>
       <button

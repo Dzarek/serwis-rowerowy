@@ -33,6 +33,7 @@ const BikeService = () => {
     <Wrapper className="mainPage">
       <div className="title">
         <h1>Serwis Rowerowy</h1>
+        <div data-aos="titleWidth"></div>
       </div>
       <p className="bikeMainInfo">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae aperiam
@@ -104,6 +105,15 @@ const BikeService = () => {
 };
 
 const Wrapper = styled.div`
+  .title {
+    [data-aos="titleWidth"] {
+      width: 0;
+      transition-property: width;
+      &.aos-animate {
+        width: 300px;
+      }
+    }
+  }
   .bikeMainInfo {
     margin: 10vh auto 0;
     width: 50vw;

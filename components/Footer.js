@@ -30,6 +30,7 @@ const Wrapper = styled.div`
   font-size: 1.1rem;
   position: relative;
   overflow: hidden;
+  border-top: 1px solid #555;
   p {
     text-align: center;
     width: 100%;

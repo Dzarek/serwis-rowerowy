@@ -26,6 +26,7 @@ const SkiService = () => {
       ></div>
       <div className="title">
         <h1>Serwis Narciarski</h1>
+        <div data-aos="titleWidth"></div>
       </div>
       <p className="firstInfo">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti omnis
@@ -100,6 +101,16 @@ const Wrapper = styled.div`
     h1 {
       /* text-shadow: 0.5px 0.5px 0.5px #eee; */
       text-shadow: 2px 2px 2px #222;
+    }
+    /* div {
+      width: 300px;
+    } */
+    [data-aos="titleWidth"] {
+      width: 0;
+      transition-property: width;
+      &.aos-animate {
+        width: 300px;
+      }
     }
   }
 

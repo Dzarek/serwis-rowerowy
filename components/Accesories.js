@@ -3,8 +3,13 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { FaSmileWink } from "react-icons/fa";
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
+import { useState } from "react";
 
-const bikeAccesories = [
+const bikeAccesories1 = [
   {
     id: 1,
     name: "kask męski",
@@ -41,6 +46,9 @@ const bikeAccesories = [
     price: "230",
     img: "/images/accesories/rowerowe/nakolenniki.jpg",
   },
+];
+
+const bikeAccesories2 = [
   {
     id: 7,
     name: "ochraniacze",
@@ -107,9 +115,36 @@ const skiAccesories = [
 ];
 
 const Accesories = () => {
+  const [activeCategory, setActiveCategory] = useState("bike");
+  const [activeNumber, setActiveNumber] = useState(1);
+  const [activeBikeA, setActiveBikeA] = useState(bikeAccesories1);
+
   useEffect(() => {
     Aos.init({ duration: 1000, disable: "mobile" });
   }, []);
+
+  useEffect(() => {
+    if (activeNumber === 1) {
+      setActiveBikeA(bikeAccesories1);
+    }
+    if (activeNumber === 2) {
+      setActiveBikeA(bikeAccesories2);
+    }
+  }, [activeNumber]);
+
+  const handleBack = () => {
+    if (activeNumber === 1) {
+      return;
+    }
+    setActiveNumber(activeNumber - 1);
+  };
+  const handleNext = () => {
+    if (activeNumber === 2 || activeCategory === "ski") {
+      return;
+    }
+    setActiveNumber(activeNumber + 1);
+  };
+
   return (
     <Wrapper className="mainPage">
       <div className="title">
@@ -121,35 +156,75 @@ const Accesories = () => {
           <p>
             Oprócz usług serwisowych, w swojej ofercie posiadam również liczne
             akcesoria rowerowe i narciarskie. Sprawdź czy nie potrzebujesz
-            nowego gadżetu dla siebie lub znajdź prezent dla bliskiej osoby.{" "}
+            nowego gadżetu dla siebie lub znajdź prezent dla bliskiej osoby.
             <FaSmileWink />
+          </p>
+          <br />
+          <p>
+            Akcesoria są dostępne tylko w sklepie stacjonarnym na ul. Rowerowa
+            1, 33-170 Tuchów.
           </p>
         </section>
         <section className="shop">
           <div className="categories">
-            <h4>Rowerowe</h4>|<h4>Narciarskie</h4>
+            <h4
+              onClick={() => setActiveCategory("bike")}
+              className={activeCategory === "bike" ? "activeCategory" : ""}
+            >
+              Rowerowe
+            </h4>
+            |
+            <h4
+              onClick={() => setActiveCategory("ski")}
+              className={activeCategory === "ski" ? "activeCategory" : ""}
+            >
+              Narciarskie
+            </h4>
           </div>
-          <div className="items">
-            <div className="oneItem">
-              <img src="/images/accesories/narciarskie/spodnie.jpg" alt="" />
-              <h5>Spodnie</h5>
-              <span>100</span>
+          {activeCategory === "bike" ? (
+            <div className="items">
+              {activeBikeA.map((item) => {
+                const { id, name, price, img } = item;
+                return (
+                  <div key={id} className="oneItem">
+                    <img src={img} alt={name} />
+                    <h5>{name}</h5>
+                    <span>{price} zł</span>
+                  </div>
+                );
+              })}
             </div>
-            <div className="oneItem">
-              <img src="/images/accesories/narciarskie/spodnie.jpg" alt="" />
-              <h5>Spodnie</h5>
-              <span>100</span>
+          ) : (
+            <div className="items">
+              {skiAccesories.map((item) => {
+                const { id, name, price, img } = item;
+                return (
+                  <div key={id} className="oneItem">
+                    <img src={img} alt={name} />
+                    <h5>{name}</h5>
+                    <span>{price} zł</span>
+                  </div>
+                );
+              })}
             </div>
-            <div className="oneItem">
-              <img src="/images/accesories/narciarskie/spodnie.jpg" alt="" />
-              <h5>Spodnie</h5>
-              <span>100</span>
-            </div>
-            <div className="oneItem">
-              <img src="/images/accesories/narciarskie/spodnie.jpg" alt="" />
-              <h5>Spodnie</h5>
-              <span>100</span>
-            </div>
+          )}
+          <div className="pageNumber">
+            <MdOutlineKeyboardArrowLeft onClick={handleBack} />
+            <span
+              onClick={() => setActiveNumber(1)}
+              className={activeNumber === 1 ? "activeNumber" : ""}
+            >
+              1
+            </span>
+            {activeCategory === "bike" && (
+              <span
+                onClick={() => setActiveNumber(2)}
+                className={activeNumber === 2 ? "activeNumber" : ""}
+              >
+                2
+              </span>
+            )}
+            <MdOutlineKeyboardArrowRight onClick={handleNext} />
           </div>
         </section>
       </div>
@@ -158,6 +233,7 @@ const Accesories = () => {
 };
 
 const Wrapper = styled.div`
+  padding-bottom: 5vh;
   .title {
     display: flex;
     flex-direction: column;
@@ -183,8 +259,9 @@ const Wrapper = styled.div`
     justify-content: space-between;
     .text {
       width: 30%;
+      margin-top: -10vh;
       p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         font-family: var(--titleFont);
         line-height: 2;
         text-align: justify;
@@ -196,7 +273,7 @@ const Wrapper = styled.div`
       }
     }
     .shop {
-      width: 50%;
+      width: 57%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -207,7 +284,12 @@ const Wrapper = styled.div`
         margin-bottom: 3vh;
         h4 {
           margin: 0 3vw;
+          cursor: pointer;
+          transition: 0.4s;
         }
+      }
+      .activeCategory {
+        color: var(--secondaryColor);
       }
       .items {
         display: flex;
@@ -216,18 +298,95 @@ const Wrapper = styled.div`
         flex-wrap: wrap;
         /* width: 40vw; */
         .oneItem {
-          width: 10vw;
-          height: 10vw;
-          background: #fff;
+          width: 12vw;
+          height: 12vw;
+          background: var(--secondaryColor2);
           position: relative;
           margin: 1.5vw;
+          border-radius: 5px;
+          overflow: hidden;
+          cursor: pointer;
           img {
             position: absolute;
             width: 100%;
-            height: 100%;
+            height: 10vw;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            object-fit: cover;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            transition: 0.3s;
+          }
+          h5 {
+            position: absolute;
+            width: 100%;
+            height: 2vw;
+            bottom: 0vw;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            text-transform: capitalize;
+          }
+          span {
+            position: absolute;
             top: 0;
             left: 0;
-            object-fit: cover;
+            background: var(--secondaryColor2);
+            border-bottom-right-radius: 5px;
+            padding: 5px 10px;
+          }
+          :hover img {
+            width: 110%;
+          }
+        }
+      }
+      .pageNumber {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        margin-top: 3vh;
+        background: #ddd;
+        padding: 5px 10px;
+        color: #222;
+        border-radius: 10px;
+        span {
+          cursor: pointer;
+          transition: 0.4s;
+          height: 100%;
+          min-width: 30px;
+          text-align: center;
+          border-radius: 5px;
+          :hover {
+            color: #fff;
+            background: #222;
+            background: var(--secondaryColor2);
+          }
+        }
+        .activeNumber {
+          color: #fff;
+          background: #222;
+          background: var(--secondaryColor2);
+        }
+        svg {
+          font-size: 2rem;
+          cursor: pointer;
+          transition: 0.4s;
+          height: 100%;
+          min-width: 30px;
+          text-align: center;
+          border-radius: 5px;
+          :hover {
+            color: #fff;
+            background: #222;
+          }
+          :nth-of-type(1) {
+            margin-right: 15px;
+          }
+          :nth-last-of-type(1) {
+            margin-left: 15px;
           }
         }
       }

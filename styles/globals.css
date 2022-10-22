@@ -30,7 +30,9 @@ body {
     --primaryColor: rgb(243, 243, 243);
     --bikeBg: rgb(249, 249, 249);
     --secondaryColor: #77886b;
-    --secondaryColor2: #5a270d;
+    /* --secondaryColor: #849160; */
+    --secondaryColor2: #525c37;
+    --secondaryColor3: #849160;
     --navLinkColor: #666;
     /* --navLinkColorHover: #1c310c; */
     --navLinkColorHover: #294613;

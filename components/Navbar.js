@@ -7,7 +7,7 @@ import { navlinks } from "../public/data";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { MdOutlinePhoneAndroid, MdEmail } from "react-icons/md";
-import { FaFacebookSquare } from "react-icons/fa";
+import { FaFacebookSquare, FaMapMarkerAlt } from "react-icons/fa";
 
 const logoImg = "/images/veloway-logo.png";
 
@@ -69,6 +69,12 @@ const Navbar = () => {
           </nav>
           <img src={logoImg} alt="logo" className="logo" />
           <div className="contactWrapper">
+            <div>
+              <FaMapMarkerAlt
+                className="icon"
+                onClick={() => setContactInfo("ul. Rowerowa 1, 33-170 Tuchów")}
+              />
+            </div>
             <a
               href="tel:798867716"
               onClick={() => setContactInfo("798 867 716")}
@@ -158,7 +164,7 @@ const Wrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    width: 50%;
+    width: 60%;
     justify-content: space-between;
     a,
     div {

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { TiSpanner } from "react-icons/ti";
 import { useEffect, useState } from "react";
 import AllBikeOffer from "./AllBikeOffer";
+import { BsGearFill } from "react-icons/bs";
 
 const bgImg = "/images/bikeService/bg.jpg";
 const img1 = "/images/bikeService/1.jpg";
@@ -56,13 +57,31 @@ const BikeService = () => {
           onMouseLeave={() => setActivePakiet("")}
         >
           <h2>Przegląd Podstawowy</h2>
-          <ul>
-            <li>weryfikacja stanu technicznego</li>
-            <li>kontrola połączeń gwintowanych</li>
-            <li>likwidacja luzów</li>
-            <li>regulacja przerzutek i hamulców</li>
-            <li>korekta centryczności oraz pompowanie kół</li>
-            <li>smarowanie napędu</li>
+          <ul className={activePakiet === "basic" ? "gearActive" : ""}>
+            <li>
+              <BsGearFill />
+              weryfikacja stanu technicznego
+            </li>
+            <li>
+              <BsGearFill />
+              kontrola połączeń gwintowanych
+            </li>
+            <li>
+              <BsGearFill />
+              likwidacja luzów
+            </li>
+            <li>
+              <BsGearFill />
+              regulacja przerzutek i hamulców
+            </li>
+            <li>
+              <BsGearFill />
+              korekta centryczności oraz pompowanie kół
+            </li>
+            <li>
+              <BsGearFill />
+              smarowanie napędu
+            </li>
           </ul>
           <span>od 100 zł</span>
         </div>
@@ -73,18 +92,46 @@ const BikeService = () => {
           onMouseLeave={() => setActivePakiet("")}
         >
           <h2>Przegląd Zaawansowany</h2>
-          <ul>
-            <li>weryfikacja stanu technicznego</li>
-            <li>kontrola połączeń gwintowanych</li>
-            <li>likwidacja luzów</li>
-            <li>regulacja przerzutek i hamulców</li>
-            <li>korekta centryczności oraz pompowanie kół</li>
-            <li>smarowanie napędu</li>
-            <li>demontaż</li>
+          <ul className={activePakiet === "pro" ? "gearActive" : ""}>
             <li>
-              czyszczenie oraz smarowanie łożysk sterów, sterów oraz piast
+              <BsGearFill />
+              <p>weryfikacja stanu technicznego</p>
             </li>
-            <li>czyszczenie i smarowanie układu napędowego</li>
+            <li>
+              <BsGearFill />
+              kontrola połączeń gwintowanych
+            </li>
+            <li>
+              <BsGearFill />
+              likwidacja luzów
+            </li>
+            <li>
+              <BsGearFill />
+              regulacja przerzutek i hamulców
+            </li>
+            <li>
+              <BsGearFill />
+              korekta centryczności oraz pompowanie kół
+            </li>
+            <li>
+              <BsGearFill />
+              smarowanie napędu
+            </li>
+            <li>
+              <BsGearFill />
+              demontaż
+            </li>
+            <li>
+              <BsGearFill />{" "}
+              <p>
+                {" "}
+                czyszczenie oraz smarowanie łożysk sterów, sterów oraz piast
+              </p>
+            </li>
+            <li>
+              <BsGearFill />
+              czyszczenie i smarowanie układu napędowego
+            </li>
           </ul>
           <span>od 220 zł</span>
         </div>
@@ -154,6 +201,31 @@ const Wrapper = styled.div`
         margin: 4vh auto;
         margin-bottom: 5vh;
         width: 100%;
+        list-style: none;
+        li {
+          display: flex;
+          align-items: flex-start;
+          font-size: 1rem;
+          svg {
+            flex-shrink: 0;
+            color: var(--secondaryColor);
+            margin-right: 10px;
+            margin-top: 7px;
+            font-size: 1.1rem;
+          }
+        }
+      }
+      .gearActive {
+        li {
+          svg {
+            animation: gearAnim 2s linear infinite;
+            @keyframes gearAnim {
+              100% {
+                transform: rotate(360deg);
+              }
+            }
+          }
+        }
       }
       span {
         font-size: 1.5rem;

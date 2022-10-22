@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { HiChevronDoubleDown } from "react-icons/hi";
 import { MdOutlinePhoneAndroid, MdEmail } from "react-icons/md";
-import { FaFacebookSquare } from "react-icons/fa";
+import { FaFacebookSquare, FaMapMarkerAlt } from "react-icons/fa";
 // import { TiSpanner } from "react-icons/ti";
 import { navlinks } from "../public/data";
 
@@ -29,6 +29,10 @@ const Header = () => {
         laboriosam!
       </p>
       <div className="contactWrapper">
+        <div>
+          <FaMapMarkerAlt className="icon" />
+          <p>ul. Rowerowa 1, 33-170 Tuchów</p>
+        </div>
         <a href="tel:798867716">
           <MdOutlinePhoneAndroid className="icon" />
           <p>798 867 716</p>
@@ -37,14 +41,14 @@ const Header = () => {
           <MdEmail className="icon" />
           <p>serwisrowerowy@gmail.com</p>
         </div>
-        <a
+        {/* <a
           // href="https://www.facebook.com/Pyszotka-Lipinki-100529712463136/?ti=as"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaFacebookSquare className="icon" />
           <p>serwis rowerowy</p>
-        </a>
+        </a> */}
       </div>
     </Wrapper>
   );

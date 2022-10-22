@@ -31,7 +31,7 @@ const MyForm = ({ setVisibleCookie }) => {
     if (category === "treningi") {
       setSubCategories(subCategoriesGym);
     }
-    if (category === "inne") {
+    if (category === "inne" || category === "---") {
       setSubCategories(false);
     }
   }, [category]);
@@ -43,10 +43,10 @@ const MyForm = ({ setVisibleCookie }) => {
     } else {
       emailjs
         .sendForm(
-          "service_9s94mu1",
-          "template_p3qolfe",
-          e.target,
-          "WgQWoqpRy3nW2fmKj"
+          // "service_9s94mu1",
+          // "template_p3qolfe",
+          e.target
+          // "WgQWoqpRy3nW2fmKj"
         )
         .then(
           () => {
@@ -196,7 +196,9 @@ const MyForm = ({ setVisibleCookie }) => {
           </div>
           <div
             className={
-              category === "inne" ? "chooseInput selectDisabled" : "chooseInput"
+              category === "inne" || category === "---"
+                ? "chooseInput selectDisabled"
+                : "chooseInput"
             }
           >
             <label htmlFor="subCategory">Wybierz typ:</label>
@@ -373,12 +375,12 @@ const Wrapper = styled.form`
   }
   button {
     width: 30%;
-    border: 2px solid #fff;
+    border: none;
     border-radius: 10px;
-    font-size: 1rem;
-    font-family: var(--titleFont);
+    font-size: 1.2rem;
+    font-family: var(--textFont);
     text-transform: uppercase;
-    padding: 10px 0px;
+    padding: 7px 0px;
     margin: 5vh auto 0;
     font-weight: 600;
     color: #fff;
@@ -387,7 +389,7 @@ const Wrapper = styled.form`
     cursor: pointer;
     :hover {
       background: #fff;
-      border: 2px solid var(--secondaryColor);
+      /* border: 2px solid var(--secondaryColor); */
       color: var(--secondaryColor);
     }
   }

@@ -3,7 +3,6 @@ import MyForm from "./others/MyForm";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-// import Head from "next/head";
 
 const bgImg = "/images/contact/bg.jpg";
 
@@ -13,17 +12,6 @@ const KontaktPage = ({ setVisibleCookie }) => {
   }, []);
   return (
     <>
-      {/* <Head>
-        <title>FocusEye | Kontakt</title>
-        <meta
-          name="description"
-          content="Fomularz, Email, Telefon, Social Media."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/logo192.png" />
-        <link rel="shortcut icon" href="/logo192.png" />
-      </Head> */}
       <Wrapper>
         <div className="bg"></div>
         <header>
@@ -34,7 +22,7 @@ const KontaktPage = ({ setVisibleCookie }) => {
         </header>
         <div className="contactContainer">
           <section className="contactForm">
-            <h3>Napisz do mnie przez formularz kontaktowy</h3>
+            <h3>Formularz kontaktowy</h3>
             <MyForm setVisibleCookie={setVisibleCookie} />
           </section>
 
@@ -42,35 +30,35 @@ const KontaktPage = ({ setVisibleCookie }) => {
             <h3>Kontakt bezpośredni</h3>
             <div className="socialMediaWrapper">
               <a href="tel:+48798698605">
-                Telefon: <span>798 698 605</span>
+                Telefon: <span>798 867 716</span>
               </a>
               <h4>
-                Email: <span>kontakt.focuseye@gmail.com</span>
+                Email: <span>serwisrowerowy@gmail.com</span>
               </h4>
-              <a
-                href="https://www.instagram.com/focuseye_sylwiasajdak/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram: <span>focuseye_sylwiasajdak</span>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                Facebook: <span>veloway</span>
               </a>
-              <a
-                href="https://www.facebook.com/sylwiasajdakfotografia/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Facebook: <span>sylwiasajdakfotografia</span>
-              </a>
+              <h4>
+                Nr konta: <span>00 0000 0000 0000 0000 0000 0000</span>
+              </h4>
+              <h4>
+                Adres: <span>ul. Rowerowa 1, 33-170 Tuchów</span>
+              </h4>
             </div>
-            <div className="bankInfo">
+            {/* <div className="bankInfo">
               <h3>Dane do przelewu:</h3>
-              <h4 className="bankInfoName">
-                FocusEye Mobilne Studio Fotografii - Sylwia Sajdak
-              </h4>
+              <h4 className="bankInfoName">VeloWay - Pracownia Rowerów</h4>
               <h4>
-                Nr konta: <span>91 1140 2004 0000 3102 7985 0369</span>
+                Nr konta: <span>00 0000 0000 0000 0000 0000 0000</span>
               </h4>
-            </div>
+            </div> */}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4322.347791838567!2d21.055910916858387!3d49.89723802938114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473d9740c487280f%3A0xa3ac4c2d8bd03b39!2sMiejski%20O%C5%9Brodek%20Sportu%20i%20Rekreacji!5e0!3m2!1spl!2spl!4v1666438898960!5m2!1spl!2spl"
+              className="map"
+              title="mapa"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
           </section>
         </div>
       </Wrapper>
@@ -82,7 +70,7 @@ const Wrapper = styled.div`
   width: 100vw;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 10vh 0 2vh;
+  padding: 10vh 0 5vh;
   position: relative;
   @media screen and (max-width: 800px) {
     padding-top: 0;
@@ -96,6 +84,7 @@ const Wrapper = styled.div`
     background-image: url(${bgImg});
     background-attachment: fixed;
     background-position: center;
+    background-size: cover;
     opacity: 0.2;
   }
   header {
@@ -174,7 +163,7 @@ const Wrapper = styled.div`
     .contactSocialMedia {
       h3 {
         color: var(--secondaryColor3);
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         text-align: center;
         font-family: var(--titleFont);
         font-weight: 500;
@@ -205,11 +194,12 @@ const Wrapper = styled.div`
     margin-top: 3vh;
     a,
     h4 {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       margin: 2vh 5vw;
       font-weight: 500;
       text-decoration: none;
       color: var(--primaryColor);
+      text-shadow: 2px 2px 2px #000;
       @media screen and (max-width: 800px) {
         margin: 2vh auto;
         width: 90vw;
@@ -238,6 +228,20 @@ const Wrapper = styled.div`
       @media screen and (max-width: 800px) {
         text-align: center;
       }
+    }
+  }
+  .map {
+    width: 80%;
+    height: 40vh;
+    margin-top: 5vh;
+    /* position: relative;
+    bottom: 0;
+    left: 0; */
+    border-radius: 5px;
+    filter: saturate(0.2);
+    transition: 0.4s;
+    :hover {
+      filter: saturate(0.8);
     }
   }
 `;

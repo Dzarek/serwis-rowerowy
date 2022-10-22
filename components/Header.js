@@ -31,7 +31,7 @@ const Header = () => {
       <div className="contactWrapper">
         <div>
           <FaMapMarkerAlt className="icon" />
-          <p>ul. Rowerowa 1, 33-170 Tuchów</p>
+          <p>ul. Długa 48, 33-170 Tuchów</p>
         </div>
         <a href="tel:798867716">
           <MdOutlinePhoneAndroid className="icon" />

@@ -3,6 +3,8 @@ import { TiSpanner } from "react-icons/ti";
 import { useEffect, useState } from "react";
 import AllBikeOffer from "./AllBikeOffer";
 import { BsGearFill } from "react-icons/bs";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const bgImg = "/images/bikeService/bg.jpg";
 const img1 = "/images/bikeService/1.jpg";
@@ -14,6 +16,9 @@ const BikeService = () => {
   const [activePakiet, setActivePakiet] = useState(null);
   const [iconClass, setIconClass] = useState("pakietIcon");
   const [showAllBikeOffer, setShowAllBikeOffer] = useState(false);
+  useEffect(() => {
+    Aos.init({ duration: 1000, disable: "mobile" });
+  }, []);
 
   useEffect(() => {
     if (activePakiet === "basic") {
@@ -55,6 +60,7 @@ const BikeService = () => {
           className="onePakiet basic"
           onMouseEnter={() => setActivePakiet("basic")}
           onMouseLeave={() => setActivePakiet("")}
+          data-aos="fade-right"
         >
           <h2>Przegląd Podstawowy</h2>
           <ul className={activePakiet === "basic" ? "gearActive" : ""}>
@@ -90,6 +96,7 @@ const BikeService = () => {
           className="onePakiet pro"
           onMouseEnter={() => setActivePakiet("pro")}
           onMouseLeave={() => setActivePakiet("")}
+          data-aos="fade-left"
         >
           <h2>Przegląd Zaawansowany</h2>
           <ul className={activePakiet === "pro" ? "gearActive" : ""}>

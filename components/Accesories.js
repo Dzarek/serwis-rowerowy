@@ -161,8 +161,8 @@ const Accesories = () => {
           </p>
           <br />
           <p>
-            Akcesoria są dostępne tylko w sklepie stacjonarnym na ul. Rowerowa
-            1, 33-170 Tuchów.
+            Akcesoria są dostępne tylko w sklepie stacjonarnym na ul. Długa 48,
+            33-170 Tuchów.
           </p>
         </section>
         <section className="shop">
@@ -182,7 +182,7 @@ const Accesories = () => {
             </h4>
           </div>
           {activeCategory === "bike" ? (
-            <div className="items">
+            <div className="items" data-aos="zoom-in" data-aos-delay="300">
               {activeBikeA.map((item) => {
                 const { id, name, price, img } = item;
                 return (
@@ -195,7 +195,7 @@ const Accesories = () => {
               })}
             </div>
           ) : (
-            <div className="items">
+            <div className="items" data-aos="zoom-in" data-aos-delay="300">
               {skiAccesories.map((item) => {
                 const { id, name, price, img } = item;
                 return (
@@ -261,7 +261,7 @@ const Wrapper = styled.div`
       width: 30%;
       margin-top: -10vh;
       p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-family: var(--titleFont);
         line-height: 2;
         text-align: justify;

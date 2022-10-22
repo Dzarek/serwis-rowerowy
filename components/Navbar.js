@@ -72,7 +72,7 @@ const Navbar = () => {
             <div>
               <FaMapMarkerAlt
                 className="icon"
-                onClick={() => setContactInfo("ul. Rowerowa 1, 33-170 Tuchów")}
+                onClick={() => setContactInfo("ul. Długa 48, 33-170 Tuchów")}
               />
             </div>
             <a

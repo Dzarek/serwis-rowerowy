@@ -5,6 +5,8 @@ import Header from "../components/Header";
 import BikeService from "../components/BikeService";
 import SkiService from "../components/SkiService";
 import Accesories from "../components/Accesories";
+import AboutMe from "../components/AboutMe";
+import Workout from "../components/Workout";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
@@ -25,6 +27,8 @@ export default function Home() {
       <BikeService />
       <SkiService />
       <Accesories />
+      <AboutMe />
+      <Workout />
       <Contact />
       <Footer />
     </>

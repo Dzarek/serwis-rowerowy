@@ -42,7 +42,7 @@ const KontaktPage = ({ setVisibleCookie }) => {
                 Nr konta: <span>00 0000 0000 0000 0000 0000 0000</span>
               </h4>
               <h4>
-                Adres: <span>ul. Rowerowa 1, 33-170 Tuchów</span>
+                Adres: <span>ul. Długa 48, 33-170 Tuchów</span>
               </h4>
             </div>
             {/* <div className="bankInfo">
@@ -53,11 +53,12 @@ const KontaktPage = ({ setVisibleCookie }) => {
               </h4>
             </div> */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4322.347791838567!2d21.055910916858387!3d49.89723802938114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473d9740c487280f%3A0xa3ac4c2d8bd03b39!2sMiejski%20O%C5%9Brodek%20Sportu%20i%20Rekreacji!5e0!3m2!1spl!2spl!4v1666438898960!5m2!1spl!2spl"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10278.969913076555!2d21.0485635!3d49.9036379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x24e5f320a27d27cc!2sVeloWay%20Pracownia%20i%20Serwis%20Rowerowy!5e0!3m2!1spl!2spl!4v1666475935085!5m2!1spl!2spl"
               className="map"
               title="mapa"
               allowfullscreen=""
               loading="lazy"
+              data-aos="fade-up"
             ></iframe>
           </section>
         </div>

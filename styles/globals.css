@@ -217,3 +217,10 @@ html::-webkit-scrollbar-thumb {
 html::-webkit-scrollbar-thumb:hover {
     background: #293c29;
 }
+
+
+@media screen and (max-width:800px) {
+    body {
+        display: none;
+    }
+}

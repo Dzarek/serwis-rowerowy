@@ -105,13 +105,6 @@ const Wrapper = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      h2 {
-        font-weight: 800;
-        font-size: 3rem;
-        margin-bottom: 3vh;
-        margin-top: 3vh;
-        color: var(--secondaryColor);
-      }
       [data-aos="titleWidth"] {
         width: 0;
         transition-property: width;
@@ -119,11 +112,7 @@ const Wrapper = styled.div`
           width: 150px;
         }
       }
-      p {
-        font-size: 1rem;
-        font-weight: 400;
-        font-family: var(--titleFont);
-      }
+
       @media screen and (max-width: 800px) {
         padding: 5vh 0;
       }
@@ -203,6 +192,9 @@ const Wrapper = styled.div`
       @media screen and (max-width: 800px) {
         margin: 2vh auto;
         width: 90vw;
+      }
+      @media screen and (max-width: 1700px) {
+        font-size: 1.3rem;
       }
       span {
         color: var(--secondaryColor);

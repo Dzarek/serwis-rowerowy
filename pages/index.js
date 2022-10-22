@@ -4,6 +4,7 @@ import Header from "../components/Header";
 // import FirstInfo from "../components/FirstInfo";
 import BikeService from "../components/BikeService";
 import SkiService from "../components/SkiService";
+import Accesories from "../components/Accesories";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
@@ -23,6 +24,7 @@ export default function Home() {
       {/* <FirstInfo /> */}
       <BikeService />
       <SkiService />
+      <Accesories />
       <Contact />
       <Footer />
     </>

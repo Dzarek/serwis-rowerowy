@@ -36,6 +36,10 @@ const Wrapper = styled.div`
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-size: 1.1rem;
+    @media screen and (max-width: 1700px) {
+      font-size: 1rem;
+    }
   }
   .logoJarek {
     position: absolute;

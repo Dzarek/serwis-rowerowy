@@ -12,7 +12,7 @@ const KontaktPage = ({ setVisibleCookie }) => {
   }, []);
   return (
     <>
-      <Wrapper>
+      <Wrapper id="contact">
         <div className="bg"></div>
         <header>
           <div className="title">

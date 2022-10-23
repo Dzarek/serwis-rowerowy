@@ -15,7 +15,7 @@ const AboutMe = () => {
     Aos.init({ duration: 1000, disable: "mobile" });
   }, []);
   return (
-    <Wrapper>
+    <Wrapper id="aboutMe">
       <div className="title">
         <h1>O mnie</h1>
         <div data-aos="titleWidth"></div>
@@ -150,7 +150,7 @@ const Wrapper = styled.div`
       p {
         width: 100%;
         font-size: 1.2rem;
-        line-height: 2.5;
+        line-height: 2.3;
         text-align: center;
       }
       .iconContainer {

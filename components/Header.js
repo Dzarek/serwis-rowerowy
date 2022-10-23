@@ -1,24 +1,33 @@
 import styled from "styled-components";
-import Link from "next/link";
+// import Link from "next/link";
 import { HiChevronDoubleDown } from "react-icons/hi";
 import { MdOutlinePhoneAndroid, MdEmail } from "react-icons/md";
 import { FaFacebookSquare, FaMapMarkerAlt } from "react-icons/fa";
 // import { TiSpanner } from "react-icons/ti";
 import { navlinks } from "../public/data";
+import { Link } from "react-scroll";
+// import { animateScroll as scroll } from "react-scroll";
 
 const headerBg = "/images/homepage/headerBg.jpg";
 const logoWhite = "/images/veloway-logoWhite.png";
 
 const Header = () => {
   return (
-    <Wrapper>
+    <Wrapper id="home">
       <div className="overlay"></div>
       <img className="logo" src={logoWhite} alt="" />
       <nav>
         {navlinks.map((item, index) => {
           return (
-            <Link key={index} href="/">
-              <a>{item.name}</a>
+            <Link
+              key={index}
+              to={item.link}
+              smooth={true}
+              duration={1000}
+              activeClass="active"
+              spy={true}
+            >
+              {item.name}
             </Link>
           );
         })}
@@ -109,12 +118,16 @@ const Wrapper = styled.div`
       transition: 0.4s;
       text-shadow: 1px 1px 1px #999;
       font-family: var(--headerNavFont);
+      cursor: pointer;
+      &.active {
+        color: var(--navLinkColorHover);
+      }
       :hover {
         color: var(--navLinkColorHover);
       }
-      :nth-child(1) {
+      /* :nth-child(1) {
         color: var(--navLinkColorHover);
-      }
+      } */
     }
   }
   .headerArrow {

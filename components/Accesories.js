@@ -146,7 +146,7 @@ const Accesories = () => {
   };
 
   return (
-    <Wrapper className="mainPage">
+    <Wrapper id="accesories" className="mainPage">
       <div className="title">
         <h1>Akcesoria </h1>
         <div data-aos="titleWidth"></div>
@@ -263,7 +263,7 @@ const Wrapper = styled.div`
       p {
         font-size: 1.2rem;
         /* font-family: var(--titleFont); */
-        line-height: 2.5;
+        line-height: 2.3;
         text-align: justify;
         svg {
           color: var(--secondaryColor);

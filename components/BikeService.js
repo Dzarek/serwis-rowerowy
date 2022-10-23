@@ -36,7 +36,7 @@ const BikeService = () => {
   }, [activePakiet]);
 
   return (
-    <Wrapper className="mainPage">
+    <Wrapper className="mainPage" id="bikeService">
       <div className="title">
         <h1>Serwis Rowerowy</h1>
         <div data-aos="titleWidth"></div>

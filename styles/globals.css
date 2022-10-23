@@ -33,7 +33,7 @@ body {
     /* --secondaryColor: #849160; */
     --secondaryColor2: #525c37;
     --secondaryColor3: #849160;
-    --workoutBg: #101700ce;
+    --workoutBg: #394027ca;
     --navLinkColor: #666;
     /* --navLinkColorHover: #1c310c; */
     --navLinkColorHover: #294613;
@@ -186,7 +186,7 @@ body {
 }
 
 .navHamburger2:hover {
-    color: var(--navLinkColorHover)
+    color: var(--secondaryColor);
 }
 
 @media screen and (max-width:800px) {

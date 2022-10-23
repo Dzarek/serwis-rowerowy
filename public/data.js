@@ -9,37 +9,37 @@ import { TiSpannerOutline, TiSpanner } from "react-icons/ti";
 export const navlinks = [
   {
     name: "Strona Główna",
-    link: "",
+    link: "home",
     icon: <MdHome />,
   },
   {
     name: "Serwis Rowerowy",
-    link: "",
+    link: "bikeService",
     icon: <TiSpanner />,
   },
   {
     name: "Serwis Narciarski",
-    link: "",
+    link: "skiService",
     icon: <TiSpannerOutline />,
   },
   {
     name: "Akcesoria",
-    link: "",
+    link: "accesories",
     icon: <MdShoppingBasket />,
   },
   {
     name: "O mnie",
-    link: "",
+    link: "aboutMe",
     icon: <MdPerson />,
   },
   {
     name: "Treningi",
-    link: "",
+    link: "workout",
     icon: <MdDirectionsBike />,
   },
   {
     name: "Kontakt",
-    link: "",
+    link: "contact",
     icon: <MdMail />,
   },
 ];

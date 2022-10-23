@@ -12,7 +12,7 @@ const Workout = () => {
     Aos.init({ duration: 1000, disable: "mobile" });
   }, []);
   return (
-    <Wrapper className="mainPage">
+    <Wrapper id="workout" className="mainPage">
       <div className="title">
         <h1>Treningi</h1>
         <div data-aos="titleWidth"></div>

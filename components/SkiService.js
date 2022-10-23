@@ -15,6 +15,7 @@ const SkiService = () => {
   }, []);
   return (
     <Wrapper
+      id="skiService"
       onMouseEnter={() => setActiveGears(true)}
       onMouseLeave={() => setActiveGears(false)}
     >

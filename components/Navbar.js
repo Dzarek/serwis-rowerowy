@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import Link from "next/link";
-import { animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import React, { useEffect, useState } from "react";
 import { navlinks } from "../public/data";
 
@@ -58,11 +57,18 @@ const Navbar = () => {
           <nav>
             {navlinks.map((item, index) => {
               return (
-                <Link key={index} href="/">
-                  <a>
-                    {item.icon}
-                    {item.name}
-                  </a>
+                <Link
+                  key={index}
+                  to={item.link}
+                  smooth={true}
+                  duration={1000}
+                  activeClass="active"
+                  spy={true}
+                  offset={2}
+                  onClick={handleCloseMenu}
+                >
+                  {item.icon}
+                  {item.name}
                 </Link>
               );
             })}
@@ -142,11 +148,15 @@ const Wrapper = styled.div`
       justify-content: center;
       margin-left: 20%;
       transition: 0.4s;
+      cursor: pointer;
       svg {
         margin-right: 15px;
         color: var(--navLinkColorHover);
       }
       :hover {
+        margin-left: 25%;
+      }
+      &.active {
         margin-left: 25%;
       }
     }

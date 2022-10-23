@@ -262,8 +262,8 @@ const Wrapper = styled.div`
       margin-top: -10vh;
       p {
         font-size: 1.2rem;
-        font-family: var(--titleFont);
-        line-height: 2;
+        /* font-family: var(--titleFont); */
+        line-height: 2.5;
         text-align: justify;
         svg {
           color: var(--secondaryColor);

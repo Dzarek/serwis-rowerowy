@@ -65,7 +65,7 @@ const Wrapper = styled.div`
   width: 100vw;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 10vh 5vw 0;
+  padding: 10vh 5vw 5vh;
   position: relative;
   .title {
     display: flex;

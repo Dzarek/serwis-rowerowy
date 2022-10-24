@@ -110,8 +110,8 @@ const Wrapper = styled.div`
       text-decoration: none;
       color: black;
       color: var(--navLinkColor);
-      margin: 1.5vh 0;
-      /* margin: 0.5vh 0; */
+      /* margin: 1.5vh 0; */
+      margin: 1.2vh 0;
       text-transform: uppercase;
       /* font-weight: 700; */
       letter-spacing: 3px;
@@ -175,6 +175,9 @@ const Wrapper = styled.div`
       font-size: 1.2rem;
       margin-left: 3vw;
       transition: 0.3s;
+      /* font-family: var(--headerContactFont);
+      font-size: 1rem;
+      font-weight: 500; */
       :hover {
         transform: translateY(5px);
       }

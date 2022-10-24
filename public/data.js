@@ -6,6 +6,7 @@ import {
   MdHome,
 } from "react-icons/md";
 import { TiSpannerOutline, TiSpanner } from "react-icons/ti";
+import { GiNewspaper } from "react-icons/gi";
 export const navlinks = [
   {
     name: "Strona Główna",
@@ -36,6 +37,11 @@ export const navlinks = [
     name: "Treningi",
     link: "workout",
     icon: <MdDirectionsBike />,
+  },
+  {
+    name: "Aktualności",
+    link: "news",
+    icon: <GiNewspaper />,
   },
   {
     name: "Kontakt",

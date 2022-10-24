@@ -28,7 +28,7 @@ const Workout = () => {
         </p>
         <h2>Wybierz swój plan treningowy</h2>
         <div className="plans">
-          <section className="easy" data-aos="fade-right">
+          <section className="easy" data-aos="fade-right" data-aos-offset="300">
             <div className="info">
               <h2>
                 Poziom <br /> Początkujący
@@ -42,7 +42,7 @@ const Workout = () => {
               </ul>
             </div>
           </section>
-          <section className="medium" data-aos="fade-up">
+          <section className="medium" data-aos="fade-up" data-aos-offset="300">
             <div className="info">
               <h2>
                 Poziom <br /> Średniozaawansowany
@@ -56,7 +56,7 @@ const Workout = () => {
               </ul>
             </div>
           </section>
-          <section className="hard" data-aos="fade-left">
+          <section className="hard" data-aos="fade-left" data-aos-offset="300">
             <div className="info">
               <h2>
                 Poziom <br /> Zaawansowany

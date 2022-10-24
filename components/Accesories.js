@@ -8,6 +8,7 @@ import {
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
 import { useState } from "react";
+import { SRLWrapper } from "simple-react-lightbox";
 
 const bikeAccesories1 = [
   {
@@ -182,31 +183,35 @@ const Accesories = () => {
             </h4>
           </div>
           {activeCategory === "bike" ? (
-            <div className="items" data-aos="zoom-in" data-aos-delay="300">
-              {activeBikeA.map((item) => {
-                const { id, name, price, img } = item;
-                return (
-                  <div key={id} className="oneItem">
-                    <img src={img} alt={name} />
-                    <h5>{name}</h5>
-                    <span>{price} zł</span>
-                  </div>
-                );
-              })}
-            </div>
+            <SRLWrapper>
+              <div className="items" data-aos="zoom-in" data-aos-delay="300">
+                {activeBikeA.map((item) => {
+                  const { id, name, price, img } = item;
+                  return (
+                    <div key={id} className="oneItem">
+                      <img src={img} alt={name} />
+                      <h5>{name}</h5>
+                      <span>{price} zł</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </SRLWrapper>
           ) : (
-            <div className="items" data-aos="zoom-in" data-aos-delay="300">
-              {skiAccesories.map((item) => {
-                const { id, name, price, img } = item;
-                return (
-                  <div key={id} className="oneItem">
-                    <img src={img} alt={name} />
-                    <h5>{name}</h5>
-                    <span>{price} zł</span>
-                  </div>
-                );
-              })}
-            </div>
+            <SRLWrapper>
+              <div className="items" data-aos="zoom-in" data-aos-delay="300">
+                {skiAccesories.map((item) => {
+                  const { id, name, price, img } = item;
+                  return (
+                    <div key={id} className="oneItem">
+                      <img src={img} alt={name} />
+                      <h5>{name}</h5>
+                      <span>{price} zł</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </SRLWrapper>
           )}
           <div className="pageNumber">
             <MdOutlineKeyboardArrowLeft onClick={handleBack} />

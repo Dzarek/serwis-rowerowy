@@ -35,8 +35,12 @@ const KontaktPage = ({ setVisibleCookie }) => {
               <h4>
                 Email: <span>serwisrowerowy@gmail.com</span>
               </h4>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Facebook: <span>veloway</span>
+              <a
+                href="https://www.facebook.com/PracowniarowerowPiotrSajdak"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook: <span>VeloWay Pracownia Rowerów</span>
               </a>
               <h4>
                 Nr konta: <span>00 0000 0000 0000 0000 0000 0000</span>

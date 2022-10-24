@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 import React, { useEffect, useState } from "react";
 import { navlinks } from "../public/data";
 
-import { HiMenuAlt2 } from "react-icons/hi";
+import { HiMenuAlt2, HiArrowCircleUp } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { MdOutlinePhoneAndroid, MdEmail } from "react-icons/md";
 import { FaFacebookSquare, FaMapMarkerAlt } from "react-icons/fa";
@@ -94,16 +95,24 @@ const Navbar = () => {
               />
             </div>
             <a
-              // href="https://www.facebook.com/Pyszotka-Lipinki-100529712463136/?ti=as"
+              href="https://www.facebook.com/PracowniarowerowPiotrSajdak"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => setContactInfo("serwis rowerowy")}
+              onClick={() => setContactInfo("VeloWay Pracownia Rowerów")}
             >
               <FaFacebookSquare className="icon" />
             </a>
           </div>
           <span className="contactInfo">{contactInfo}</span>
         </div>
+        <button
+          className={offset > 200 ? "upBtn" : "upBtn upBtnNone"}
+          onClick={() => {
+            scroll.scrollToTop();
+          }}
+        >
+          <HiArrowCircleUp />
+        </button>
       </Wrapper>
       {/* ) : null} */}
     </>
@@ -130,6 +139,7 @@ const Wrapper = styled.div`
   }
   nav {
     position: absolute;
+    /* top: 52%; */
     top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -141,7 +151,8 @@ const Wrapper = styled.div`
       /* width: 100%; */
       text-decoration: none;
       font-size: 1.5rem;
-      margin-bottom: 1vh;
+      /* margin-bottom: 1vh; */
+      margin-bottom: 0.7vh;
       color: #222;
       display: flex;
       align-items: center;
@@ -163,14 +174,15 @@ const Wrapper = styled.div`
   }
   .logo {
     position: absolute;
-    top: 15%;
+    /* top: 15%; */
+    top: 13%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 45%;
   }
   .contactWrapper {
     position: absolute;
-    bottom: 8%;
+    bottom: 6%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -186,13 +198,31 @@ const Wrapper = styled.div`
   }
   .contactInfo {
     position: absolute;
-    bottom: 3%;
+    bottom: 1%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     color: #222;
     text-align: center;
     font-size: 1.2rem;
+  }
+  .upBtn {
+    position: fixed;
+    bottom: 3vh;
+    right: 3vw;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    color: var(--titleLine);
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 999;
+    :hover {
+      color: var(--secondaryColor3);
+    }
+  }
+  .upBtnNone {
+    opacity: 0;
   }
 `;
 

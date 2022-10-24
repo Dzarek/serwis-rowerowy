@@ -5,6 +5,7 @@ import AllBikeOffer from "./AllBikeOffer";
 import { BsGearFill } from "react-icons/bs";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { SRLWrapper } from "simple-react-lightbox";
 
 const bgImg = "/images/bikeService/bg.jpg";
 const img1 = "/images/bikeService/1.jpg";
@@ -49,12 +50,14 @@ const BikeService = () => {
         aliquid ea laboriosam quaerat sit hic totam? Nobis nam cupiditate
         quibusdam cumque, aliquam excepturi!
       </p>
-      <div className="imgContainerHorizontal">
-        <img src={img1} alt="" />
-        <img src={img2} alt="" />
-        <img src={img3} alt="" />
-        <img src={img4} alt="" />
-      </div>
+      <SRLWrapper>
+        <div className="imgContainerHorizontal">
+          <img src={img1} alt="" />
+          <img src={img2} alt="" />
+          <img src={img3} alt="" />
+          <img src={img4} alt="" />
+        </div>
+      </SRLWrapper>
       <section className="pakiety">
         <div
           className="onePakiet basic"
@@ -187,6 +190,7 @@ const Wrapper = styled.div`
       object-fit: cover;
       border-radius: 5px;
       box-shadow: 2px 2px 5px 0 #111;
+      cursor: pointer;
     }
   }
   .pakiety {

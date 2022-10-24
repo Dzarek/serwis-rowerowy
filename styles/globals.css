@@ -40,6 +40,7 @@ body {
     --navBgColor: #3c2d25;
     --footerBgColor: #eee6e0;
     --textFont: 'Changa', serif;
+    --headerContactFont: 'Poppins', sans-serif;
     --titleFont: 'Bitter', sans-serif;
     --headerNavFont: 'Rubik Dirt', serif;
     width: 100vw;
@@ -218,6 +219,29 @@ html::-webkit-scrollbar-thumb {
 
 /* Handle on hover */
 html::-webkit-scrollbar-thumb:hover {
+    background: #293c29;
+}
+
+/* SCROOL BAR ARTICLE */
+
+.contentArticle::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+.contentArticle::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.contentArticle::-webkit-scrollbar-thumb {
+    background: #3b4c3b;
+    border: 2px solid #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+.contentArticle::-webkit-scrollbar-thumb:hover {
     background: #293c29;
 }
 

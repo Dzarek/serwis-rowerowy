@@ -22,9 +22,9 @@ const AboutMe = () => {
       </div>
       <div className="content">
         <div className="images">
-          <img src={piotrImg} alt="" data-aos="img1" />
-          <img src={piotrImg3} alt="" data-aos="img2" />
-          <img src={piotrImg2} alt="" data-aos="img3" />
+          <img src={piotrImg} alt="" data-aos="img1" data-aos-offset="300" />
+          <img src={piotrImg3} alt="" data-aos="img2" data-aos-offset="300" />
+          <img src={piotrImg2} alt="" data-aos="img3" data-aos-offset="300" />
         </div>
         <div className="info">
           <p>

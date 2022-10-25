@@ -174,6 +174,7 @@ const Wrapper = styled.div`
     cursor: pointer;
     border-radius: 5px;
     /* border: 1px solid #ddd; */
+
     img {
       height: 100%;
       width: 100%;
@@ -181,9 +182,10 @@ const Wrapper = styled.div`
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      filter: brightness(0.8);
+      filter: brightness(0.7);
       object-fit: cover;
       border-radius: 5px;
+      transition: 0.4s;
     }
     .articleName {
       position: absolute;
@@ -219,6 +221,9 @@ const Wrapper = styled.div`
     :hover svg {
       animation: svgRotate 2s linear infinite;
     }
+    :hover img {
+      filter: brightness(1);
+    }
   }
   .allArticleIcon {
     font-size: 3rem;
@@ -248,8 +253,10 @@ const Wrapper = styled.div`
       color: #eee;
       cursor: pointer;
       transition: 0.4s;
+
       :hover {
         color: var(--secondaryColor);
+        transform: translateX(-50%) rotate(180deg);
       }
     }
     .contentArticle {
@@ -313,6 +320,7 @@ const Wrapper = styled.div`
       z-index: 9999999999999;
       :hover {
         color: var(--secondaryColor);
+        transform: translateX(-50%) rotate(180deg);
       }
     }
     .articles {

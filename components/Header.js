@@ -26,7 +26,7 @@ const Header = () => {
               duration={1000}
               activeClass="active"
               spy={true}
-              offset={2}
+              offset={item.link === "home" ? 0 : 2}
             >
               {item.name}
             </Link>

@@ -156,7 +156,7 @@ const Wrapper = styled.div`
     .contactForm,
     .contactSocialMedia {
       h3 {
-        color: var(--secondaryColor3);
+        color: var(--secondaryColor);
         font-size: 1.5rem;
         text-align: center;
         font-family: var(--titleFont);

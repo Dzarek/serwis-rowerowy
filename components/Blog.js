@@ -203,9 +203,10 @@ const Wrapper = styled.div`
       h3 {
         text-align: center;
         text-transform: uppercase;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 500;
         line-height: 1.5;
+        font-family: var(--headerContactFont);
       }
       svg {
         margin-right: 5px;
@@ -269,7 +270,7 @@ const Wrapper = styled.div`
       transform: translate(-50%, -50%);
       overflow: auto;
       border-radius: 5px;
-      border: 2px solid var(--secondaryColor);
+      border: 2px solid var(--secondaryColor2);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -289,6 +290,7 @@ const Wrapper = styled.div`
         font-size: 1.8rem;
         color: var(--secondaryColor2);
         padding: 0 3vw;
+        font-family: var(--headerContactFont);
       }
       p {
         padding: 0 20px 20px;

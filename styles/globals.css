@@ -9,6 +9,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600;700&display=swap');
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap');
+/* font-family: 'Genos', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -29,17 +41,22 @@ body {
     --appBgColor: #222;
     --primaryColor: rgb(243, 243, 243);
     --bikeBg: rgb(249, 249, 249);
-    --secondaryColor: #77886b;
-    /* --secondaryColor: #849160; */
-    --secondaryColor2: #525c37;
+    /* --secondaryColor: #65996e; */
+    /* --secondaryColor: #77886b; */
+    --secondaryColor: #8faf99;
+    /* --secondaryColor2: #525c37; */
+    --secondaryColor2: #3d5844;
     --secondaryColor3: #849160;
+    --secondaryColor3: #609174;
+
     --workoutBg: #394027ca;
+    --workoutBg: #35493aca;
     --navLinkColor: #666;
-    /* --navLinkColorHover: #1c310c; */
     --navLinkColorHover: #294613;
-    --navBgColor: #3c2d25;
-    --footerBgColor: #eee6e0;
+    --navLinkColorHover: #3d5844;
+
     --textFont: 'Changa', serif;
+    --headerContactFont: 'Barlow Semi Condensed', sans-serif;
     --headerContactFont: 'Poppins', sans-serif;
     --titleFont: 'Bitter', sans-serif;
     --headerNavFont: 'Rubik Dirt', serif;

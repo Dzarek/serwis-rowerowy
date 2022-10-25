@@ -112,7 +112,7 @@ const Wrapper = styled.div`
     transition: 0.5s;
     :hover {
       transform: translateX(-50%) rotate(180deg);
-      color: var(--secondaryColor);
+      color: var(--secondaryColor3);
     }
   }
   .bikeImg {
@@ -124,7 +124,7 @@ const Wrapper = styled.div`
     /* align-self: center; */
     /* filter: saturate(0.7); */
     margin-bottom: 5vh;
-    border: 2px solid var(--secondaryColor);
+    border: 2px solid var(--secondaryColor3);
     border-radius: 5px;
     animation: partColor 1s ease-in infinite alternate;
     @keyframes partColor {
@@ -140,7 +140,7 @@ const Wrapper = styled.div`
     transform: translateX(-50%);
     font-size: 2rem;
     text-transform: uppercase;
-    color: var(--navLinkColorHover);
+    color: var(--secondaryColor3);
     text-align: center;
   }
   .accordion__panel {
@@ -162,7 +162,7 @@ const Wrapper = styled.div`
     width: 35vw;
     padding: 1vh 2vw;
     background: #fff;
-    border: 2px solid var(--secondaryColor);
+    border: 2px solid var(--secondaryColor3);
     border-radius: 5px;
     margin-bottom: 1vh;
     header {
@@ -184,7 +184,7 @@ const Wrapper = styled.div`
         background: transparent;
         border: none;
         font-size: 2.5rem;
-        color: var(--secondaryColor);
+        color: var(--secondaryColor3);
         display: flex;
         align-items: center;
         cursor: pointer;
@@ -218,7 +218,7 @@ const Wrapper = styled.div`
           margin: 0 5px 10px;
         }
         span {
-          color: var(--secondaryColor);
+          color: var(--secondaryColor3);
           font-weight: 700;
           font-size: 1.2rem;
         }

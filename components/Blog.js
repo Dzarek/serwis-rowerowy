@@ -128,7 +128,8 @@ const Blog = () => {
 
 const Wrapper = styled.div`
   padding-bottom: 10vh;
-  background: #111;
+  /* background: #111; */
+  background: rgba(0, 0, 0, 0.4);
   .title {
     display: flex;
     flex-direction: column;
@@ -166,6 +167,11 @@ const Wrapper = styled.div`
   }
   .arrow {
     font-size: 2rem;
+    cursor: pointer;
+    transition: 0.4s;
+    :hover {
+      color: var(--secondaryColor);
+    }
   }
   .oneArticle {
     position: relative;
@@ -173,7 +179,7 @@ const Wrapper = styled.div`
     width: 25vw;
     cursor: pointer;
     border-radius: 5px;
-    /* border: 1px solid #ddd; */
+    border: 1px solid #ddd;
 
     img {
       height: 100%;
@@ -209,7 +215,7 @@ const Wrapper = styled.div`
         font-family: var(--headerContactFont);
       }
       svg {
-        margin-right: 5px;
+        margin-right: 10px;
         font-size: 2rem;
         flex-shrink: 0;
       }
@@ -300,7 +306,10 @@ const Wrapper = styled.div`
     }
   }
   .allArticles {
-    background: rgba(20, 20, 20, 0.98);
+    /* background: rgba(20, 20, 20, 0.98); */
+    background-image: url("/images/mainBg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
     z-index: 9999991;
     position: fixed;
     width: 100vw;

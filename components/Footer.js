@@ -31,6 +31,7 @@ const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
   border-top: 1px solid #555;
+  background: rgba(0, 0, 0, 0.4);
   p {
     text-align: center;
     width: 100%;

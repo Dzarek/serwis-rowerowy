@@ -175,13 +175,16 @@ const Wrapper = styled.div`
       text-decoration: none;
       font-size: 1.2rem;
       margin-left: 3vw;
-      /* margin-left: 2vw; */
+      margin-left: 2vw;
       transition: 0.3s;
-      /* font-family: var(--headerContactFont);
+      font-family: var(--headerContactFont);
       font-size: 1.4rem;
-      font-weight: 600; */
+      font-weight: 600;
       :hover {
         transform: translateY(5px);
+      }
+      @media screen and (max-width: 1700px) {
+        font-size: 1.3rem;
       }
     }
   }

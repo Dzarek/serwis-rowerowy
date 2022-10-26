@@ -7,7 +7,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { SRLWrapper } from "simple-react-lightbox";
 
-const bgImg = "/images/bikeService/bg.jpg";
+// const bgImg = "/images/mainBg.png";
 const img1 = "/images/bikeService/1.jpg";
 const img2 = "/images/bikeService/2.jpg";
 const img3 = "/images/bikeService/3.jpg";
@@ -162,6 +162,10 @@ const BikeService = () => {
 };
 
 const Wrapper = styled.div`
+  /* background-image: url(${bgImg});
+  background-size: cover; */
+  background-color: var(--appBgColor);
+  padding-bottom: 5vh;
   .title {
     [data-aos="titleWidth"] {
       width: 0;

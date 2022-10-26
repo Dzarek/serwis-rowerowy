@@ -238,6 +238,7 @@ const Accesories = () => {
 };
 
 const Wrapper = styled.div`
+  background-color: var(--appBgColor);
   padding-bottom: 5vh;
   .title {
     display: flex;

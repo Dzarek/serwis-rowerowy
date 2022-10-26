@@ -38,26 +38,31 @@ body {
 
 
 .app {
-    --appBgColor: #222;
+    /* --appBgColor: #222; */
     --primaryColor: rgb(243, 243, 243);
+    /* --appBgColor: rgb(29, 36, 33); */
+    --appBgColor: rgba(27, 50, 32, 0.163);
+    /* --appBgColor: rgba(43, 68, 43, 0.163); */
+    /* --primaryColor: #222; */
+
     --bikeBg: rgb(249, 249, 249);
     /* --secondaryColor: #65996e; */
     /* --secondaryColor: #77886b; */
     --secondaryColor: #8faf99;
     /* --secondaryColor2: #525c37; */
     --secondaryColor2: #3d5844;
-    --secondaryColor3: #849160;
+    /* --secondaryColor3: #849160; */
     --secondaryColor3: #609174;
 
-    --workoutBg: #394027ca;
+    /* --workoutBg: #394027ca; */
     --workoutBg: #35493aca;
     --navLinkColor: #666;
-    --navLinkColorHover: #294613;
+    /* --navLinkColorHover: #294613; */
     --navLinkColorHover: #3d5844;
 
     --textFont: 'Changa', serif;
+    /* --headerContactFont: 'Poppins', sans-serif; */
     --headerContactFont: 'Barlow Semi Condensed', sans-serif;
-    --headerContactFont: 'Poppins', sans-serif;
     --titleFont: 'Bitter', sans-serif;
     --headerNavFont: 'Rubik Dirt', serif;
     width: 100vw;
@@ -66,6 +71,10 @@ body {
     color: var(--primaryColor);
     font-family: var(--textFont);
     position: relative;
+    background-image: url('/images/mainBg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 
 
@@ -100,6 +109,7 @@ body {
     color: var(--secondaryColor);
     text-transform: uppercase;
     letter-spacing: 5px;
+    /* font-family: var(--headerContactFont); */
 }
 
 .title div {

@@ -79,6 +79,9 @@ const AllBikeOffer = ({ setShowAllBikeOffer }) => {
 
 const Wrapper = styled.div`
   background: var(--bikeBg);
+  background-image: url("/images/mainBg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   /* background: #222; */
   z-index: 999999999999999;
   position: fixed;
@@ -89,9 +92,9 @@ const Wrapper = styled.div`
   transition: 1s;
   overflow-x: hidden;
   overflow-y: auto;
-  background-image: url(${bgPrices});
-  background-repeat: repeat;
-  background-size: 15vw;
+  /* background-image: url(${bgPrices}); */
+  /* background-repeat: repeat;
+  background-size: 15vw; */
   .content {
     width: 100vw;
     min-height: 100vh;
@@ -100,6 +103,7 @@ const Wrapper = styled.div`
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
+    background-color: var(--appBgColor);
   }
   .closeIcon {
     position: absolute;
@@ -107,7 +111,8 @@ const Wrapper = styled.div`
     left: 50%;
     transform: translateX(-50%);
     font-size: 4rem;
-    color: var(--navLinkColorHover);
+    /* color: var(--navLinkColorHover); */
+    color: var(--secondaryColor);
     cursor: pointer;
     transition: 0.5s;
     :hover {
@@ -140,7 +145,8 @@ const Wrapper = styled.div`
     transform: translateX(-50%);
     font-size: 2rem;
     text-transform: uppercase;
-    color: var(--secondaryColor3);
+    /* color: var(--secondaryColor3); */
+    color: var(--secondaryColor);
     text-align: center;
   }
   .accordion__panel {
@@ -230,7 +236,7 @@ const Wrapper = styled.div`
     bottom: 5%;
     left: 50%;
     /* transform: translateX(-50%); */
-    color: #111;
+    /* color: #111; */
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */

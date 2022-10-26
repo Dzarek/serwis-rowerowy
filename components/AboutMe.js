@@ -61,7 +61,7 @@ const AboutMe = () => {
 };
 
 const Wrapper = styled.div`
-  background: #333;
+  /* background: #333; */
   width: 100vw;
   min-height: 100vh;
   margin: 0 auto;

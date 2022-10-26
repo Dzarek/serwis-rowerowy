@@ -120,6 +120,9 @@ const Navbar = () => {
 };
 
 const Wrapper = styled.div`
+  background-image: url("/images/mainBg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   .navNone {
     display: none;
   }

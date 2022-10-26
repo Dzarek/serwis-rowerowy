@@ -95,7 +95,7 @@ const SkiService = () => {
 const Wrapper = styled.div`
   min-height: 100vh;
   width: 100vw;
-  margin: 15vh auto 0;
+  margin: 0vh auto 0;
   padding: 10vh 0;
   position: relative;
   .title {
@@ -128,7 +128,7 @@ const Wrapper = styled.div`
     opacity: 0;
     transition-property: opacity;
     &.aos-animate {
-      opacity: 0.2;
+      opacity: 0.3;
     }
   }
   .firstInfo {

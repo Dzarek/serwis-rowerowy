@@ -78,6 +78,7 @@ const Workout = () => {
 
 const Wrapper = styled.div`
   padding-bottom: 5vh;
+  background-color: var(--appBgColor);
   .title {
     display: flex;
     flex-direction: column;

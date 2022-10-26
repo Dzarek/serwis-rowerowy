@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
-// import FirstInfo from "../components/FirstInfo";
 import BikeService from "../components/BikeService";
 import SkiService from "../components/SkiService";
 import Accesories from "../components/Accesories";
@@ -24,7 +23,6 @@ export default function Home() {
       </Head>
       <Header />
       <Navbar />
-      {/* <FirstInfo /> */}
       <BikeService />
       <SkiService />
       <Accesories />

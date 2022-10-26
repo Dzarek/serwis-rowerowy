@@ -77,6 +77,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
   padding: 10vh 0 5vh;
   position: relative;
+  background: rgba(0, 0, 0, 0.2);
   @media screen and (max-width: 800px) {
     padding-top: 0;
   }

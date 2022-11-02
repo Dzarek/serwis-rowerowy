@@ -53,6 +53,10 @@ body {
     --secondaryColor2: #3d5844;
     /* --secondaryColor3: #849160; */
     --secondaryColor3: #609174;
+    --secondaryColor99: #94b899;
+    /* --secondaryColor99: #95c4a9; */
+
+
 
     /* --workoutBg: #394027ca; */
     --workoutBg: #35493aca;
@@ -136,6 +140,7 @@ body {
 
 .icon {
     color: var(--navLinkColorHover);
+    /* color: var(--secondaryColor99); */
     margin-right: 10px;
 }
 

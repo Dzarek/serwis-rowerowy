@@ -8,7 +8,7 @@ import { navlinks } from "../public/data";
 import { Link } from "react-scroll";
 // import { animateScroll as scroll } from "react-scroll";
 
-const headerBg = "/images/homepage/headerBg.jpg";
+const headerBg = "/images/homepage/headerBg4.jpg";
 const logoWhite = "/images/veloway-logoWhite.png";
 
 const Header = () => {
@@ -71,6 +71,8 @@ const Wrapper = styled.div`
   background-position: center 70%;
   background-size: cover;
   position: relative;
+  /* border-bottom: 5px solid #444; */
+  box-shadow: 0px 50px 100px #111;
   .overlay {
     width: 100vw;
     height: 100vh;
@@ -93,14 +95,16 @@ const Wrapper = styled.div`
     position: absolute;
     top: 5%;
     left: 4%;
+
     /* transform: translate(-50%, -50%); */
     width: 25vw;
     opacity: 0.8;
+    opacity: 0.6;
   }
   nav {
     position: absolute;
     top: 50%;
-    right: 11%;
+    right: 9%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -109,8 +113,9 @@ const Wrapper = styled.div`
       font-size: 1.8rem;
       font-size: 2.2rem;
       text-decoration: none;
-      color: black;
-      color: var(--navLinkColor);
+      /* color: var(--navLinkColor); */
+      /* color: #eee; */
+      color: #ccc;
       /* margin: 1.5vh 0; */
       margin: 1.2vh 0;
       text-transform: uppercase;
@@ -121,10 +126,12 @@ const Wrapper = styled.div`
       font-family: var(--headerNavFont);
       cursor: pointer;
       &.active {
-        color: var(--navLinkColorHover);
+        /* color: var(--navLinkColorHover); */
+        color: var(--secondaryColor99);
       }
       :hover {
-        color: var(--navLinkColorHover);
+        /* color: var(--navLinkColorHover); */
+        color: var(--secondaryColor99);
       }
       /* :nth-child(1) {
         color: var(--navLinkColorHover);
@@ -137,6 +144,7 @@ const Wrapper = styled.div`
     left: 50%;
     transform: translateX(-50%);
     color: #444;
+    color: #ccc;
     font-size: 3.5rem;
     animation: arrowLower 2s ease infinite;
     @keyframes arrowLower {
@@ -156,7 +164,8 @@ const Wrapper = styled.div`
     position: absolute;
     bottom: 2%;
     right: 5%;
-    color: white;
+    /* color: white; */
+    color: #eee;
     text-shadow: 1px 1px 1px black;
     font-size: 1.2rem;
     font-style: italic;
@@ -171,7 +180,8 @@ const Wrapper = styled.div`
     div {
       display: flex;
       align-items: center;
-      color: #111;
+      /* color: #111; */
+      color: #eee;
       text-decoration: none;
       font-size: 1.2rem;
       margin-left: 3vw;
@@ -187,6 +197,11 @@ const Wrapper = styled.div`
         font-size: 1.3rem;
       }
     }
+  }
+  .icon {
+    /* color: var(--navLinkColorHover); */
+    color: var(--secondaryColor99);
+    margin-right: 10px;
   }
 `;
 

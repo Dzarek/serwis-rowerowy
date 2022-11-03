@@ -8,7 +8,7 @@ import { navlinks } from "../public/data";
 import { Link } from "react-scroll";
 // import { animateScroll as scroll } from "react-scroll";
 
-const headerBg = "/images/homepage/headerBg4.jpg";
+const headerBg = "/images/homepage/headerBg5.jpg";
 const logoWhite = "/images/veloway-logoWhite.png";
 
 const Header = () => {
@@ -131,7 +131,7 @@ const Wrapper = styled.div`
       }
       :hover {
         /* color: var(--navLinkColorHover); */
-        color: var(--secondaryColor99);
+        color: var(--secondaryColor4);
       }
       /* :nth-child(1) {
         color: var(--navLinkColorHover);

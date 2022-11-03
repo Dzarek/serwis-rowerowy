@@ -34,10 +34,7 @@ const Header = () => {
         })}
       </nav>
       <HiChevronDoubleDown className="headerArrow" />
-      <p className="cytat">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
-        laboriosam!
-      </p>
+      <p className="cytat">Pracuj w ciszy, niech efekty robią hałas!</p>
       <div className="contactWrapper">
         <div>
           <FaMapMarkerAlt className="icon" />
@@ -163,17 +160,19 @@ const Wrapper = styled.div`
   .cytat {
     position: absolute;
     bottom: 2%;
-    right: 5%;
+    /* right: 5%; */
+    right: 7%;
     /* color: white; */
     color: #eee;
     text-shadow: 1px 1px 1px black;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
     font-style: italic;
   }
   .contactWrapper {
     position: absolute;
     top: 2%;
-    right: 5%;
+    right: 7%;
     display: flex;
     align-items: center;
     a,

@@ -4,7 +4,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-const bgImg = "/images/contact/bg.jpg";
+const bgImg = "/images/contact/bg2.jpg";
 
 const KontaktPage = ({ setVisibleCookie }) => {
   useEffect(() => {
@@ -91,7 +91,7 @@ const Wrapper = styled.div`
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    opacity: 0.2;
+    opacity: 0.25;
   }
   header {
     position: relative;

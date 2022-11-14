@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import BikeService from "../components/BikeService";
 import SkiService from "../components/SkiService";
-import Accesories from "../components/Accesories";
+// import Accesories from "../components/Accesories";
 import AboutMe from "../components/AboutMe";
 import Workout from "../components/Workout";
 import Blog from "../components/Blog";
@@ -25,7 +25,7 @@ export default function Home() {
       <Navbar />
       <BikeService />
       <SkiService />
-      <Accesories />
+      {/* <Accesories /> */}
       <AboutMe />
       <Workout />
       <Blog />

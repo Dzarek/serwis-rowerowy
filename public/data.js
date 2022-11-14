@@ -1,6 +1,6 @@
 import {
   MdDirectionsBike,
-  MdShoppingBasket,
+  // MdShoppingBasket,
   MdPerson,
   MdMail,
   MdHome,
@@ -23,11 +23,11 @@ export const navlinks = [
     link: "skiService",
     icon: <TiSpannerOutline />,
   },
-  {
-    name: "Akcesoria",
-    link: "accesories",
-    icon: <MdShoppingBasket />,
-  },
+  // {
+  //   name: "Akcesoria",
+  //   link: "accesories",
+  //   icon: <MdShoppingBasket />,
+  // },
   {
     name: "O mnie",
     link: "aboutMe",

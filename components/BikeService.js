@@ -43,12 +43,13 @@ const BikeService = () => {
         <div data-aos="titleWidth"></div>
       </div>
       <p className="bikeMainInfo">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae aperiam
-        cumque ad nesciunt pariatur temporibus, voluptatum quidem rerum laborum
-        quas reiciendis? Laudantium tenetur magnam possimus quia voluptas
-        officia nisi ad vel facilis consequuntur, asperiores corporis eum
-        aliquid ea laboriosam quaerat sit hic totam? Nobis nam cupiditate
-        quibusdam cumque, aliquam excepturi!
+        Veloway to przestrzeń w której zajmujemy się kompleksową obsługą waszych
+        rowerów. Zależnie od potrzeb oferujemy przeglądy zarówno podstawowe jak
+        i rozszerzone. Zajmujemy się serwisem oraz naprawą wszystkich elementów
+        składowych roweru. Nasza wiedza oraz praktyka pozwala na wykonanie
+        napraw i usług indywidualnych których często wymagają wasze rowery.
+        Wykonane naprawy poprzedzone są diagnozą która daje możliwość
+        dopasowania usługi do Waszych potrzeb. <br /> Zapraszamy!
       </p>
       <SRLWrapper>
         <div className="imgContainerHorizontal">
@@ -177,7 +178,7 @@ const Wrapper = styled.div`
   }
   .bikeMainInfo {
     margin: 10vh auto 0;
-    width: 50vw;
+    width: 65vw;
     text-align: center;
     font-size: 1.1rem;
   }

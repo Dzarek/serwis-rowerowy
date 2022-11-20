@@ -11,10 +11,8 @@ import {
 } from "react-icons/md";
 import { CgMenuGridR } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
-
-const piastaImg = "/images/blog/piasta.jpg";
-const notatkaImg = "/images/blog/notatka.png";
-const logoImg = "/logo192.png";
+import { FaSmileWink } from "react-icons/fa";
+import { blogArticles } from "../public/data";
 
 const Blog = () => {
   const [showArticle, setShowArticle] = useState(false);
@@ -22,15 +20,16 @@ const Blog = () => {
   useEffect(() => {
     Aos.init({ duration: 1000, disable: "mobile" });
   }, []);
+  console.log(showArticle);
   return (
     <Wrapper className="mainPage" id="news">
       <div className="title">
         <h1>Aktualności</h1>
         <div data-aos="titleWidth"></div>
       </div>
-      {/* <div className="content"> */}
       <h2>
-        Interesuje Cię świat rowerów? Zapraszam do lektury katolickiej prasy ;)
+        Interesuje Cię świat rowerów? Zapraszam do lektury moich artykułów{" "}
+        <FaSmileWink />
       </h2>
       <Carousel
         className="carousel"
@@ -44,15 +43,24 @@ const Blog = () => {
         arrowLeft={<MdOutlineArrowBackIos className="arrow" />}
         arrowRight={<MdOutlineArrowForwardIos className="arrow" />}
       >
-        <div className="oneArticle" onClick={() => setShowArticle(true)}>
-          <img src={piastaImg} alt="" />
-          <div className="articleName">
-            <GiCartwheel />
-            <h3>piasta wielobiegowa Kindernay</h3>
-          </div>
-        </div>
+        {blogArticles.map((article, index) => {
+          const { title, image, date } = article;
+          return (
+            <div
+              key={index}
+              className="oneArticle"
+              onClick={() => setShowArticle(article)}
+            >
+              <img src={image} alt={title} />
+              <span>{date}</span>
+              <div className="articleName">
+                <GiCartwheel />
+                <h3>{title}</h3>
+              </div>
+            </div>
+          );
+        })}
       </Carousel>
-      {/* </div> */}
       <CgMenuGridR
         className="allArticleIcon"
         onClick={() => setShowAllArticles(true)}
@@ -61,19 +69,11 @@ const Blog = () => {
         <div className="fullArticle">
           <IoClose onClick={() => setShowArticle(false)} />
           <div className="contentArticle">
-            <img src={piastaImg} alt="" />
-            <h3>piasta wielobiegowa Kindernay</h3>
-            <p>
-              Nieszablonowe i rzadkie rozwiązania na serwisie zawsze wzbudzają
-              zachwyt i zaciekawienie. Tym razem zagościła u nas piasta
-              wielobiegowa norweskiej marki Kindernay Mechanizm zamontowany jest
-              w „klatce” która umożliwia sprawne żąglowanie między kołami,
-              piasta wyposażona w sprzęgło które czyni indeksację subtelną a
-              całość sterowana jest hydraulicznie za pomocą aluminiowej manetki
-              o niebanalnym kształcie. Zestaw ten montowaliśmy w mocno
-              customowym rowerze elektrycznym niemieckiej manufaktury Exess co
-              stworzyło sprzęt do walki z najcięższym górskim terenem.
-            </p>
+            <img src={showArticle.image} alt="" />
+            <h3>{showArticle.title}</h3>
+            {showArticle.text.map((info, index) => {
+              return <p key={index}>{info}</p>;
+            })}
           </div>
         </div>
       )}
@@ -84,41 +84,23 @@ const Blog = () => {
             onClick={() => setShowAllArticles(false)}
           />
           <div className="articles">
-            <div className="oneArticle" onClick={() => setShowArticle(true)}>
-              <img src={piastaImg} alt="" />
-              <div className="articleName">
-                <GiCartwheel />
-                <h3>piasta wielobiegowa Kindernay</h3>
-              </div>
-            </div>
-            <div className="oneArticle" onClick={() => setShowArticle(true)}>
-              <img src={piastaImg} alt="" />
-              <div className="articleName">
-                <GiCartwheel />
-                <h3>piasta wielobiegowa Kindernay</h3>
-              </div>
-            </div>
-            <div className="oneArticle" onClick={() => setShowArticle(true)}>
-              <img src={piastaImg} alt="" />
-              <div className="articleName">
-                <GiCartwheel />
-                <h3>piasta wielobiegowa Kindernay</h3>
-              </div>
-            </div>
-            <div className="oneArticle" onClick={() => setShowArticle(true)}>
-              <img src={piastaImg} alt="" />
-              <div className="articleName">
-                <GiCartwheel />
-                <h3>piasta wielobiegowa Kindernay</h3>
-              </div>
-            </div>
-            <div className="oneArticle" onClick={() => setShowArticle(true)}>
-              <img src={piastaImg} alt="" />
-              <div className="articleName">
-                <GiCartwheel />
-                <h3>piasta wielobiegowa Kindernay</h3>
-              </div>
-            </div>
+            {blogArticles.map((article, index) => {
+              const { title, image, date } = article;
+              return (
+                <div
+                  key={index}
+                  className="oneArticle"
+                  onClick={() => setShowArticle(article)}
+                >
+                  <img src={image} alt={title} />
+                  <span>{date}</span>
+                  <div className="articleName">
+                    <GiCartwheel />
+                    <h3>{title}</h3>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       )}
@@ -153,6 +135,10 @@ const Wrapper = styled.div`
     margin: 10vh auto 0;
     font-size: 1.2rem;
     font-weight: 400;
+    svg {
+      margin-left: 10px;
+      font-size: 1.5rem;
+    }
   }
   /* .content {
     width: 90vw;
@@ -180,7 +166,21 @@ const Wrapper = styled.div`
     cursor: pointer;
     border-radius: 5px;
     border: 1px solid #ddd;
-
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 5px 15px;
+      border-radius: 0 0 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ccc;
+      color: var(--secondaryColor2);
+      font-size: 1rem;
+      z-index: 2;
+      font-weight: 600;
+    }
     img {
       height: 100%;
       width: 100%;
@@ -290,6 +290,7 @@ const Wrapper = styled.div`
         height: 50vh;
         object-fit: cover;
       }
+
       h3 {
         margin: 5vh auto;
         text-transform: uppercase;
@@ -299,9 +300,10 @@ const Wrapper = styled.div`
         font-family: var(--headerContactFont);
       }
       p {
-        padding: 0 20px 20px;
+        padding: 0 20px;
         text-align: justify;
         font-size: 1.1rem;
+        margin-bottom: 20px;
       }
     }
   }

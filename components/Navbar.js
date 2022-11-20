@@ -7,7 +7,11 @@ import { navlinks } from "../public/data";
 import { HiMenuAlt2, HiArrowCircleUp } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { MdOutlinePhoneAndroid, MdEmail } from "react-icons/md";
-import { FaFacebookSquare, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaFacebookSquare,
+  FaMapMarkerAlt,
+  FaInstagramSquare,
+} from "react-icons/fa";
 
 const logoImg = "/images/veloway-logo.png";
 
@@ -91,7 +95,7 @@ const Navbar = () => {
             <div>
               <MdEmail
                 className="icon"
-                onClick={() => setContactInfo("serwisrowerowy@gmail.com")}
+                onClick={() => setContactInfo("piotr.j.sajdak@gmail.com")}
               />
             </div>
             <a
@@ -101,6 +105,14 @@ const Navbar = () => {
               onClick={() => setContactInfo("VeloWay Pracownia Rowerów")}
             >
               <FaFacebookSquare className="icon" />
+            </a>
+            <a
+              href="https://www.facebook.com/PracowniarowerowPiotrSajdak"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setContactInfo("VeloWay Pracownia Rowerów")}
+            >
+              <FaInstagramSquare className="icon" />
             </a>
           </div>
           <span className="contactInfo">{contactInfo}</span>
@@ -155,7 +167,7 @@ const Wrapper = styled.div`
       text-decoration: none;
       font-size: 1.5rem;
       /* margin-bottom: 1vh; */
-      margin-bottom: 0.7vh;
+      margin-bottom: 0.9vh;
       color: #222;
       display: flex;
       align-items: center;
@@ -189,7 +201,7 @@ const Wrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    width: 60%;
+    width: 65%;
     justify-content: space-between;
     a,
     div {

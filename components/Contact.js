@@ -33,7 +33,7 @@ const KontaktPage = ({ setVisibleCookie }) => {
                 Telefon: <span>798 867 716</span>
               </a>
               <h4>
-                Email: <span>serwisrowerowy@gmail.com</span>
+                Email: <span>piotr.j.sajdak@gmail.com</span>
               </h4>
               <a
                 href="https://www.facebook.com/PracowniarowerowPiotrSajdak"
@@ -42,20 +42,29 @@ const KontaktPage = ({ setVisibleCookie }) => {
               >
                 Facebook: <span>VeloWay Pracownia Rowerów</span>
               </a>
-              <h4>
-                Nr konta: <span>00 0000 0000 0000 0000 0000 0000</span>
-              </h4>
+              <a
+                href="https://www.facebook.com/PracowniarowerowPiotrSajdak"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram: <span>VeloWay Pracownia Rowerów</span>
+              </a>
               <h4>
                 Adres: <span>ul. Długa 48, 33-170 Tuchów</span>
               </h4>
-            </div>
-            {/* <div className="bankInfo">
-              <h3>Dane do przelewu:</h3>
-              <h4 className="bankInfoName">VeloWay - Pracownia Rowerów</h4>
               <h4>
-                Nr konta: <span>00 0000 0000 0000 0000 0000 0000</span>
+                NIP: <span>993 06 90 883</span>
               </h4>
-            </div> */}
+            </div>
+            <div className="bankInfo">
+              <h3>Dane do przelewu:</h3>
+              <h4 className="bankInfoName">
+                Bank: <span>Santander Bank Polska SA</span>
+              </h4>
+              <h4>
+                Nr konta: <span>26 1090 2590 0000 0001 5167 1348</span>
+              </h4>
+            </div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10278.969913076555!2d21.0485635!3d49.9036379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x24e5f320a27d27cc!2sVeloWay%20Pracownia%20i%20Serwis%20Rowerowy!5e0!3m2!1spl!2spl!4v1666475935085!5m2!1spl!2spl"
               className="map"
@@ -189,8 +198,8 @@ const Wrapper = styled.div`
     margin-top: 3vh;
     a,
     h4 {
-      font-size: 1.5rem;
-      margin: 2vh 5vw;
+      font-size: 1.4rem;
+      margin: 1vh 5vw;
       font-weight: 500;
       text-decoration: none;
       color: var(--primaryColor);
@@ -210,7 +219,8 @@ const Wrapper = styled.div`
   .bankInfo {
     margin-top: 4vh;
     h4 {
-      font-size: 1.3rem;
+      text-shadow: 2px 2px 2px #000;
+      font-size: 1.4rem;
       margin: 2vh 5vw;
       font-weight: 500;
       @media screen and (max-width: 800px) {

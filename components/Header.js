@@ -2,7 +2,11 @@ import styled from "styled-components";
 // import Link from "next/link";
 import { HiChevronDoubleDown } from "react-icons/hi";
 import { MdOutlinePhoneAndroid, MdEmail } from "react-icons/md";
-import { FaFacebookSquare, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaFacebookSquare,
+  FaMapMarkerAlt,
+  FaInstagramSquare,
+} from "react-icons/fa";
 // import { TiSpanner } from "react-icons/ti";
 import { navlinks } from "../public/data";
 import { Link } from "react-scroll";
@@ -46,16 +50,24 @@ const Header = () => {
         </a>
         <div>
           <MdEmail className="icon" />
-          <p>serwisrowerowy@gmail.com</p>
+          <p>piotr.j.sajdak@gmail.com</p>
         </div>
-        {/* <a
-          // href="https://www.facebook.com/Pyszotka-Lipinki-100529712463136/?ti=as"
+        <a
+          href="https://www.facebook.com/PracowniarowerowPiotrSajdak"
           target="_blank"
           rel="noopener noreferrer"
+          className="fbIn"
         >
           <FaFacebookSquare className="icon" />
-          <p>serwis rowerowy</p>
-        </a> */}
+        </a>
+        <a
+          href="https://www.facebook.com/PracowniarowerowPiotrSajdak"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fbIn"
+        >
+          <FaInstagramSquare className="icon" />
+        </a>
       </div>
     </Wrapper>
   );
@@ -182,8 +194,6 @@ const Wrapper = styled.div`
       /* color: #111; */
       color: #eee;
       text-decoration: none;
-      font-size: 1.2rem;
-      margin-left: 3vw;
       margin-left: 2vw;
       transition: 0.3s;
       font-family: var(--headerContactFont);
@@ -191,6 +201,24 @@ const Wrapper = styled.div`
       font-weight: 600;
       :hover {
         transform: translateY(5px);
+      }
+      @media screen and (max-width: 1700px) {
+        font-size: 1.3rem;
+      }
+    }
+    .fbIn {
+      display: flex;
+      align-items: center;
+      color: #eee;
+      text-decoration: none;
+      margin-left: 3vw;
+      transition: 0.3s;
+      font-size: 1.6rem;
+      :hover {
+        transform: translateY(5px);
+      }
+      :nth-of-type(3) {
+        margin-left: 1vw;
       }
       @media screen and (max-width: 1700px) {
         font-size: 1.3rem;

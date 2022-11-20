@@ -93,7 +93,7 @@ const BikeService = () => {
               smarowanie napędu
             </li>
           </ul>
-          <span>od 100 zł</span>
+          <span>120 zł</span>
         </div>
         <TiSpanner className={iconClass} />
         <div
@@ -144,7 +144,7 @@ const BikeService = () => {
               czyszczenie i smarowanie układu napędowego
             </li>
           </ul>
-          <span>od 220 zł</span>
+          <span>250 zł</span>
         </div>
       </section>
       <button

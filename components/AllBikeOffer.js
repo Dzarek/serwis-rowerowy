@@ -53,7 +53,7 @@ const AllBikeOffer = ({ setShowAllBikeOffer }) => {
                             <li key={index}>
                               <p>{info}</p>
                               <div></div>
-                              <span>od {price} zł</span>
+                              <span>{price} zł</span>
                             </li>
                           );
                         })}

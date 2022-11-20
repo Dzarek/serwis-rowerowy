@@ -7,8 +7,10 @@ import { MdEngineering, MdPostAdd } from "react-icons/md";
 import { HiLightBulb } from "react-icons/hi";
 import { FaGraduationCap } from "react-icons/fa";
 import { BsCameraFill } from "react-icons/bs";
+import { FaSmileWink, FaSmileBeam } from "react-icons/fa";
 
 const piotrImg = "/images/aboutUs/Piotrek.jpg";
+const piotr2Img = "/images/aboutUs/Piotrek2.jpg";
 const sylwiaImg = "/images/aboutUs/Sylwia.jpg";
 
 const AboutMe = () => {
@@ -22,12 +24,13 @@ const AboutMe = () => {
         <div data-aos="titleWidth"></div>
       </div>
       <div className="content">
-        <img
-          src={piotrImg}
-          alt=""
-          data-aos="fade-right"
-          data-aos-offset="300"
-        />
+        <div
+          // src={piotrImg}
+          // alt=""
+          className="imgPiotr"
+          // data-aos="fade-right"
+          // data-aos-offset="300"
+        ></div>
         <div className="info">
           <p>
             Piotrek z rowerami spędził ponad połowę swojego życia. Na codzień
@@ -64,8 +67,8 @@ const AboutMe = () => {
         <img
           src={sylwiaImg}
           alt=""
-          data-aos="fade-left"
-          data-aos-offset="300"
+          data-aos="zoom-in"
+          // data-aos-offset="300"
         />
         <div className="info">
           <p>
@@ -73,9 +76,9 @@ const AboutMe = () => {
             uwieczniając kolarską rywalizację, a obecnie stara się zatrzymać w
             kadrze najważniejsze momenty oraz wydarzenia wykonując wszelkiego
             rodzaju sesje oraz reportaże. Na codzień Żona, Mama oraz Pani domu.
-            Miłośniczka podróży, Hiszpanii oraz dziewiczej Oliwy ;-). W naszym
-            serwisie jest motorem napędowym, źródłem najlepszych pomysłów, oraz
-            odpowiada za działania reklamowe :).
+            Miłośniczka podróży, Hiszpanii oraz dziewiczej Oliwy <FaSmileBeam />
+            . W naszym serwisie jest motorem napędowym, źródłem najlepszych
+            pomysłów, oraz odpowiada za działania reklamowe <FaSmileWink />.
           </p>
           <ul className="iconContainer">
             <li>
@@ -133,6 +136,41 @@ const Wrapper = styled.div`
     img {
       width: 40vw;
       border-radius: 5px;
+    }
+    .imgPiotr {
+      width: 40vw;
+      height: 55vh;
+      border-radius: 5px;
+      background-image: url(${piotrImg});
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: changeImg 5s linear infinite alternate;
+      @keyframes changeImg {
+        0% {
+          transform: scale(1);
+          background-image: url(${piotrImg});
+        }
+        45% {
+          transform: scale(1);
+          background-image: url(${piotrImg});
+        }
+        50% {
+          transform: scale(0);
+          background-image: url(${piotrImg});
+        }
+        51% {
+          transform: scale(0);
+          background-image: url(${piotr2Img});
+        }
+        55% {
+          transform: scale(1);
+          background-image: url(${piotr2Img});
+        }
+        100% {
+          transform: scale(1);
+          background-image: url(${piotr2Img});
+        }
+      }
     }
 
     .info {

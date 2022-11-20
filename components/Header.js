@@ -61,7 +61,7 @@ const Header = () => {
           <FaFacebookSquare className="icon" />
         </a>
         <a
-          href="https://www.facebook.com/PracowniarowerowPiotrSajdak"
+          href="https://www.instagram.com/veloway_pracowniarowerow/"
           target="_blank"
           rel="noopener noreferrer"
           className="fbIn"

@@ -228,3 +228,33 @@ export const blogArticles = [
     ],
   },
 ];
+
+export const plans = [
+  {
+    id: 1,
+    name: "competition",
+    info: [
+      "Plan treningowy aktualizowany co 7 dni",
+      "Dziennik treningowy Training Peaks Basic",
+      "Kontakt: telefoniczny, e-mail, messenger",
+      "Program treningu na siłowni dla kolarzy",
+      "Analiza profilów mocy, diagnostyka i wyznaczanie celów",
+      "Analiza treningu na podstawie danych z miernika mocy i pulsometru",
+    ],
+    price: "380 zł/m",
+  },
+  {
+    id: 2,
+    name: "professional",
+    info: [
+      "Plan treningowy aktualizowany co 7 dni",
+      "Dziennik treningowy Training Peaks Premium",
+      "Analiza treningu rozbudowana WKO5",
+      "Kontakt: telefoniczny, e-mail, messenger",
+      "Program treningu na siłowni dla kolarzy",
+      "Analiza profilów mocy, diagnostyka i wyznaczanie celów",
+      "Analiza treningu na podstawie danych z miernika mocy i pulsometru",
+    ],
+    price: "550 zł/m",
+  },
+];

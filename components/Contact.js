@@ -40,14 +40,14 @@ const KontaktPage = ({ setVisibleCookie }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Facebook: <span>VeloWay Pracownia Rowerów</span>
+                Facebook: <span>PracowniarowerowPiotrSajdak</span>
               </a>
               <a
-                href="https://www.facebook.com/PracowniarowerowPiotrSajdak"
+                href="https://www.instagram.com/veloway_pracowniarowerow/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Instagram: <span>VeloWay Pracownia Rowerów</span>
+                Instagram: <span>veloway_pracowniarowerow</span>
               </a>
               <h4>
                 Adres: <span>ul. Długa 48, 33-170 Tuchów</span>
@@ -167,9 +167,9 @@ const Wrapper = styled.div`
     .contactSocialMedia {
       h3 {
         color: var(--secondaryColor);
-        font-size: 1.5rem;
+        font-size: 2rem;
         text-align: center;
-        font-family: var(--titleFont);
+        font-family: var(--headerContactFont);
         font-weight: 500;
         margin-bottom: 5vh;
       }
@@ -204,12 +204,16 @@ const Wrapper = styled.div`
       text-decoration: none;
       color: var(--primaryColor);
       text-shadow: 2px 2px 2px #000;
+      transition: 0.5s;
       @media screen and (max-width: 800px) {
         margin: 2vh auto;
         width: 90vw;
       }
       @media screen and (max-width: 1700px) {
         font-size: 1.3rem;
+      }
+      :hover {
+        transform: scale(1.1);
       }
       span {
         color: var(--secondaryColor);
@@ -223,12 +227,16 @@ const Wrapper = styled.div`
       font-size: 1.4rem;
       margin: 2vh 5vw;
       font-weight: 500;
+      transition: 0.5s;
       @media screen and (max-width: 800px) {
         margin: 2vh auto;
         width: 90vw;
       }
       span {
         color: var(--secondaryColor);
+      }
+      :hover {
+        transform: scale(1.1);
       }
     }
     .bankInfoName {

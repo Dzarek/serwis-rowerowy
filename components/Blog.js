@@ -202,7 +202,7 @@ const Wrapper = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--secondaryColor2);
+      background: var(--workoutBg);
       padding: 10px 20px;
       border-radius: 20px;
       width: 70%;

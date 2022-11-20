@@ -102,15 +102,15 @@ const Navbar = () => {
               href="https://www.facebook.com/PracowniarowerowPiotrSajdak"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => setContactInfo("VeloWay Pracownia Rowerów")}
+              onClick={() => setContactInfo("PracowniarowerowPiotrSajdak")}
             >
               <FaFacebookSquare className="icon" />
             </a>
             <a
-              href="https://www.facebook.com/PracowniarowerowPiotrSajdak"
+              href="https://www.instagram.com/veloway_pracowniarowerow/"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => setContactInfo("VeloWay Pracownia Rowerów")}
+              onClick={() => setContactInfo("veloway_pracowniarowerow")}
             >
               <FaInstagramSquare className="icon" />
             </a>

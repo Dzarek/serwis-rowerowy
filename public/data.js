@@ -191,6 +191,71 @@ export const bikePrices = [
   },
 ];
 
+export const skiPrices = [
+  {
+    id: 1,
+    name: "smarowanie na gorąco",
+    price: "45 zł",
+    details: "smarowanie, cyklinowanie + szczotkowanie",
+  },
+  {
+    id: 2,
+    name: "ostrzenie krawędzi",
+    price: "65 zł",
+    details: "ostrzenie na zadany kąt",
+  },
+  {
+    id: 3,
+    name: "ostrzenie krawędzi + smarowanie",
+    price: "95 zł",
+    details: "",
+  },
+  {
+    id: 4,
+    name: "średni serwis",
+    price: "140 zł",
+    details: "wycięcie struktury na ślizgu, ostrzenie + smarowanie",
+  },
+  {
+    id: 5,
+    name: "duży serwis - narty",
+    price: "180 - 200 zł",
+    details:
+      "planowanie ślizgu, uzupełnienie ubytków, ostrzenie krawędzi z podniesieniem na zadane kąty, wycięcie struktury, smarowanie",
+  },
+  {
+    id: 6,
+    name: "duży serwis - snowboard",
+    price: "190 - 210 zł",
+    details: "",
+  },
+  {
+    id: 7,
+    name: "wygrzewanie nart w thermo boxie",
+    price: "125 zł",
+    details:
+      "komora grzewcza Briko - Maplus, 24 godzinne nasączanie ślizgów smarem SWIX BP 99 + smarowanie końcowe",
+  },
+  {
+    id: 8,
+    name: "regulacja wiązań",
+    price: "25 - 35 zł",
+    details: "na podstawie tabel sił wypięcia DIN",
+  },
+  {
+    id: 9,
+    name: "montaż i regulacja wiązań",
+    price: "70 zł",
+    details: "",
+  },
+  {
+    id: 10,
+    name: "montaż i regulacja z wierceniem otworów montażowych",
+    price: "120 - 150 zł",
+    details: "",
+  },
+];
+
 export const blogArticles = [
   {
     id: 1,

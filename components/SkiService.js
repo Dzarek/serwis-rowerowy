@@ -2,7 +2,8 @@ import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
-import { BsGearFill } from "react-icons/bs";
+import { BsGearFill, BsFillQuestionSquareFill } from "react-icons/bs";
+import { skiPrices } from "../public/data";
 
 const bgImg = "/images/skiService/bg.jpg";
 const snowboardImg = "/images/skiService/snowboard.png";
@@ -10,6 +11,7 @@ const skiImg = "/images/skiService/ski.png";
 
 const SkiService = () => {
   const [activeGears, setActiveGears] = useState(false);
+  const [activeDetail, setActiveDetail] = useState("");
   useEffect(() => {
     Aos.init({ duration: 1000, disable: "mobile" });
   }, []);
@@ -42,48 +44,29 @@ const SkiService = () => {
         <section className="infoContainer">
           <h3>Usługi Serwisowe</h3>
           <ul className={activeGears && "gearsActive"}>
-            <li>
-              <BsGearFill />
-              <p>regulacja wiązań narciarskich</p>
-              <div></div>
-              <span>od 10 zł</span>
-            </li>
-            <li>
-              <BsGearFill />
-              <p>ostrzenie nart</p>
-              <div></div>
-              <span>od 45 zł</span>
-            </li>
-            <li>
-              <BsGearFill />
-              <p>ostrzenie snowboardu</p>
-              <div></div>
-              <span>od 40 zł</span>
-            </li>
-            <li>
-              <BsGearFill />
-              <p>czyszczenie i smarowanie nart na gorąco</p>
-              <div></div>
-              <span>od 40 zł</span>
-            </li>
-            <li>
-              <BsGearFill />
-              <p>czyszczenie i smarowanie snowboardu na gorąco</p>
-              <div></div>
-              <span>od 50 zł</span>
-            </li>
-            <li>
-              <BsGearFill />
-              <p>regeneracja ślizgu nart</p>
-              <div></div>
-              <span>od 20 zł</span>
-            </li>
-            <li>
-              <BsGearFill />
-              <p>regeneracja ślizgu snowboardu</p>
-              <div></div>
-              <span>od 30 zł</span>
-            </li>
+            {skiPrices.map((oneSki, index) => {
+              const { name, price, details } = oneSki;
+              return (
+                <div key={index} className="oneServiceWrapper">
+                  <li>
+                    <BsGearFill className="gearIcon" />
+                    <p>{name}</p>
+                    {details && (
+                      <BsFillQuestionSquareFill
+                        style={{ cursor: "pointer" }}
+                        onMouseEnter={() => setActiveDetail(details)}
+                        onMouseLeave={() => setActiveDetail("")}
+                      />
+                    )}
+                    <div></div>
+                    <span>{price}</span>
+                  </li>
+                  {activeDetail === details && details !== "" && (
+                    <p className="serviceDetail">{details}</p>
+                  )}
+                </div>
+              );
+            })}
           </ul>
         </section>
         <img src={skiImg} alt="" />
@@ -132,14 +115,14 @@ const Wrapper = styled.div`
     }
   }
   .firstInfo {
-    margin: 10vh auto;
+    margin: 10vh auto 5vh;
     width: 70vw;
     font-size: 1.1rem;
     text-align: center;
   }
   .content {
-    margin: 10vh auto;
-    width: 90vw;
+    margin: 5vh auto 10vh;
+    width: 95vw;
     display: flex;
     justify-content: center;
     position: relative;
@@ -147,6 +130,9 @@ const Wrapper = styled.div`
       width: 30%;
       position: absolute;
       top: 0;
+      @media screen and (max-width: 1700px) {
+        width: 28%;
+      }
     }
     img:nth-of-type(1) {
       left: 0%;
@@ -156,36 +142,74 @@ const Wrapper = styled.div`
       opacity: 0.4;
     }
     .infoContainer {
-      min-width: 40%;
+      width: 50%;
+      margin-top: 10vh;
+      @media screen and (max-width: 1700px) {
+        width: 55%;
+      }
       h3 {
         text-align: center;
-        font-size: 2rem;
-        margin-bottom: 5vh;
+        font-size: 2.1rem;
+        margin-bottom: 10vh;
       }
       ul {
         list-style: none;
-        li {
+        width: 100%;
+        .oneServiceWrapper {
           display: flex;
-          align-items: center;
-          font-size: 1.3rem;
-          div {
-            flex-grow: 1;
-            border-bottom: 1px solid #ddd;
-            align-self: flex-end;
-            margin: 0 5px 10px;
+          flex-direction: column;
+          margin-bottom: 1.5vh;
+          width: 100%;
+          .serviceDetail {
+            font-size: 1.1rem;
+            font-family: var(--headerContactFont);
+            background: #fff;
+            color: #222;
+            text-align: center;
+            width: 80%;
+            padding: 3px 10px;
+            border-radius: 5px;
+            margin: 0 auto;
+            /* position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); */
           }
-          svg,
-          span {
-            color: var(--secondaryColor);
-            margin: 0 10px;
-            font-weight: 700;
-            text-shadow: 2px 2px 2px #222;
+
+          li {
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+            width: 100%;
+            @media screen and (max-width: 1700px) {
+              font-size: 1.2rem;
+            }
+            div {
+              flex-grow: 1;
+              border-bottom: 1px solid #ddd;
+              align-self: flex-end;
+              margin: 0 5px 10px;
+            }
+            svg,
+            span {
+              color: var(--secondaryColor);
+              margin: 0 10px;
+              font-weight: 700;
+              text-shadow: 2px 2px 2px #222;
+              font-size: 1.4rem;
+              @media screen and (max-width: 1700px) {
+                font-size: 1.3rem;
+              }
+            }
+            svg {
+              font-size: 1.6rem;
+            }
           }
         }
       }
       .gearsActive {
         li {
-          svg {
+          .gearIcon {
             animation: rotateGears 2s linear infinite;
             @keyframes rotateGears {
               100% {

@@ -2,10 +2,14 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 // import { offers } from "../../public/data";
 import emailjs from "emailjs-com";
+import RodoCookies from "./RodoCookies";
+import CookieAccept from "./CookieAccept";
 
 // let minDate = new Date().toISOString().slice(0, 10);
 
-const MyForm = ({ setVisibleCookie }) => {
+const MyForm = () => {
+  const [visibleCookie, setVisibleCookie] = useState(false);
+
   const [status, setStatus] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -25,9 +29,9 @@ const MyForm = ({ setVisibleCookie }) => {
     if (category === "serwis narciarski") {
       setSubCategories(subCategoriesSki);
     }
-    if (category === "akcesoria") {
-      setSubCategories(subCategoriesAccesories);
-    }
+    // if (category === "akcesoria") {
+    //   setSubCategories(subCategoriesAccesories);
+    // }
     if (category === "treningi") {
       setSubCategories(subCategoriesGym);
     }
@@ -60,7 +64,7 @@ const MyForm = ({ setVisibleCookie }) => {
               setText("");
               setBox(false);
               setCategory("---");
-              setDate(minDate);
+              // setDate(minDate);
             }, 3000);
           },
           () => {
@@ -73,7 +77,7 @@ const MyForm = ({ setVisibleCookie }) => {
               setText("");
               setBox(false);
               setCategory("---");
-              setDate(minDate);
+              // setDate(minDate);
             }, 3000);
           }
         );
@@ -89,7 +93,7 @@ const MyForm = ({ setVisibleCookie }) => {
     "---",
     "serwis rowerowy",
     "serwis narciarski",
-    "akcesoria",
+    // "akcesoria",
     "treningi",
     "inne",
   ].map((item, index) => {
@@ -113,22 +117,7 @@ const MyForm = ({ setVisibleCookie }) => {
       </option>
     );
   });
-  const subCategoriesSki = [
-    "---",
-    "narty",
-    "snowboard",
-    "może rodzaje nart jak poniżej?",
-    "narty race",
-    "narty freeride",
-    "inne",
-  ].map((item, index) => {
-    return (
-      <option key={index} value={item}>
-        {item}
-      </option>
-    );
-  });
-  const subCategoriesAccesories = ["---", "rowerowe", "narciarskie"].map(
+  const subCategoriesSki = ["---", "narty", "snowboard", "inne"].map(
     (item, index) => {
       return (
         <option key={index} value={item}>
@@ -137,18 +126,24 @@ const MyForm = ({ setVisibleCookie }) => {
       );
     }
   );
-  const subCategoriesGym = [
-    "---",
-    "indywidualne",
-    "grupowe",
-    "nie wiem jakie tam robisz :)",
-  ].map((item, index) => {
-    return (
-      <option key={index} value={item}>
-        {item}
-      </option>
-    );
-  });
+  // const subCategoriesAccesories = ["---", "rowerowe", "narciarskie"].map(
+  //   (item, index) => {
+  //     return (
+  //       <option key={index} value={item}>
+  //         {item}
+  //       </option>
+  //     );
+  //   }
+  // );
+  const subCategoriesGym = ["---", "competition", "professional"].map(
+    (item, index) => {
+      return (
+        <option key={index} value={item}>
+          {item}
+        </option>
+      );
+    }
+  );
 
   return (
     <>
@@ -265,6 +260,8 @@ const MyForm = ({ setVisibleCookie }) => {
           )}
         </>
       </Wrapper>
+      {visibleCookie && <RodoCookies setVisibleCookie={setVisibleCookie} />}
+      <CookieAccept setVisibleCookie={setVisibleCookie} />
     </>
   );
 };

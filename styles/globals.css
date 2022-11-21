@@ -278,6 +278,51 @@ html::-webkit-scrollbar-thumb:hover {
     background: #293c29;
 }
 
+/* COOKIE */
+
+.cookieLink {
+    margin-left: 10px;
+    cursor: pointer;
+    color: var(--activeNavLink);
+}
+
+.cookieInfo p button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    margin-left: 10px;
+    color: var(--secondaryColor);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.cookieInfo p button:hover {
+    color: var(--secondaryColor99);
+}
+
+.cookieInfo {
+    display: flex;
+    align-items: center;
+}
+
+
+.cookieIcon {
+    margin-right: 3vw;
+    font-size: 5rem;
+}
+
+@media screen and (max-width:800px) {
+    .cookieInfo {
+        flex-direction: column;
+        text-align: justify;
+    }
+
+    .cookieIcon {
+        margin-right: 0vw;
+        font-size: 4rem;
+        margin-bottom: 4vh;
+    }
+}
 
 @media screen and (max-width:800px) {
     body {

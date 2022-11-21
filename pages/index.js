@@ -16,7 +16,10 @@ export default function Home() {
     <>
       <Head>
         <title>VeloWay - Pracownia Rowerów</title>
-        <meta name="description" content="serwis rowerowy...." />
+        <meta
+          name="description"
+          content="Veloway to przestrzeń w której zajmujemy się kompleksową obsługą waszych rowerów."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/logo192.png" />

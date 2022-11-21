@@ -11,7 +11,9 @@ import Blog from "../components/Blog";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
+// export default function Home({ thumbnails }) {
 export default function Home() {
+  // console.log(thumbnails);
   return (
     <>
       <Head>
@@ -36,6 +38,23 @@ export default function Home() {
       <Blog />
       <Contact />
       <Footer />
+      {/* <Footer thumbnails={thumbnails} /> */}
     </>
   );
 }
+// export async function getStaticProps() {
+//   const response = await fetch(
+//     "https://data.focuseye.pl/wp-json/wp/v2/media?media_folder=59&per_page=100"
+//   );
+//   const data = await response.json();
+//   const thumbnails = data.map((image) => {
+//     const smallImg = image.media_details.sizes.full.source_url;
+//     return smallImg;
+//   });
+
+//   return {
+//     props: {
+//       thumbnails,
+//     },
+//   };
+// }

@@ -20,7 +20,6 @@ const Blog = () => {
   useEffect(() => {
     Aos.init({ duration: 1000, disable: "mobile" });
   }, []);
-  console.log(showArticle);
   return (
     <Wrapper className="mainPage" id="news">
       <div className="title">

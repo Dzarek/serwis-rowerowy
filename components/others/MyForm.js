@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-// import { offers } from "../../public/data";
 import emailjs from "emailjs-com";
 import RodoCookies from "./RodoCookies";
 import CookieAccept from "./CookieAccept";
-
-// let minDate = new Date().toISOString().slice(0, 10);
 
 const MyForm = () => {
   const [visibleCookie, setVisibleCookie] = useState(false);
@@ -17,8 +14,6 @@ const MyForm = () => {
   const [text, setText] = useState("");
   const [box, setBox] = useState(false);
   const [category, setCategory] = useState("---");
-  // const [date, setDate] = useState(minDate);
-
   const [subCategory, setSubCategory] = useState("---");
   const [subCategories, setSubCategories] = useState("---");
 
@@ -64,7 +59,8 @@ const MyForm = () => {
               setText("");
               setBox(false);
               setCategory("---");
-              // setDate(minDate);
+              setSubCategory("---");
+              setSubCategories("---");
             }, 3000);
           },
           () => {
@@ -77,17 +73,13 @@ const MyForm = () => {
               setText("");
               setBox(false);
               setCategory("---");
-              // setDate(minDate);
+              setSubCategory("---");
+              setSubCategories("---");
             }, 3000);
           }
         );
     }
   };
-
-  // let categories = offers.map((item) => {
-  //   const { category } = item;
-  //   return category;
-  // });
 
   const categories = [
     "---",
@@ -207,17 +199,6 @@ const MyForm = () => {
               {subCategories}
             </select>
           </div>
-          {/* <div className="chooseInput">
-            <label htmlFor="category">Wybierz termin:</label>
-
-            <input
-              type="date"
-              name="date"
-              value={date}
-              min={minDate}
-              onChange={(e) => setDate(e.target.value)}
-            />
-          </div> */}
         </div>
         <br />
         <textarea

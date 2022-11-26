@@ -102,7 +102,7 @@ const Wrapper = styled.div`
 
   .logo {
     position: absolute;
-    top: 5%;
+    top: 10%;
     left: 4%;
 
     /* transform: translate(-50%, -50%); */
@@ -183,10 +183,19 @@ const Wrapper = styled.div`
   }
   .contactWrapper {
     position: absolute;
-    top: 2%;
-    right: 7%;
+    /* top: 2%;
+    right: 7%; */
     display: flex;
+    justify-content: flex-end;
     align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    right: 0;
+    width: 100vw;
+    padding-top: 0.7%;
+    padding-bottom: 0.5%;
+    padding-right: 7%;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
     a,
     div {
       display: flex;

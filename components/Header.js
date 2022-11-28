@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import Link from "next/link";
 import { HiChevronDoubleDown } from "react-icons/hi";
 import { MdOutlinePhoneAndroid, MdEmail } from "react-icons/md";
 import {
@@ -7,10 +6,8 @@ import {
   FaMapMarkerAlt,
   FaInstagramSquare,
 } from "react-icons/fa";
-// import { TiSpanner } from "react-icons/ti";
 import { navlinks } from "../public/data";
 import { Link } from "react-scroll";
-// import { animateScroll as scroll } from "react-scroll";
 
 const headerBg = "/images/homepage/headerBg5.jpg";
 const logoWhite = "/images/veloway-logoWhite.png";
@@ -18,7 +15,9 @@ const logoWhite = "/images/veloway-logoWhite.png";
 const Header = () => {
   return (
     <Wrapper id="home">
-      <div className="overlay"></div>
+      <div className="overlay">
+        <img className="logo" src={logoWhite} alt="" />
+      </div>
       <img className="logo" src={logoWhite} alt="" />
       <nav>
         {navlinks.map((item, index) => {
@@ -86,16 +85,20 @@ const Wrapper = styled.div`
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 1);
     z-index: 1;
-    animation: showHeader 2s linear 1 forwards;
+    animation: showHeader 3s linear 1 forwards;
     @keyframes showHeader {
+      60% {
+        opacity: 1;
+      }
       99% {
         z-index: 1;
       }
       100% {
-        background: transparent;
+        /* background: transparent; */
         z-index: 0;
+        opacity: 0;
       }
     }
   }
@@ -104,11 +107,16 @@ const Wrapper = styled.div`
     position: absolute;
     top: 10%;
     left: 4%;
-
     /* transform: translate(-50%, -50%); */
     width: 25vw;
-    opacity: 0.8;
+    /* opacity: 0.8; */
     opacity: 0.6;
+    @media screen and (max-width: 800px) {
+      top: 7%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 75vw;
+    }
   }
   nav {
     position: absolute;
@@ -146,6 +154,9 @@ const Wrapper = styled.div`
         color: var(--navLinkColorHover);
       } */
     }
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
   }
   .headerArrow {
     position: absolute;
@@ -180,6 +191,13 @@ const Wrapper = styled.div`
     font-size: 1.3rem;
     letter-spacing: 0.5px;
     font-style: italic;
+    @media screen and (max-width: 800px) {
+      right: 50%;
+      transform: translateX(50%);
+      font-size: 1rem;
+      width: 90vw;
+      text-align: center;
+    }
   }
   .contactWrapper {
     position: absolute;
@@ -232,6 +250,9 @@ const Wrapper = styled.div`
       @media screen and (max-width: 1700px) {
         font-size: 1.3rem;
       }
+    }
+    @media screen and (max-width: 800px) {
+      display: none;
     }
   }
   .icon {

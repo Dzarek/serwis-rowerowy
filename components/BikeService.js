@@ -6,8 +6,9 @@ import { BsGearFill } from "react-icons/bs";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { SRLWrapper } from "simple-react-lightbox";
+import Carousel from "@brainhubeu/react-carousel";
+import "@brainhubeu/react-carousel/lib/style.css";
 
-// const bgImg = "/images/mainBg.png";
 const img1 = "/images/bikeService/1.jpg";
 const img2 = "/images/bikeService/2.jpg";
 const img3 = "/images/bikeService/3.jpg";
@@ -51,13 +52,31 @@ const BikeService = () => {
         Wykonane naprawy poprzedzone są diagnozą która daje możliwość
         dopasowania usługi do Waszych potrzeb. <br /> Zapraszamy!
       </p>
+      <div className="imgContainerDesktop">
+        <SRLWrapper>
+          <div className="imgContainerHorizontal">
+            <img src={img1} alt="" />
+            <img src={img2} alt="" />
+            <img src={img3} alt="" />
+            <img src={img4} alt="" />
+          </div>
+        </SRLWrapper>
+      </div>
       <SRLWrapper>
-        <div className="imgContainerHorizontal">
+        <Carousel
+          className="carouselM"
+          infinite
+          autoPlay={3000}
+          animationSpeed={1000}
+          slidesPerPage={1}
+          stopAutoPlayOnHover
+          draggable={false}
+        >
           <img src={img1} alt="" />
           <img src={img2} alt="" />
           <img src={img3} alt="" />
           <img src={img4} alt="" />
-        </div>
+        </Carousel>
       </SRLWrapper>
       <section className="pakiety">
         <div
@@ -181,8 +200,15 @@ const Wrapper = styled.div`
     width: 65vw;
     text-align: center;
     font-size: 1.1rem;
+    @media screen and (max-width: 800px) {
+      width: 90vw;
+    }
   }
-
+  .imgContainerDesktop {
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
   .imgContainerHorizontal {
     margin: 10vh auto 0;
     width: 85vw;
@@ -198,6 +224,22 @@ const Wrapper = styled.div`
       cursor: pointer;
     }
   }
+  .carouselM {
+    @media screen and (min-width: 801px) {
+      display: none;
+    }
+    width: 90vw;
+    margin: 10vh auto 0;
+    img {
+      width: 90%;
+      /* height: 100%; */
+      object-fit: cover;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px 0 #111;
+      cursor: pointer;
+    }
+  }
+
   .pakiety {
     width: 80vw;
     margin: 10vh auto 0;

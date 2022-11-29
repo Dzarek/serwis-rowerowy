@@ -93,12 +93,12 @@ const Navbar = () => {
             >
               <MdOutlinePhoneAndroid className="icon" />
             </a>
-            <div>
+            <a href="mailto:piotr.j.sajdak@gmail.com">
               <MdEmail
                 className="icon"
                 onClick={() => setContactInfo("piotr.j.sajdak@gmail.com")}
               />
-            </div>
+            </a>
             <a
               href="https://www.facebook.com/PracowniarowerowPiotrSajdak"
               target="_blank"
@@ -147,7 +147,7 @@ const Navbar = () => {
                   duration={1000}
                   activeClass="active"
                   spy={true}
-                  // offset={2}
+                  offset={item.link === "home" ? 0 : 2}
                   onClick={handleCloseMenu}
                 >
                   {item.icon}
@@ -163,28 +163,18 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaMapMarkerAlt
-                className="icon"
-                onClick={() => setContactInfo("ul. Długa 48, 33-170 Tuchów")}
-              />
+              <FaMapMarkerAlt className="icon" />
             </a>
-            <a
-              href="tel:798867716"
-              onClick={() => setContactInfo("798 867 716")}
-            >
+            <a href="tel:798867716">
               <MdOutlinePhoneAndroid className="icon" />
             </a>
-            <div>
-              <MdEmail
-                className="icon"
-                onClick={() => setContactInfo("piotr.j.sajdak@gmail.com")}
-              />
-            </div>
+            <a href="mailto:piotr.j.sajdak@gmail.com">
+              <MdEmail className="icon" />
+            </a>
             <a
               href="https://www.facebook.com/PracowniarowerowPiotrSajdak"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => setContactInfo("PracowniarowerowPiotrSajdak")}
             >
               <FaFacebookSquare className="icon" />
             </a>
@@ -192,7 +182,6 @@ const Navbar = () => {
               href="https://www.instagram.com/veloway_pracowniarowerow/"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => setContactInfo("veloway_pracowniarowerow")}
             >
               <FaInstagramSquare className="icon" />
             </a>
@@ -401,7 +390,7 @@ const Wrapper2 = styled.div`
   }
   .contactWrapper {
     position: absolute;
-    bottom: 6%;
+    bottom: 7%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -418,7 +407,7 @@ const Wrapper2 = styled.div`
       }
     }
   }
-  .contactInfo {
+  /* .contactInfo {
     position: absolute;
     bottom: 0.5%;
     left: 50%;
@@ -430,7 +419,7 @@ const Wrapper2 = styled.div`
     @media screen and (min-height: 800px) {
       font-size: 1.3rem;
     }
-  }
+  } */
   .upBtn {
     position: fixed;
     bottom: 3vh;

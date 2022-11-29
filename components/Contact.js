@@ -32,9 +32,9 @@ const KontaktPage = ({ setVisibleCookie }) => {
               <a href="tel:+48798698605">
                 Telefon: <span>798 867 716</span>
               </a>
-              <h4>
+              <a href="mailto:piotr.j.sajdak@gmail.com">
                 Email: <span>piotr.j.sajdak@gmail.com</span>
-              </h4>
+              </a>
               <a
                 href="https://www.facebook.com/PracowniarowerowPiotrSajdak"
                 target="_blank"

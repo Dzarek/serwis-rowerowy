@@ -103,6 +103,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 90vw;
+    margin: 0 auto;
 }
 
 .title h1 {
@@ -114,7 +116,15 @@ body {
     color: var(--secondaryColor);
     text-transform: uppercase;
     letter-spacing: 5px;
+    text-align: center;
     /* font-family: var(--headerContactFont); */
+}
+
+@media screen and (max-width:800px) {
+    .title h1 {
+        font-size: 2rem;
+
+    }
 }
 
 .title div {

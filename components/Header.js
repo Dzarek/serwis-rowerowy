@@ -47,10 +47,10 @@ const Header = () => {
           <MdOutlinePhoneAndroid className="icon" />
           <p>798 867 716</p>
         </a>
-        <div>
+        <a href="mailto:piotr.j.sajdak@gmail.com">
           <MdEmail className="icon" />
           <p>piotr.j.sajdak@gmail.com</p>
-        </div>
+        </a>
         <a
           href="https://www.facebook.com/PracowniarowerowPiotrSajdak"
           target="_blank"
@@ -86,14 +86,14 @@ const Wrapper = styled.div`
     height: 100vh;
     position: fixed;
     background: rgba(0, 0, 0, 1);
-    z-index: 1;
-    animation: showHeader 3s linear 1 forwards;
+    z-index: 9999999999999;
+    animation: showHeader 2s linear 1 forwards;
     @keyframes showHeader {
       60% {
         opacity: 1;
       }
       99% {
-        z-index: 1;
+        z-index: 9999999999999;
       }
       100% {
         /* background: transparent; */
@@ -244,7 +244,7 @@ const Wrapper = styled.div`
       :hover {
         transform: translateY(5px);
       }
-      :nth-of-type(3) {
+      :nth-of-type(4) {
         margin-left: 1vw;
       }
       @media screen and (max-width: 1700px) {

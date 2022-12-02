@@ -81,6 +81,9 @@ const Wrapper = styled.div`
   margin: 0vh auto 0;
   padding: 10vh 0;
   position: relative;
+  @media screen and (max-width: 800px) {
+    padding: 10vh 0 3vh;
+  }
   .title {
     h1 {
       /* text-shadow: 0.5px 0.5px 0.5px #eee; */

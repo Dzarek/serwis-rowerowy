@@ -24,13 +24,7 @@ const AboutMe = () => {
         <div data-aos="titleWidth"></div>
       </div>
       <div className="content">
-        <div
-          // src={piotrImg}
-          // alt=""
-          className="imgPiotr"
-          // data-aos="fade-right"
-          // data-aos-offset="300"
-        ></div>
+        <div className="imgPiotr"></div>
         <div className="info">
           <p>
             Piotrek z rowerami spędził ponad połowę swojego życia. Na codzień
@@ -107,7 +101,9 @@ const Wrapper = styled.div`
   margin: 0 auto;
   padding: 10vh 5vw 5vh;
   position: relative;
-
+  @media screen and (max-width: 800px) {
+    padding: 10vh 0vw 0vh;
+  }
   .title {
     display: flex;
     flex-direction: column;
@@ -121,10 +117,6 @@ const Wrapper = styled.div`
         width: 100px;
       }
     }
-
-    @media screen and (max-width: 800px) {
-      padding: 5vh 0;
-    }
   }
   .content {
     width: 80vw;
@@ -132,10 +124,17 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    @media screen and (max-width: 800px) {
+      width: 95vw;
+      flex-direction: column;
+    }
     img {
       width: 40vw;
       border-radius: 5px;
+      @media screen and (max-width: 800px) {
+        width: 90vw;
+        margin-bottom: 3vh;
+      }
     }
     .imgPiotr {
       width: 40vw;
@@ -145,6 +144,10 @@ const Wrapper = styled.div`
       background-size: contain;
       background-repeat: no-repeat;
       animation: changeImg 5s linear infinite alternate;
+      @media screen and (max-width: 800px) {
+        width: 90vw;
+        height: 37vh;
+      }
       @keyframes changeImg {
         0% {
           transform: scale(1);
@@ -177,6 +180,9 @@ const Wrapper = styled.div`
       display: flex;
       flex-direction: column;
       width: 35vw;
+      @media screen and (max-width: 800px) {
+        width: 90vw;
+      }
       p {
         width: 100%;
         font-size: 1.1rem;
@@ -189,24 +195,38 @@ const Wrapper = styled.div`
         margin-top: 8vh;
         width: 100%;
         justify-content: space-between;
+        @media screen and (max-width: 800px) {
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-top: 5vh;
+        }
         li {
           display: flex;
           flex-direction: column;
           align-items: center;
+          @media screen and (max-width: 800px) {
+            width: 40%;
+            margin: 2vw;
+          }
           svg {
             color: var(--secondaryColor);
             font-size: 4rem;
+            @media screen and (max-width: 800px) {
+              font-size: 3rem;
+            }
           }
         }
       }
     }
-    :nth-of-type(3) {
-      flex-direction: row-reverse;
-      .info {
-        .iconContainer {
-          justify-content: space-between;
-          li {
-            width: 33.33%;
+    @media screen and (min-width: 801px) {
+      :nth-of-type(3) {
+        flex-direction: row-reverse;
+        .info {
+          .iconContainer {
+            justify-content: space-between;
+            li {
+              width: 33.33%;
+            }
           }
         }
       }

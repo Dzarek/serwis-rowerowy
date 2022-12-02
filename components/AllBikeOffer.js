@@ -269,7 +269,7 @@ const Wrapper = styled.div`
       position: relative;
       width: 100vw;
       transform: translateX(-50%);
-      margin: 10vh auto;
+      margin: 8vh auto 10vh;
     }
     li {
       /* width: 40%; */
@@ -279,7 +279,8 @@ const Wrapper = styled.div`
         font-size: 1.1rem;
         font-weight: 400;
         text-align: center;
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
       }
       span {
         opacity: 0;

@@ -186,6 +186,9 @@ const Wrapper = styled.div`
   background-size: cover; */
   background-color: var(--appBgColor);
   padding-bottom: 5vh;
+  @media screen and (max-width: 800px) {
+    padding-top: 10vh;
+  }
   .title {
     [data-aos="titleWidth"] {
       width: 0;

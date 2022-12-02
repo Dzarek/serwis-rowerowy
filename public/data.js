@@ -29,7 +29,7 @@ export const navlinks = [
   //   icon: <MdShoppingBasket />,
   // },
   {
-    name: "O mnie",
+    name: "O nas",
     link: "aboutMe",
     icon: <MdPerson />,
   },

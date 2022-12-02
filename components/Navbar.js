@@ -147,7 +147,7 @@ const Navbar = () => {
                   duration={1000}
                   activeClass="active"
                   spy={true}
-                  offset={item.link === "home" ? 0 : 5}
+                  offset={item.link === "home" ? 0 : 8}
                   onClick={handleCloseMenu}
                 >
                   {item.icon}

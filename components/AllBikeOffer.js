@@ -267,7 +267,7 @@ const Wrapper = styled.div`
     list-style: none;
     @media screen and (max-width: 800px) {
       position: relative;
-      width: 95vw;
+      width: 100vw;
       transform: translateX(-50%);
       margin: 10vh auto;
     }
@@ -279,6 +279,7 @@ const Wrapper = styled.div`
         font-size: 1.1rem;
         font-weight: 400;
         text-align: center;
+        width: 100%;
       }
       span {
         opacity: 0;

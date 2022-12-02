@@ -122,6 +122,9 @@ const Wrapper = styled.div`
     width: 70vw;
     font-size: 1.1rem;
     text-align: center;
+    @media screen and (max-width: 800px) {
+      width: 90vw;
+    }
   }
   .content {
     margin: 5vh auto 10vh;
@@ -150,10 +153,17 @@ const Wrapper = styled.div`
       @media screen and (max-width: 1700px) {
         width: 55%;
       }
+      @media screen and (max-width: 800px) {
+        width: 100%;
+      }
       h3 {
         text-align: center;
         font-size: 2.1rem;
         margin-bottom: 10vh;
+        @media screen and (max-width: 800px) {
+          font-size: 1.9rem;
+          margin-bottom: 5vh;
+        }
       }
       ul {
         list-style: none;
@@ -187,11 +197,18 @@ const Wrapper = styled.div`
             @media screen and (max-width: 1700px) {
               font-size: 1.2rem;
             }
+            @media screen and (max-width: 800px) {
+              font-size: 1.1rem;
+              flex-wrap: wrap;
+            }
             div {
               flex-grow: 1;
               border-bottom: 1px solid #ddd;
               align-self: flex-end;
               margin: 0 5px 10px;
+              /* @media screen and (max-width: 800px) {
+                display: none;
+              } */
             }
             svg,
             span {
@@ -203,9 +220,30 @@ const Wrapper = styled.div`
               @media screen and (max-width: 1700px) {
                 font-size: 1.3rem;
               }
+              @media screen and (max-width: 800px) {
+                font-size: 1.2rem;
+                font-weight: 600;
+              }
             }
             svg {
               font-size: 1.6rem;
+              @media screen and (max-width: 800px) {
+                font-size: 1rem;
+                /* display: none; */
+                margin: 0 3px;
+              }
+            }
+            @media screen and (max-width: 800px) {
+              .gearIcon {
+                animation: rotateGears 2s linear infinite;
+                display: block;
+                margin: 0 5px 0 0;
+                @keyframes rotateGears {
+                  100% {
+                    transform: rotate(360deg);
+                  }
+                }
+              }
             }
           }
         }

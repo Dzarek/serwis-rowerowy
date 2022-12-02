@@ -245,7 +245,10 @@ const Wrapper = styled.div`
     margin: 10vh auto 0;
     display: flex;
     justify-content: space-around;
-
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+      width: 90vw;
+    }
     .onePakiet {
       width: 40%;
       display: flex;
@@ -255,6 +258,10 @@ const Wrapper = styled.div`
       border: 2px solid var(--secondaryColor);
       padding: 2vw 5vw;
       background: #111;
+      @media screen and (max-width: 800px) {
+        width: 100%;
+        padding: 3vw 3vw;
+      }
       ul {
         margin: 4vh auto;
         margin-bottom: 5vh;
@@ -270,6 +277,14 @@ const Wrapper = styled.div`
             margin-right: 10px;
             margin-top: 7px;
             font-size: 1.1rem;
+            @media screen and (max-width: 800px) {
+              animation: gearAnim 2s linear infinite;
+              @keyframes gearAnim {
+                100% {
+                  transform: rotate(360deg);
+                }
+              }
+            }
           }
         }
       }
@@ -296,12 +311,23 @@ const Wrapper = styled.div`
       align-self: center;
       transform: rotate(-45deg);
       transition: 0.5s;
+      @media screen and (max-width: 800px) {
+        transform: rotate(45deg);
+        margin: 3vh auto;
+        font-size: 5rem;
+      }
     }
     .basicIcon {
       transform: rotate(-90deg);
+      @media screen and (max-width: 800px) {
+        transform: rotate(-45deg);
+      }
     }
     .proIcon {
       transform: rotate(0deg);
+      @media screen and (max-width: 800px) {
+        transform: rotate(135deg);
+      }
     }
     .allIcon {
       transform: rotate(-225deg);
@@ -324,6 +350,10 @@ const Wrapper = styled.div`
     :hover {
       background: #111;
       color: #eee;
+    }
+    @media screen and (max-width: 800px) {
+      padding: 10px 20px;
+      font-size: 1.3rem;
     }
   }
 `;

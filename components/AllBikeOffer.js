@@ -36,12 +36,14 @@ const AllBikeOffer = ({ setShowAllBikeOffer }) => {
                 <AccordionItem key={id}>
                   <div className="category" onClick={() => setBikeImage(image)}>
                     <header>
-                      <h3>{title}</h3>
                       <AccordionItemHeading>
                         <AccordionItemButton>
-                          <button type="button" className="btn">
-                            <MdExpandMore />
-                          </button>
+                          <h3>
+                            {title}
+                            <button type="button" className="btn">
+                              <MdExpandMore />
+                            </button>
+                          </h3>
                         </AccordionItemButton>
                       </AccordionItemHeading>
                     </header>
@@ -97,13 +99,16 @@ const Wrapper = styled.div`
   background-size: 15vw; */
   .content {
     width: 100vw;
-    min-height: 100vh;
+    min-height: 120vh;
     position: relative;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
     background-color: var(--appBgColor);
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+    }
   }
   .closeIcon {
     position: absolute;
@@ -111,7 +116,6 @@ const Wrapper = styled.div`
     left: 50%;
     transform: translateX(-50%);
     font-size: 4rem;
-    /* color: var(--navLinkColorHover); */
     color: var(--secondaryColor);
     cursor: pointer;
     transition: 0.5s;
@@ -119,15 +123,13 @@ const Wrapper = styled.div`
       transform: translateX(-50%) rotate(180deg);
       color: var(--secondaryColor3);
     }
+    @media screen and (max-width: 800px) {
+      top: 3vh;
+      font-size: 3rem;
+    }
   }
   .bikeImg {
-    /* position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%); */
     width: 40vw;
-    /* align-self: center; */
-    /* filter: saturate(0.7); */
     margin-bottom: 5vh;
     border: 2px solid var(--secondaryColor3);
     border-radius: 5px;
@@ -136,6 +138,10 @@ const Wrapper = styled.div`
       100% {
         filter: saturate(0);
       }
+    }
+    @media screen and (max-width: 800px) {
+      margin: 35vh auto 10vh;
+      width: 100vw;
     }
   }
   .priceTitle {
@@ -148,6 +154,12 @@ const Wrapper = styled.div`
     /* color: var(--secondaryColor3); */
     color: var(--secondaryColor);
     text-align: center;
+    @media screen and (max-width: 800px) {
+      left: 50%;
+      top: 15vh;
+      width: 90vw;
+      font-size: 1.8rem;
+    }
   }
   .accordion__panel {
     animation: fadein 0.5s ease-in;
@@ -171,19 +183,26 @@ const Wrapper = styled.div`
     border: 2px solid var(--secondaryColor3);
     border-radius: 5px;
     margin-bottom: 1vh;
+    @media screen and (max-width: 800px) {
+      width: 95vw;
+      margin-bottom: 2vh;
+    }
     header {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       flex-shrink: 0;
       h3 {
+        width: 30vw;
         display: flex;
+        justify-content: space-between;
         align-items: center;
         font-size: 1.8rem;
         font-weight: 500;
         text-transform: uppercase;
         @media screen and (max-width: 800px) {
           font-size: 1.2rem;
+          width: 90vw;
         }
       }
       .btn {
@@ -227,6 +246,10 @@ const Wrapper = styled.div`
           color: var(--secondaryColor3);
           font-weight: 700;
           font-size: 1.2rem;
+          @media screen and (max-width: 800px) {
+            font-weight: 500;
+            font-size: 1.1rem;
+          }
         }
       }
     }
@@ -242,10 +265,21 @@ const Wrapper = styled.div`
     /* justify-content: space-between; */
     width: 45vw;
     list-style: none;
+    @media screen and (max-width: 800px) {
+      position: relative;
+      width: 95vw;
+      transform: translateX(-50%);
+      margin: 10vh auto;
+    }
     li {
       /* width: 40%; */
       font-weight: 500;
       font-size: 1.15rem;
+      @media screen and (max-width: 800px) {
+        font-size: 1.1rem;
+        font-weight: 400;
+        text-align: center;
+      }
       span {
         opacity: 0;
       }

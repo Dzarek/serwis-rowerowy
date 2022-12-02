@@ -106,6 +106,9 @@ const Wrapper = styled.div`
     left: 0;
     background-image: url(${bgImg});
     background-attachment: fixed;
+    @media screen and (max-width: 800px) {
+      opacity: 0.3;
+    }
   }
   [data-aos="bgShow"] {
     opacity: 0;

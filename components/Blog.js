@@ -36,6 +36,11 @@ const Blog = () => {
         autoPlay={5000}
         animationSpeed={1000}
         slidesPerPage={3}
+        breakpoints={{
+          900: {
+            slidesPerPage: 1,
+          },
+        }}
         addArrowClickHandler
         stopAutoPlayOnHover
         draggable={false}
@@ -138,6 +143,11 @@ const Wrapper = styled.div`
       margin-left: 10px;
       font-size: 1.5rem;
     }
+    @media screen and (max-width: 800px) {
+      width: 90vw;
+      margin: 5vh auto 0;
+      font-size: 1.1rem;
+    }
   }
   /* .content {
     width: 90vw;
@@ -147,7 +157,7 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center; */
   .carousel {
-    width: 90vw;
+    width: 95vw;
     margin: 10vh auto 5vh;
   }
   .arrow {
@@ -157,6 +167,9 @@ const Wrapper = styled.div`
     :hover {
       color: var(--secondaryColor);
     }
+    @media screen and (max-width: 800px) {
+      font-size: 1.5rem;
+    }
   }
   .oneArticle {
     position: relative;
@@ -165,6 +178,10 @@ const Wrapper = styled.div`
     cursor: pointer;
     border-radius: 5px;
     border: 1px solid #ddd;
+    @media screen and (max-width: 800px) {
+      width: 75vw;
+      height: 30vh;
+    }
     span {
       position: absolute;
       top: 0;
@@ -179,6 +196,9 @@ const Wrapper = styled.div`
       font-size: 1rem;
       z-index: 2;
       font-weight: 600;
+      @media screen and (max-width: 800px) {
+        padding: 3px 10px;
+      }
     }
     img {
       height: 100%;
@@ -205,6 +225,10 @@ const Wrapper = styled.div`
       padding: 10px 20px;
       border-radius: 20px;
       width: 70%;
+      @media screen and (max-width: 800px) {
+        width: 100%;
+        border-radius: 0px;
+      }
       h3 {
         text-align: center;
         text-transform: uppercase;
@@ -212,11 +236,18 @@ const Wrapper = styled.div`
         font-weight: 500;
         line-height: 1.5;
         font-family: var(--headerContactFont);
+        @media screen and (max-width: 800px) {
+          font-size: 1rem;
+          line-height: 1.3;
+        }
       }
       svg {
         margin-right: 10px;
         font-size: 2rem;
         flex-shrink: 0;
+        @media screen and (max-width: 800px) {
+          font-size: 1.5rem;
+        }
       }
     }
     @keyframes svgRotate {
@@ -239,6 +270,9 @@ const Wrapper = styled.div`
     transition: 0.4s;
     :hover {
       color: var(--secondaryColor);
+    }
+    @media screen and (max-width: 800px) {
+      margin: 5vh auto 2vh;
     }
   }
   .fullArticle {
@@ -281,6 +315,11 @@ const Wrapper = styled.div`
       align-items: center;
       justify-content: space-between;
       color: #222;
+      @media screen and (max-width: 800px) {
+        width: 100vw;
+        top: 100%;
+        transform: translate(-50%, -100%);
+      }
       img {
         /* position: absolute;
         top: 0;
@@ -297,12 +336,19 @@ const Wrapper = styled.div`
         color: var(--secondaryColor2);
         padding: 0 3vw;
         font-family: var(--headerContactFont);
+        text-align: center;
+        @media screen and (max-width: 800px) {
+          padding: 0 2vw;
+        }
       }
       p {
         padding: 0 20px;
         text-align: justify;
         font-size: 1.1rem;
         margin-bottom: 20px;
+        @media screen and (max-width: 800px) {
+          padding: 0 4vw;
+        }
       }
     }
   }
@@ -346,6 +392,16 @@ const Wrapper = styled.div`
       padding: 5vw;
       .oneArticle {
         margin: 2vw;
+      }
+      @media screen and (max-width: 800px) {
+        margin-top: 15vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0vw;
+        .oneArticle {
+          margin: 2vh auto;
+        }
       }
     }
   }

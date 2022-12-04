@@ -255,7 +255,7 @@ const Wrapper = styled.form`
   width: 80%;
   margin: 0 auto;
   @media screen and (max-width: 800px) {
-    width: 100%;
+    width: 95%;
     height: auto;
   }
   input,
@@ -270,7 +270,7 @@ const Wrapper = styled.form`
     @media screen and (max-width: 800px) {
       font-size: 1rem;
       width: 47%;
-      padding: 8px 10px;
+      padding: 5px 10px;
     }
     ::placeholder {
       color: #888;
@@ -291,6 +291,9 @@ const Wrapper = styled.form`
     /* margin-bottom: 2vh; */
     input {
       width: 45%;
+      @media screen and (max-width: 800px) {
+        width: 48%;
+      }
     }
     .chooseInput {
       width: 45%;
@@ -299,6 +302,10 @@ const Wrapper = styled.form`
       align-items: center;
       justify-content: center;
       margin-top: 4vh;
+      @media screen and (max-width: 800px) {
+        width: 48%;
+        margin-top: 2vh;
+      }
       input,
       select {
         width: 100%;
@@ -369,6 +376,11 @@ const Wrapper = styled.form`
       background: #fff;
       /* border: 2px solid var(--secondaryColor); */
       color: var(--secondaryColor);
+    }
+    @media screen and (max-width: 800px) {
+      width: 60%;
+      padding: 5px 0px;
+      font-weight: 500;
     }
   }
   .messageAlert {

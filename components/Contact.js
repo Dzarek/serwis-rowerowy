@@ -3,6 +3,12 @@ import MyForm from "./others/MyForm";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { MdOutlinePhoneAndroid, MdEmail } from "react-icons/md";
+import {
+  FaFacebookSquare,
+  FaMapMarkerAlt,
+  FaInstagramSquare,
+} from "react-icons/fa";
 
 const bgImg = "/images/contact/bg2.jpg";
 
@@ -56,6 +62,34 @@ const KontaktPage = ({ setVisibleCookie }) => {
                 NIP: <span>993 06 90 883</span>
               </h4>
             </div>
+            <div className="socialMediaWrapperM">
+              <a href="tel:+48798698605">
+                <MdOutlinePhoneAndroid /> <span>798 867 716</span>
+              </a>
+              <a href="mailto:piotr.j.sajdak@gmail.com">
+                <MdEmail /> <span>piotr.j.sajdak@gmail.com</span>
+              </a>
+              <a
+                href="https://www.facebook.com/PracowniarowerowPiotrSajdak"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookSquare /> <span>PracowniarowerowPiotrSajdak</span>
+              </a>
+              <a
+                href="https://www.instagram.com/veloway_pracowniarowerow/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagramSquare /> <span>veloway_pracowniarowerow</span>
+              </a>
+              <h4>
+                <FaMapMarkerAlt /> <span>ul. Długa 48, 33-170 Tuchów</span>
+              </h4>
+              <h4>
+                NIP: <span>993 06 90 883</span>
+              </h4>
+            </div>
             <div className="bankInfo">
               <h3>Dane do przelewu:</h3>
               <h4 className="bankInfoName">
@@ -88,7 +122,7 @@ const Wrapper = styled.div`
   position: relative;
   background: rgba(0, 0, 0, 0.2);
   @media screen and (max-width: 800px) {
-    padding-top: 0;
+    padding: 5vh 0 0vh;
   }
   .bg {
     width: 100%;
@@ -129,10 +163,10 @@ const Wrapper = styled.div`
       }
 
       @media screen and (max-width: 800px) {
-        padding: 5vh 0;
+        padding: 5vh 0 0;
       }
     }
-    img {
+    /* img {
       height: 50vh;
       margin-right: 5vw;
       @media screen and (max-width: 800px) {
@@ -140,7 +174,7 @@ const Wrapper = styled.div`
         width: 100vw;
         margin-right: 0;
       }
-    }
+    } */
   }
   .contactContainer {
     position: relative;
@@ -149,34 +183,39 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
     section {
       width: 47%;
     }
-    .separateLine {
+    /* .separateLine {
       width: 2px;
       background: var(--secondaryColor3);
       height: 50vh;
       align-self: center;
-    }
-    .separateImg {
+    } */
+    /* .separateImg {
       width: 10vw;
       align-self: center;
       opacity: 0.5;
-    }
+    } */
     .contactForm,
     .contactSocialMedia {
       h3 {
-        color: var(--secondaryColor);
+        color: #aaa;
         font-size: 2rem;
         text-align: center;
         font-family: var(--headerContactFont);
         font-weight: 500;
         margin-bottom: 5vh;
+        @media screen and (max-width: 800px) {
+          font-size: 1.8rem;
+        }
       }
     }
     @media screen and (max-width: 800px) {
       flex-direction: column;
-      margin: 15vh auto;
+      margin: 10vh auto 0vh;
+      width: 100vw;
       section {
         width: 100%;
       }
@@ -189,7 +228,8 @@ const Wrapper = styled.div`
     }
   }
 
-  .socialMediaWrapper {
+  .socialMediaWrapper,
+  .socialMediaWrapperM {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -205,18 +245,45 @@ const Wrapper = styled.div`
       color: var(--primaryColor);
       text-shadow: 2px 2px 2px #000;
       transition: 0.5s;
-      @media screen and (max-width: 800px) {
-        margin: 2vh auto;
-        width: 90vw;
-      }
       @media screen and (max-width: 1700px) {
         font-size: 1.3rem;
+      }
+      @media screen and (max-width: 800px) {
+        margin: 1vh auto;
+        width: 90vw;
+        font-size: 1.2rem;
       }
       :hover {
         transform: scale(1.1);
       }
       span {
         color: var(--secondaryColor);
+      }
+    }
+  }
+
+  .socialMediaWrapper {
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+  .socialMediaWrapperM {
+    @media screen and (min-width: 801px) {
+      display: none;
+    }
+    align-items: center;
+    a,
+    h4 {
+      display: flex;
+      align-items: center;
+      :hover {
+        transform: none;
+      }
+      span {
+        margin-left: 10px;
+      }
+      svg {
+        font-size: 1.5rem;
       }
     }
   }
@@ -229,8 +296,10 @@ const Wrapper = styled.div`
       font-weight: 500;
       transition: 0.5s;
       @media screen and (max-width: 800px) {
-        margin: 2vh auto;
+        margin: 1vh auto 1vh;
         width: 90vw;
+        font-size: 1.2rem;
+        text-align: center;
       }
       span {
         color: var(--secondaryColor);
@@ -258,6 +327,11 @@ const Wrapper = styled.div`
     transition: 0.4s;
     :hover {
       filter: saturate(0.8);
+    }
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      margin-top: 10vh;
+      border-radius: 0px;
     }
   }
 `;

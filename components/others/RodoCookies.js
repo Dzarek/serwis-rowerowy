@@ -218,7 +218,15 @@ const Wrapper = styled.div`
     width: 100vw;
     height: 100vh;
     box-shadow: none;
-
+    padding: 10px;
+    p {
+      text-align: justify;
+      padding: 15px;
+    }
+    .title {
+      margin: 10vh auto 5vh;
+      text-align: center;
+    }
     h1 {
       font-size: 2rem;
       margin-top: 10vh;

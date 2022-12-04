@@ -58,12 +58,19 @@ const Wrapper = styled.div`
     @media screen and (max-width: 1700px) {
       font-size: 1rem;
     }
+    @media screen and (max-width: 800px) {
+      font-size: 0.9rem;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    padding: 0vh 2vw 5vh;
+    height: 25vh;
   }
   .logoJarek {
     position: absolute;
     /* bottom: 4%; */
-    top: 50%;
-    transform: translateY(-10%);
+    bottom: 10%;
+    /* transform: translateY(10%); */
     left: 2%;
     display: flex;
     justify-content: center;

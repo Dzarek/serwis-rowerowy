@@ -79,7 +79,13 @@ body {
     background-image: url('/images/mainBg.jpg');
     background-size: cover;
     background-attachment: fixed;
+}
 
+@media screen and (max-width: 800px) {
+    .app {
+        background-size: initial;
+        background-position: 0% 30%;
+    }
 }
 
 

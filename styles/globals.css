@@ -72,7 +72,7 @@ body {
     --headerNavFont: 'Rubik Dirt', serif;
     width: 100vw;
     min-height: 100vh;
-    background-color: var(--appBgColor);
+    /* background-color: var(--appBgColor); */
     color: var(--primaryColor);
     font-family: var(--textFont);
     position: relative;
@@ -84,7 +84,7 @@ body {
 @media screen and (max-width: 800px) {
     .app {
         background-size: initial;
-        background-position: 0% 30%;
+        /* background-position: 0% 30%; */
     }
 }
 

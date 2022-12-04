@@ -135,9 +135,9 @@ const Wrapper = styled.div`
     background-position: center;
     background-size: cover;
     opacity: 0.25;
-    /* @media screen and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       background-size: initial;
-    } */
+    }
   }
   header {
     position: relative;

@@ -25,19 +25,25 @@ const Workout = () => {
       </div>
       <div className="content">
         <p className="mainInfo">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora,
-          eligendi illum! Iusto debitis perferendis nemo expedita, nisi,
-          recusandae quo quod neque id animi temporibus! Dolore odit animi
-          suscipit rem optio omnis natus minima totam obcaecati reprehenderit
-          numquam, explicabo reiciendis ullam sit nemo! Totam autem impedit
-          soluta praesentium dignissimos, porro veritatis.
+          Skuteczny plan treningowy to wyzwanie przed którym staje każdy kolarz.
+          Niezależnie od tego czy dopiero zaczynasz swoją kolarską przygodę czy
+          też chcesz rozpocząć świadome treningi o efektywnie trenować pozwól,
+          że Ci w tym pomogę. Indywidualny plan treningowy i opieka trenerska to
+          wiele korzyści dla twojego (sportowo-zdrowego) rozwoju. Co tydzień na
+          międzynarodowej platformie Treaning Peaks otrzymujesz nowy plan,
+          stworzony pod Twoje cele. Strategie treningów planuje w oparciu o
+          Twoje dotychczasowe wyniki i doświadczenie, możliwości czasowe, oraz
+          ogólny stan zdrowia. Treningi, które dla Ciebie przygotuje to sekcje
+          interwałowe, regeneracyjne, wytrzymałościowe.
+          <br /> <br />
+          Wejdź w plan który Cię interesuje i wypełnij formularz. Skontaktuje
+          się z Tobą w ciągu 2-3 dni.
         </p>
         <h2>Wybierz swój plan treningowy</h2>
         <div className="plans">
           <section
             className="medium"
             data-aos="fade-up"
-            data-aos-offset="300"
             data-aos-duration="2000"
             onMouseEnter={() => setLevelIcon("competition")}
             onMouseLeave={() => setLevelIcon("")}
@@ -71,7 +77,6 @@ const Workout = () => {
           <section
             className="hard"
             data-aos="fade-up"
-            data-aos-offset="300"
             data-aos-duration="2000"
             onMouseEnter={() => setLevelIcon("pro")}
             onMouseLeave={() => setLevelIcon("")}
@@ -118,6 +123,10 @@ const Wrapper = styled.div`
     margin: 3vh auto;
     font-size: 1.1rem;
     text-align: center;
+    @media screen and (max-width: 800px) {
+      width: 90vw;
+      font-size: 1rem;
+    }
   }
   .title {
     display: flex;
@@ -139,7 +148,7 @@ const Wrapper = styled.div`
     width: 90vw;
     margin: 10vh auto;
     p {
-      width: 60vw;
+      width: 65vw;
       margin: 0 auto;
       text-align: center;
       font-size: 1.1rem;
@@ -150,6 +159,18 @@ const Wrapper = styled.div`
       text-align: center;
       font-size: 2rem;
     }
+    @media screen and (max-width: 800px) {
+      margin: 5vh auto 10vh;
+      width: 95vw;
+      p {
+        width: 90vw;
+      }
+      h2 {
+        margin-top: 10vh;
+        font-size: 1.5rem;
+        width: 95vw;
+      }
+    }
   }
   .plans {
     width: 75vw;
@@ -157,10 +178,18 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: 800px) {
+      width: 95vw;
+      flex-direction: column;
+    }
     svg {
       font-size: 10rem;
       opacity: 0.2;
       transition: 0.5s;
+      @media screen and (max-width: 800px) {
+        font-size: 4rem;
+        margin: 3vh auto;
+      }
     }
     .competition {
       opacity: 0.5;
@@ -177,22 +206,29 @@ const Wrapper = styled.div`
       border: 2px solid #eee;
       border-radius: 5px;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media screen and (max-width: 800px) {
+        width: 95%;
+        height: auto;
+      }
       .info {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         width: 80%;
+        margin: 0 auto;
         height: 80%;
         background: var(--workoutBg);
         display: flex;
-        /* flex-direction: column; */
         align-items: center;
         justify-content: center;
         border-radius: 5px;
         transition: 0.5s;
         overflow: hidden;
         flex-wrap: wrap;
+        @media screen and (max-width: 800px) {
+          width: 100%;
+          padding: 3vw 0;
+        }
         h2 {
           font-size: 2.2rem;
           text-transform: uppercase;
@@ -201,11 +237,18 @@ const Wrapper = styled.div`
             font-size: 1.8rem;
             margin: 1vh auto;
           }
+          @media screen and (max-width: 800px) {
+            font-size: 1.5rem;
+          }
         }
         ul {
           display: none;
           list-style: none;
           width: 90%;
+          @media screen and (max-width: 800px) {
+            width: 95%;
+            margin: 3vh auto;
+          }
           li {
             display: flex;
             align-items: center;
@@ -216,11 +259,17 @@ const Wrapper = styled.div`
             @media screen and (max-width: 1700px) {
               font-size: 1rem;
             }
+            @media screen and (max-width: 800px) {
+              margin-bottom: -1vh;
+              font-size: 1rem;
+              line-height: 1.1;
+            }
             svg {
               font-size: 1.5rem;
               opacity: 1;
               color: #fff;
               margin-right: 10px;
+              margin-left: 0;
               flex-shrink: 0;
               @media screen and (max-width: 1700px) {
                 font-size: 1.2rem;
@@ -233,6 +282,10 @@ const Wrapper = styled.div`
           width: 70%;
           justify-content: space-between;
           align-items: center;
+          @media screen and (max-width: 800px) {
+            width: 90%;
+            margin: 2vh auto;
+          }
           h3 {
             font-size: 2rem;
             @media screen and (max-width: 1700px) {

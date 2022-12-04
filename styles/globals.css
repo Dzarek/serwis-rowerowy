@@ -198,7 +198,11 @@ body {
 
 .navHamburgerM {
     top: 2vh;
-    font-size: 3.2rem;
+    left: 3vw;
+    font-size: 3rem;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.4);
+
 }
 
 @keyframes hamburgerAnimation {

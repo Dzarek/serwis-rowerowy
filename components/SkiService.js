@@ -32,12 +32,11 @@ const SkiService = () => {
         <div data-aos="titleWidth"></div>
       </div>
       <p className="firstInfo">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti omnis
-        possimus facilis rerum dignissimos dolor. Nisi soluta rem, qui
-        perspiciatis ratione accusantium commodi nobis, doloribus iure saepe
-        quod laboriosam laborum! Voluptatum, optio repudiandae! Aliquam harum
-        quasi exercitationem impedit ad illum, repellat neque ipsum? Vitae, eos
-        veritatis possimus tempore quod aperiam!
+        Cała przyjemność z jazdy na białym puchu leży po stronie swietnie
+        przygotowanych nart. Ostrzenie krawędzi, smarowanie na gorąco, regulacja
+        wiązań to podstawowe czynności które sprawią, że zwiększysz swoj komfort
+        z jazdy na nartach lub desce. Sprawdź co możemy dla Ciebie wykonać w
+        naszym serwisie sprzętów zimowych.
       </p>
       <div className="content">
         <img src={snowboardImg} alt="" />
@@ -122,7 +121,7 @@ const Wrapper = styled.div`
   }
   .firstInfo {
     margin: 10vh auto 5vh;
-    width: 70vw;
+    width: 60vw;
     font-size: 1.1rem;
     text-align: center;
     @media screen and (max-width: 800px) {

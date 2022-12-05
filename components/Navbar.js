@@ -227,7 +227,6 @@ const Wrapper = styled.div`
   }
   nav {
     position: absolute;
-    /* top: 52%; */
     top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -236,10 +235,8 @@ const Wrapper = styled.div`
     align-items: flex-start;
     width: 100%;
     a {
-      /* width: 100%; */
       text-decoration: none;
       font-size: 1.5rem;
-      /* margin-bottom: 1vh; */
       margin-bottom: 0.9vh;
       color: #222;
       display: flex;
@@ -262,7 +259,6 @@ const Wrapper = styled.div`
   }
   .logo {
     position: absolute;
-    /* top: 15%; */
     top: 13%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -360,6 +356,7 @@ const Wrapper2 = styled.div`
       justify-content: center;
       transition: 0.4s;
       cursor: pointer;
+      user-select: none;
       @media screen and (min-height: 800px) {
         font-size: 1.7rem;
         margin-bottom: 2vh;
@@ -382,7 +379,6 @@ const Wrapper2 = styled.div`
     top: 13%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* width: 45%; */
     height: 18%;
     @media screen and (min-height: 800px) {
       top: 15%;
@@ -396,30 +392,21 @@ const Wrapper2 = styled.div`
     display: flex;
     width: 80%;
     justify-content: space-between;
+    user-select: none;
     a,
     div {
+      user-select: none;
       .icon {
         font-size: 1.7rem;
         cursor: pointer;
+
         @media screen and (min-height: 800px) {
           font-size: 2rem;
         }
       }
     }
   }
-  /* .contactInfo {
-    position: absolute;
-    bottom: 0.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    color: #222;
-    text-align: center;
-    font-size: 1.1rem;
-    @media screen and (min-height: 800px) {
-      font-size: 1.3rem;
-    }
-  } */
+
   .upBtn {
     position: fixed;
     bottom: 3vh;
@@ -431,6 +418,7 @@ const Wrapper2 = styled.div`
     transition: 0.5s;
     cursor: pointer;
     z-index: 999;
+    user-select: none;
     :hover {
       color: var(--secondaryColor3);
     }

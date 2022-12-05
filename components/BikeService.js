@@ -8,13 +8,12 @@ import "aos/dist/aos.css";
 import { SRLWrapper } from "simple-react-lightbox";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
+import {
+  MdOutlineArrowBackIos,
+  MdOutlineArrowForwardIos,
+} from "react-icons/md";
 
-const img1 = "/images/bikeService/1.jpg";
-const img2 = "/images/bikeService/2.jpg";
-const img3 = "/images/bikeService/3.jpg";
-const img4 = "/images/bikeService/4.jpg";
-
-const BikeService = ({ przegladRower }) => {
+const BikeService = ({ imagesRower, przegladRower, cenyRower }) => {
   const [activePakiet, setActivePakiet] = useState(null);
   const [iconClass, setIconClass] = useState("pakietIcon");
   const [showAllBikeOffer, setShowAllBikeOffer] = useState(false);
@@ -52,30 +51,39 @@ const BikeService = ({ przegladRower }) => {
         Wykonane naprawy poprzedzone są diagnozą która daje możliwość
         dopasowania usługi do Waszych potrzeb. <br /> Zapraszamy!
       </p>
-      <div className="imgContainerDesktop">
+      {/* <div className="imgContainerDesktop">
         <SRLWrapper>
           <div className="imgContainerHorizontal">
             <img src={img1} alt="" />
             <img src={img2} alt="" />
             <img src={img3} alt="" />
             <img src={img4} alt="" />
+            <img src={img4} alt="" />
+            <img src={img4} alt="" />
           </div>
         </SRLWrapper>
-      </div>
+      </div> */}
       <SRLWrapper>
         <Carousel
           className="carouselM"
           infinite
           autoPlay={3000}
           animationSpeed={1000}
-          slidesPerPage={1}
+          slidesPerPage={4}
+          breakpoints={{
+            900: {
+              slidesPerPage: 1,
+            },
+          }}
           stopAutoPlayOnHover
           draggable={false}
+          addArrowClickHandler
+          arrowLeft={<MdOutlineArrowBackIos className="arrow" />}
+          arrowRight={<MdOutlineArrowForwardIos className="arrow" />}
         >
-          <img src={img1} alt="" />
-          <img src={img2} alt="" />
-          <img src={img3} alt="" />
-          <img src={img4} alt="" />
+          {imagesRower.map((item, index) => {
+            return <img key={index} src={item} alt="" />;
+          })}
         </Carousel>
       </SRLWrapper>
       <section className="pakiety">
@@ -87,41 +95,16 @@ const BikeService = ({ przegladRower }) => {
         >
           <h2>Przegląd Podstawowy</h2>
           <ul className={activePakiet === "basic" ? "gearActive" : ""}>
-            {przegladRower &&
-              przegladRower.podstawowy.nazwa.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <BsGearFill />
-                    {item}
-                  </li>
-                );
-              })}
-            {/* <li>
-              <BsGearFill />
-              weryfikacja stanu technicznego
-            </li>
-            <li>
-              <BsGearFill />
-              kontrola połączeń gwintowanych
-            </li>
-            <li>
-              <BsGearFill />
-              likwidacja luzów
-            </li>
-            <li>
-              <BsGearFill />
-              regulacja przerzutek i hamulców
-            </li>
-            <li>
-              <BsGearFill />
-              korekta centryczności oraz pompowanie kół
-            </li>
-            <li>
-              <BsGearFill />
-              smarowanie napędu
-            </li> */}
+            {przegladRower.podstawowy.name.map((item, index) => {
+              return (
+                <li key={index}>
+                  <BsGearFill />
+                  {item}
+                </li>
+              );
+            })}
           </ul>
-          <span>120 zł</span>
+          <span>{przegladRower.podstawowy.price} zł</span>
         </div>
         <TiSpanner className={iconClass} />
         <div
@@ -132,47 +115,16 @@ const BikeService = ({ przegladRower }) => {
         >
           <h2>Przegląd Zaawansowany</h2>
           <ul className={activePakiet === "pro" ? "gearActive" : ""}>
-            <li>
-              <BsGearFill />
-              <p>weryfikacja stanu technicznego</p>
-            </li>
-            <li>
-              <BsGearFill />
-              kontrola połączeń gwintowanych
-            </li>
-            <li>
-              <BsGearFill />
-              likwidacja luzów
-            </li>
-            <li>
-              <BsGearFill />
-              regulacja przerzutek i hamulców
-            </li>
-            <li>
-              <BsGearFill />
-              korekta centryczności oraz pompowanie kół
-            </li>
-            <li>
-              <BsGearFill />
-              smarowanie napędu
-            </li>
-            <li>
-              <BsGearFill />
-              demontaż
-            </li>
-            <li>
-              <BsGearFill />{" "}
-              <p>
-                {" "}
-                czyszczenie oraz smarowanie łożysk sterów, sterów oraz piast
-              </p>
-            </li>
-            <li>
-              <BsGearFill />
-              czyszczenie i smarowanie układu napędowego
-            </li>
+            {przegladRower.zaawansowany.name.map((item, index) => {
+              return (
+                <li key={index}>
+                  <BsGearFill />
+                  {item}
+                </li>
+              );
+            })}
           </ul>
-          <span>250 zł</span>
+          <span>{przegladRower.zaawansowany.price} zł</span>
         </div>
       </section>
       <button
@@ -184,15 +136,16 @@ const BikeService = ({ przegladRower }) => {
         zobacz całą ofertę
       </button>
       {showAllBikeOffer && (
-        <AllBikeOffer setShowAllBikeOffer={setShowAllBikeOffer} />
+        <AllBikeOffer
+          setShowAllBikeOffer={setShowAllBikeOffer}
+          cenyRower={cenyRower}
+        />
       )}
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  /* background-image: url(${bgImg});
-  background-size: cover; */
   background-color: var(--appBgColor);
   padding-bottom: 5vh;
   @media screen and (max-width: 800px) {
@@ -216,39 +169,54 @@ const Wrapper = styled.div`
       width: 90vw;
     }
   }
-  .imgContainerDesktop {
+  /* .imgContainerDesktop {
     @media screen and (max-width: 800px) {
       display: none;
     }
-  }
-  .imgContainerHorizontal {
+  } */
+  /* .imgContainerHorizontal {
     margin: 10vh auto 0;
     width: 85vw;
-    height: 25vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     img {
       width: 20%;
-      height: 100%;
       object-fit: cover;
       border-radius: 5px;
       box-shadow: 2px 2px 5px 0 #111;
       cursor: pointer;
+      margin: 1vw 2vw;
     }
-  }
+  } */
   .carouselM {
-    @media screen and (min-width: 801px) {
+    /* @media screen and (min-width: 801px) {
       display: none;
-    }
-    width: 90vw;
+    } */
     margin: 10vh auto 0;
+    width: 90vw;
+    .arrow {
+      font-size: 2rem;
+      cursor: pointer;
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
     img {
-      width: 90%;
-      /* height: 100%; */
+      width: 17vw;
       object-fit: cover;
       border-radius: 5px;
       box-shadow: 2px 2px 5px 0 #111;
       cursor: pointer;
+    }
+    @media screen and (max-width: 800px) {
+      img {
+        width: 90%;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px 0 #111;
+        cursor: pointer;
+      }
     }
   }
 
@@ -347,7 +315,6 @@ const Wrapper = styled.div`
   }
   .fullPricesBtn {
     margin: 10vh auto;
-    /* width: 20vw; */
     padding: 10px 30px;
     font-size: 1.5rem;
     text-transform: uppercase;

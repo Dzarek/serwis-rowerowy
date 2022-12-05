@@ -42,10 +42,10 @@ const MyForm = () => {
     } else {
       emailjs
         .sendForm(
-          "service_eu28q7p",
-          "template_oizztce",
+          "service_n61nubg",
+          "template_dhnujxr",
           e.target,
-          "QPhckFRY63F4zWAKT"
+          "NIJK8PLN6cdaDtmW_"
         )
         .then(
           () => {
@@ -374,7 +374,6 @@ const Wrapper = styled.form`
     cursor: pointer;
     :hover {
       background: #fff;
-      /* border: 2px solid var(--secondaryColor); */
       color: var(--secondaryColor);
     }
     @media screen and (max-width: 800px) {

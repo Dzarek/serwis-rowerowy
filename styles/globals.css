@@ -9,16 +9,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600;700&display=swap');
 
-
-
-@import url('https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap');
-/* font-family: 'Genos', sans-serif; */
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap');
 
 * {
@@ -38,13 +28,8 @@ body {
 
 
 .app {
-    /* --appBgColor: #222; */
     --primaryColor: rgb(243, 243, 243);
-    /* --appBgColor: rgb(29, 36, 33); */
     --appBgColor: rgba(27, 50, 32, 0.163);
-    /* --appBgColor: rgba(43, 68, 43, 0.163); */
-    /* --primaryColor: #222; */
-
     --bikeBg: rgb(249, 249, 249);
     /* --secondaryColor: #65996e; */
     /* --secondaryColor: #77886b; */
@@ -56,9 +41,6 @@ body {
     --secondaryColor4: #669971;
     /* --secondaryColor99: #94b899; */
     --secondaryColor99: #95c4a9;
-
-
-
     /* --workoutBg: #394027ca; */
     --workoutBg: #35493aca;
     --navLinkColor: #666;
@@ -84,7 +66,6 @@ body {
 @media screen and (max-width: 800px) {
     .app {
         background-size: initial;
-        /* background-position: 0% 30%; */
     }
 }
 
@@ -116,14 +97,10 @@ body {
 .title h1 {
     font-family: var(--titleFont);
     font-size: 3rem;
-    /* font-size: 5rem; */
-    /* opacity: 0.5; */
-    /* font-weight: 600; */
     color: var(--secondaryColor);
     text-transform: uppercase;
     letter-spacing: 5px;
     text-align: center;
-    /* font-family: var(--headerContactFont); */
 }
 
 @media screen and (max-width:800px) {
@@ -157,7 +134,6 @@ body {
 
 .icon {
     color: var(--navLinkColorHover);
-    /* color: var(--secondaryColor99); */
     margin-right: 10px;
 }
 
@@ -167,23 +143,6 @@ body {
     color: var(--activeNavLink);
 }
 
-
-/* .loading {
-    margin: 30vh auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.loading img {
-    margin-bottom: 5vh;
-}
-
-.loading h2 {
-    font-family: var(--titleFont);
-    font-weight: 600;
-} */
 
 .navHamburger,
 .navHamburgerM {
@@ -361,9 +320,3 @@ html::-webkit-scrollbar-thumb:hover {
         margin-bottom: 4vh;
     }
 }
-
-/* @media screen and (max-width:800px) {
-    body {
-        display: none;
-    }
-} */

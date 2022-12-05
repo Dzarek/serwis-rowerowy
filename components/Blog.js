@@ -12,9 +12,8 @@ import {
 import { CgMenuGridR } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
 import { FaSmileWink } from "react-icons/fa";
-import { blogArticles } from "../public/data";
 
-const Blog = () => {
+const Blog = ({ blog }) => {
   const [showArticle, setShowArticle] = useState(false);
   const [showAllArticles, setShowAllArticles] = useState(false);
   useEffect(() => {
@@ -47,7 +46,7 @@ const Blog = () => {
         arrowLeft={<MdOutlineArrowBackIos className="arrow" />}
         arrowRight={<MdOutlineArrowForwardIos className="arrow" />}
       >
-        {blogArticles.map((article, index) => {
+        {blog.map((article, index) => {
           const { title, image, date } = article;
           return (
             <div
@@ -88,7 +87,7 @@ const Blog = () => {
             onClick={() => setShowAllArticles(false)}
           />
           <div className="articles">
-            {blogArticles.map((article, index) => {
+            {blog.map((article, index) => {
               const { title, image, date } = article;
               return (
                 <div
@@ -114,7 +113,6 @@ const Blog = () => {
 
 const Wrapper = styled.div`
   padding-bottom: 10vh;
-  /* background: #111; */
   background: rgba(0, 0, 0, 0.4);
   .title {
     display: flex;
@@ -149,15 +147,9 @@ const Wrapper = styled.div`
       font-size: 1.1rem;
     }
   }
-  /* .content {
-    width: 90vw;
-    margin: 15vh auto 10vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; */
+
   .carousel {
-    width: 95vw;
+    width: 90vw;
     margin: 10vh auto 5vh;
   }
   .arrow {
@@ -321,9 +313,6 @@ const Wrapper = styled.div`
         transform: translate(-50%, -100%);
       }
       img {
-        /* position: absolute;
-        top: 0;
-        left: 0; */
         width: 100%;
         height: 50vh;
         object-fit: cover;
@@ -353,7 +342,6 @@ const Wrapper = styled.div`
     }
   }
   .allArticles {
-    /* background: rgba(20, 20, 20, 0.98); */
     background-image: url("/images/mainBg.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -405,7 +393,6 @@ const Wrapper = styled.div`
       }
     }
   }
-  /* } */
 `;
 
 export default Blog;

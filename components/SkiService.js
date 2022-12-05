@@ -3,13 +3,12 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import { BsGearFill, BsFillQuestionSquareFill } from "react-icons/bs";
-import { skiPrices } from "../public/data";
 
 const bgImg = "/images/skiService/bg.jpg";
 const snowboardImg = "/images/skiService/snowboard.png";
 const skiImg = "/images/skiService/ski.png";
 
-const SkiService = () => {
+const SkiService = ({ cenyNarty }) => {
   const [activeGears, setActiveGears] = useState(false);
   const [activeDetail, setActiveDetail] = useState("");
   useEffect(() => {
@@ -43,7 +42,7 @@ const SkiService = () => {
         <section className="infoContainer">
           <h3>Usługi Serwisowe</h3>
           <ul className={activeGears && "gearsActive"}>
-            {skiPrices.map((oneSki, index) => {
+            {cenyNarty.map((oneSki, index) => {
               const { name, price, details } = oneSki;
               return (
                 <div key={index} className="oneServiceWrapper">
@@ -85,12 +84,8 @@ const Wrapper = styled.div`
   }
   .title {
     h1 {
-      /* text-shadow: 0.5px 0.5px 0.5px #eee; */
       text-shadow: 2px 2px 2px #222;
     }
-    /* div {
-      width: 300px;
-    } */
     [data-aos="titleWidth"] {
       width: 0;
       transition-property: width;
@@ -185,10 +180,6 @@ const Wrapper = styled.div`
             padding: 3px 10px;
             border-radius: 5px;
             margin: 0 auto;
-            /* position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); */
           }
 
           li {
@@ -208,9 +199,6 @@ const Wrapper = styled.div`
               border-bottom: 1px solid #ddd;
               align-self: flex-end;
               margin: 0 5px 10px;
-              /* @media screen and (max-width: 800px) {
-                display: none;
-              } */
             }
             svg,
             span {
@@ -231,7 +219,6 @@ const Wrapper = styled.div`
               font-size: 1.6rem;
               @media screen and (max-width: 800px) {
                 font-size: 1rem;
-                /* display: none; */
                 margin: 0 3px;
               }
             }

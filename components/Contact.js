@@ -169,15 +169,6 @@ const Wrapper = styled.div`
         padding: 5vh 0 0;
       }
     }
-    /* img {
-      height: 50vh;
-      margin-right: 5vw;
-      @media screen and (max-width: 800px) {
-        height: auto;
-        width: 100vw;
-        margin-right: 0;
-      }
-    } */
   }
   .contactContainer {
     position: relative;
@@ -190,17 +181,7 @@ const Wrapper = styled.div`
     section {
       width: 47%;
     }
-    /* .separateLine {
-      width: 2px;
-      background: var(--secondaryColor3);
-      height: 50vh;
-      align-self: center;
-    } */
-    /* .separateImg {
-      width: 10vw;
-      align-self: center;
-      opacity: 0.5;
-    } */
+
     .contactForm,
     .contactSocialMedia {
       h3 {
@@ -322,9 +303,6 @@ const Wrapper = styled.div`
     width: 80%;
     height: 40vh;
     margin-top: 5vh;
-    /* position: relative;
-    bottom: 0;
-    left: 0; */
     border-radius: 5px;
     filter: saturate(0.2);
     transition: 0.4s;

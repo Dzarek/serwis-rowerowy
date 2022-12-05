@@ -3,19 +3,18 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import { GiStrong, GiCartwheel } from "react-icons/gi";
-import { plans } from "../public/data";
 
 const mediumImg = "/images/workout/medium.jpg";
 const hardImg = "/images/workout/hard.jpg";
 
-const compPlan = plans.find((plan) => plan.name === "competition");
-const proPlan = plans.find((plan) => plan.name === "professional");
-
-const Workout = () => {
+const Workout = ({ treningi }) => {
   const [levelIcon, setLevelIcon] = useState("");
   useEffect(() => {
     Aos.init({ duration: 1000, disable: "mobile" });
   }, []);
+
+  const compPlan = treningi.find((plan) => plan.name === "competition");
+  const proPlan = treningi.find((plan) => plan.name === "professional");
 
   return (
     <Wrapper id="workout" className="mainPage">
@@ -202,7 +201,6 @@ const Wrapper = styled.div`
       height: 60vh;
       background-position: center;
       background-size: cover;
-      /* filter: brightness(0.8); */
       border: 2px solid #eee;
       border-radius: 5px;
       position: relative;

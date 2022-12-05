@@ -9,11 +9,10 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 import { MdExpandMore } from "react-icons/md";
-import { bikePrices } from "../public/data";
 
 const mainImg = "/images/bikeService/bike/main.png";
 
-const AllBikeOffer = ({ setShowAllBikeOffer }) => {
+const AllBikeOffer = ({ setShowAllBikeOffer, cenyRower }) => {
   const [bikeImage, setBikeImage] = useState(mainImg);
 
   const handleClose = () => {
@@ -29,7 +28,7 @@ const AllBikeOffer = ({ setShowAllBikeOffer }) => {
         <img src={bikeImage} alt="rower" className="bikeImg" />
         <div className="allCategories">
           <Accordion allowZeroExpanded={true}>
-            {bikePrices.map((oneInfo) => {
+            {cenyRower.map((oneInfo) => {
               const { title, details, id, image } = oneInfo;
               return (
                 <AccordionItem key={id}>

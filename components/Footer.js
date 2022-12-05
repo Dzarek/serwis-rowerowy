@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const logoJarek = "/images/logoJarek.png";
 
-// const Footer = ({ thumbnails }) => {
 const Footer = () => {
   return (
     <Wrapper>
@@ -16,30 +15,13 @@ const Footer = () => {
           <img src={logoJarek} alt="logo Jarosław Janas" />
         </a>{" "}
       </span>
-      {/* <div className="test">
-        {thumbnails.map((item, index) => {
-          return <img key={index} src={item} alt="" />;
-        })}
-      </div> */}
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  /* .test {
-    position: fixed;
-    width: 80vw;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    img {
-      width: 50px;
-    }
-  } */
   width: 100vw;
   padding: 2vh 7vw;
-  /* height: 10vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,9 +50,7 @@ const Wrapper = styled.div`
   }
   .logoJarek {
     position: absolute;
-    /* bottom: 4%; */
     bottom: 10%;
-    /* transform: translateY(10%); */
     left: 2%;
     display: flex;
     justify-content: center;

@@ -79,7 +79,6 @@ const Wrapper = styled.div`
   background-position: center 70%;
   background-size: cover;
   position: relative;
-  /* border-bottom: 5px solid #444; */
   box-shadow: 0px 50px 100px #111;
   .overlay {
     width: 100vw;
@@ -96,7 +95,6 @@ const Wrapper = styled.div`
         z-index: 9999999999999;
       }
       100% {
-        /* background: transparent; */
         z-index: 0;
         opacity: 0;
       }
@@ -107,9 +105,7 @@ const Wrapper = styled.div`
     position: absolute;
     top: 10%;
     left: 4%;
-    /* transform: translate(-50%, -50%); */
     width: 25vw;
-    /* opacity: 0.8; */
     opacity: 0.6;
     @media screen and (max-width: 800px) {
       top: 7%;
@@ -130,29 +126,20 @@ const Wrapper = styled.div`
       font-size: 1.8rem;
       font-size: 2.2rem;
       text-decoration: none;
-      /* color: var(--navLinkColor); */
-      /* color: #eee; */
       color: #ccc;
-      /* margin: 1.5vh 0; */
       margin: 1.2vh 0;
       text-transform: uppercase;
-      /* font-weight: 700; */
       letter-spacing: 3px;
       transition: 0.4s;
       text-shadow: 1px 1px 1px #999;
       font-family: var(--headerNavFont);
       cursor: pointer;
       &.active {
-        /* color: var(--navLinkColorHover); */
         color: var(--secondaryColor99);
       }
       :hover {
-        /* color: var(--navLinkColorHover); */
         color: var(--secondaryColor4);
       }
-      /* :nth-child(1) {
-        color: var(--navLinkColorHover);
-      } */
     }
     @media screen and (max-width: 800px) {
       display: none;
@@ -183,9 +170,7 @@ const Wrapper = styled.div`
   .cytat {
     position: absolute;
     bottom: 2%;
-    /* right: 5%; */
     right: 7%;
-    /* color: white; */
     color: #eee;
     text-shadow: 1px 1px 1px black;
     font-size: 1.3rem;
@@ -201,8 +186,6 @@ const Wrapper = styled.div`
   }
   .contactWrapper {
     position: absolute;
-    /* top: 2%;
-    right: 7%; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -218,7 +201,6 @@ const Wrapper = styled.div`
     div {
       display: flex;
       align-items: center;
-      /* color: #111; */
       color: #eee;
       text-decoration: none;
       margin-left: 2vw;
@@ -256,7 +238,6 @@ const Wrapper = styled.div`
     }
   }
   .icon {
-    /* color: var(--navLinkColorHover); */
     color: var(--secondaryColor99);
     margin-right: 10px;
   }

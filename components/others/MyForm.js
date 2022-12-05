@@ -42,10 +42,10 @@ const MyForm = () => {
     } else {
       emailjs
         .sendForm(
-          // "service_9s94mu1",
-          // "template_p3qolfe",
-          e.target
-          // "WgQWoqpRy3nW2fmKj"
+          "service_eu28q7p",
+          "template_oizztce",
+          e.target,
+          "QPhckFRY63F4zWAKT"
         )
         .then(
           () => {

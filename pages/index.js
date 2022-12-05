@@ -1,19 +1,21 @@
+import fsPromises from "fs/promises";
+import path from "path";
+
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import BikeService from "../components/BikeService";
 import SkiService from "../components/SkiService";
 // import Accesories from "../components/Accesories";
-// import AboutMe from "../components/AboutMe";
 import AboutUs from "../components/AboutUs";
 import Workout from "../components/Workout";
 import Blog from "../components/Blog";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
-// export default function Home({ thumbnails }) {
-export default function Home() {
-  // console.log(thumbnails);
+export default function Home({ przegladRower }) {
+  // export default function Home() {
+  console.log(przegladRower);
   return (
     <>
       <Head>
@@ -29,32 +31,43 @@ export default function Home() {
       </Head>
       <Header />
       <Navbar />
-      <BikeService />
+      <BikeService przegladRower={przegladRower} />
       <SkiService />
       {/* <Accesories /> */}
-      {/* <AboutMe /> */}
       <AboutUs />
       <Workout />
       <Blog />
       <Contact />
       <Footer />
-      {/* <Footer thumbnails={thumbnails} /> */}
     </>
   );
 }
-// export async function getStaticProps() {
-//   const response = await fetch(
-//     "https://data.focuseye.pl/wp-json/wp/v2/media?media_folder=59&per_page=100"
-//   );
-//   const data = await response.json();
-//   const thumbnails = data.map((image) => {
-//     const smallImg = image.media_details.sizes.full.source_url;
-//     return smallImg;
-//   });
+export async function getStaticProps() {
+  let data;
+  let przegladRower;
+  const filePath = path.join(process.cwd(), "data.json");
+  const jsonData = await fsPromises.readFile(filePath);
+  const localData = JSON.parse(jsonData);
 
-//   return {
-//     props: {
-//       thumbnails,
-//     },
-//   };
-// }
+  try {
+    const res = await fetch(
+      "https://rowery-9b90a-default-rtdb.europe-west1.firebasedatabase.app/.json"
+    );
+    data = await res.json();
+  } catch (error) {
+    data = localData;
+  }
+
+  if (data && data.przegladRower) {
+    przegladRower = data.przegladRower;
+  } else {
+    przegladRower = localData.przegladRower;
+  }
+
+  return {
+    props: {
+      przegladRower,
+    },
+    revalidate: 60,
+  };
+}

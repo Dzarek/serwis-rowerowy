@@ -58,12 +58,7 @@ const AboutMe = () => {
         </div>
       </div>
       <div className="content">
-        <img
-          src={sylwiaImg}
-          alt=""
-          data-aos="zoom-in"
-          // data-aos-offset="300"
-        />
+        <img src={sylwiaImg} alt="" data-aos="zoom-in" />
         <div className="info">
           <p>
             Sylwia to fotograf z pasją, swoją przygodę z aparatem zaczynała
@@ -95,7 +90,6 @@ const AboutMe = () => {
 };
 
 const Wrapper = styled.div`
-  /* background: #333; */
   width: 100vw;
   min-height: 100vh;
   margin: 0 auto;
@@ -186,7 +180,6 @@ const Wrapper = styled.div`
       p {
         width: 100%;
         font-size: 1.1rem;
-        /* line-height: 2.3; */
         text-align: center;
       }
       .iconContainer {

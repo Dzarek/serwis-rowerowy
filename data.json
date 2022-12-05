@@ -1,0 +1,18 @@
+{
+  "cenyRower": {
+    "naped": {
+      "id": 1,
+      "title": "Napęd"
+    }
+  },
+  "przegladRower": {
+    "podstawowy": {
+      "cena": "120",
+      "nazwa": [
+        "weryfikacja stanu technicznego",
+        "kontrola połączeń gwintowanych",
+        "aaaaa"
+      ]
+    }
+  }
+}

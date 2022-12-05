@@ -14,7 +14,7 @@ const img2 = "/images/bikeService/2.jpg";
 const img3 = "/images/bikeService/3.jpg";
 const img4 = "/images/bikeService/4.jpg";
 
-const BikeService = () => {
+const BikeService = ({ przegladRower }) => {
   const [activePakiet, setActivePakiet] = useState(null);
   const [iconClass, setIconClass] = useState("pakietIcon");
   const [showAllBikeOffer, setShowAllBikeOffer] = useState(false);
@@ -87,7 +87,16 @@ const BikeService = () => {
         >
           <h2>Przegląd Podstawowy</h2>
           <ul className={activePakiet === "basic" ? "gearActive" : ""}>
-            <li>
+            {przegladRower &&
+              przegladRower.podstawowy.nazwa.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <BsGearFill />
+                    {item}
+                  </li>
+                );
+              })}
+            {/* <li>
               <BsGearFill />
               weryfikacja stanu technicznego
             </li>
@@ -110,7 +119,7 @@ const BikeService = () => {
             <li>
               <BsGearFill />
               smarowanie napędu
-            </li>
+            </li> */}
           </ul>
           <span>120 zł</span>
         </div>

@@ -12,7 +12,6 @@ import { MdExpandMore } from "react-icons/md";
 import { bikePrices } from "../public/data";
 
 const mainImg = "/images/bikeService/bike/main.png";
-const bgPrices = "/images/bikeService/bgPrices.png";
 
 const AllBikeOffer = ({ setShowAllBikeOffer }) => {
   const [bikeImage, setBikeImage] = useState(mainImg);
@@ -84,7 +83,6 @@ const Wrapper = styled.div`
   background-image: url("/images/mainBg.jpg");
   background-size: cover;
   background-attachment: fixed;
-  /* background: #222; */
   z-index: 999999999999999;
   position: fixed;
   width: 100vw;
@@ -94,9 +92,6 @@ const Wrapper = styled.div`
   transition: 1s;
   overflow-x: hidden;
   overflow-y: auto;
-  /* background-image: url(${bgPrices}); */
-  /* background-repeat: repeat;
-  background-size: 15vw; */
   .content {
     width: 100vw;
     min-height: 120vh;
@@ -151,7 +146,6 @@ const Wrapper = styled.div`
     transform: translateX(-50%);
     font-size: 2rem;
     text-transform: uppercase;
-    /* color: var(--secondaryColor3); */
     color: var(--secondaryColor);
     text-align: center;
     @media screen and (max-width: 800px) {
@@ -258,11 +252,8 @@ const Wrapper = styled.div`
     position: absolute;
     bottom: 5%;
     left: 50%;
-    /* transform: translateX(-50%); */
-    /* color: #111; */
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     width: 45vw;
     list-style: none;
     @media screen and (max-width: 800px) {
@@ -272,7 +263,6 @@ const Wrapper = styled.div`
       margin: 8vh auto 10vh;
     }
     li {
-      /* width: 40%; */
       font-weight: 500;
       font-size: 1.15rem;
       @media screen and (max-width: 800px) {

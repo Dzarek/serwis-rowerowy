@@ -52,7 +52,7 @@ const AboutMe = () => {
             </li>
             <li>
               <FaGraduationCap />
-              <p>Magister AWF</p>
+              <p>Absolwent AWF</p>
             </li>
           </ul>
         </div>

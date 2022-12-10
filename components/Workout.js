@@ -24,21 +24,28 @@ const Workout = ({ treningi }) => {
       </div>
       <div className="content">
         <p className="mainInfo">
-          Skuteczny plan treningowy to wyzwanie przed którym staje każdy kolarz.
-          Niezależnie od tego czy dopiero zaczynasz swoją kolarską przygodę czy
-          też chcesz rozpocząć świadome treningi o efektywnie trenować pozwól,
-          że Ci w tym pomogę. Indywidualny plan treningowy i opieka trenerska to
-          wiele korzyści dla twojego (sportowo-zdrowego) rozwoju. Co tydzień na
-          międzynarodowej platformie Treaning Peaks otrzymujesz nowy plan,
-          stworzony pod Twoje cele. Strategie treningów planuje w oparciu o
-          Twoje dotychczasowe wyniki i doświadczenie, możliwości czasowe, oraz
-          ogólny stan zdrowia. Treningi, które dla Ciebie przygotuje to sekcje
-          interwałowe, regeneracyjne, wytrzymałościowe.
-          <br /> <br />
-          Wejdź w plan który Cię interesuje i wypełnij formularz. Skontaktuje
-          się z Tobą w ciągu 2-3 dni.
+          Właściwa strategia treningowa to wyzwanie przed którym staje każda
+          osoba chcąca osiągać postępy w kolarskim sporcie niezależnie od tego
+          jakie stawia sobie cele. Jako członek kadry Platformy Treningowej
+          <a
+            href="https://www.cyclotrener.pl/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Cyclotrener.pl{" "}
+          </a>
+          pracuję z zespołem który łączy ciągle poszerzaną wiedzę z praktyką
+          zdobywaną zarówno w pracy z zawodnikami jak i czynnym udziałem w
+          sporcie. Strategie treningowe są ustalane w oparciu o twoje cele,
+          doświadczenie oraz możliwości czasowe.
+          <br />
+          Jeśli chcesz podjąć współpracę lub po prostu poznać możliwości jakie
+          daje Ci praca z zespołem CYCLOTRENER kliknij w program który Cię
+          interesuje i wypełnij formularz. Skontaktuje się z Tobą w ciągu 2-3
+          dni.
         </p>
-        <h2>Wybierz swój plan treningowy</h2>
+        <h2>Wybierz swój program treningowy</h2>
         <div className="plans">
           <section
             className="medium"
@@ -49,7 +56,7 @@ const Workout = ({ treningi }) => {
           >
             <div className="info">
               <h2>
-                Plan <br /> {compPlan.name}
+                Program <br /> {compPlan.name}
               </h2>
               <ul>
                 {compPlan.info.map((text, index) => {
@@ -82,7 +89,7 @@ const Workout = ({ treningi }) => {
           >
             <div className="info">
               <h2>
-                Plan <br /> {proPlan.name}
+                Program <br /> {proPlan.name}
               </h2>
               <ul>
                 {proPlan.info.map((text, index) => {
@@ -151,6 +158,10 @@ const Wrapper = styled.div`
       margin: 0 auto;
       text-align: center;
       font-size: 1.1rem;
+      a {
+        text-decoration: none;
+        color: var(--secondaryColor);
+      }
     }
     h2 {
       width: 60vw;
@@ -172,7 +183,7 @@ const Wrapper = styled.div`
     }
   }
   .plans {
-    width: 75vw;
+    width: 80vw;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -198,7 +209,7 @@ const Wrapper = styled.div`
     }
     section {
       width: 40%;
-      height: 60vh;
+      height: 70vh;
       background-position: center;
       background-size: cover;
       border: 2px solid #eee;

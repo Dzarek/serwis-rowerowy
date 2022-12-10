@@ -32,7 +32,7 @@ const AboutMe = () => {
             Od początków swojej przygody z rowerem osobiście wykonuje serwisy
             oraz naprawy pogłębiając swoją wiedzę i umiejętności. Zawodowo jako
             mechanik pracuje od 7-miu lat. Absolwent PWSZ w Tarnowie na kierunku
-            Wychowanie Fizyczne. Swoją wiedzą kolarską dzieli się tak jako
+            Wychowanie Fizyczne. Swoją wiedzą kolarską dzieli się jako
             certyfikowany trener Platformy Treningowej Cyclo Trener oraz
             Training Peaks. Pasjonat fizjologii anatomii, miłośnik gór pod każdą
             postacią.

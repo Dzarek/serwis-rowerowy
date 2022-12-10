@@ -31,11 +31,15 @@ const SkiService = ({ cenyNarty }) => {
         <div data-aos="titleWidth"></div>
       </div>
       <p className="firstInfo">
-        Cała przyjemność z jazdy na białym puchu leży po stronie swietnie
-        przygotowanych nart. Ostrzenie krawędzi, smarowanie na gorąco, regulacja
-        wiązań to podstawowe czynności które sprawią, że zwiększysz swoj komfort
-        z jazdy na nartach lub desce. Sprawdź co możemy dla Ciebie wykonać w
-        naszym serwisie sprzętów zimowych.
+        Dla nas sezon rowerowy trwa cały rok, jednak gdy nadchodzą zimniejsze
+        dni, poza pracą z rowerami rozpoczynamy działalność
+        narciarsko-snowboardową. Nasz serwis oferuje kompleksową obsługę nart
+        zjazdowych oraz snowboardów wykonywaną z największą precyzją przy użyciu
+        ręcznych narzędzi. Ostrzenie krawędzi, regeneracja ślizgów, smarowanie
+        na gorąco, regulacja wiązań to podstawowe czynności które sprawią, że
+        zwiększysz swój komfort i bezpieczeństwo jazdy na nartach lub desce
+        snowboardowej. Sprawdź co możemy dla Ciebie wykonać w naszym serwisie
+        sprzętów zimowych.
       </p>
       <div className="content">
         <img src={snowboardImg} alt="" />

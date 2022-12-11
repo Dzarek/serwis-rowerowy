@@ -348,7 +348,7 @@ const Wrapper = styled.div`
     }
     .hard {
       background-image: url(${hardImg});
-      background-position: 30%;
+      background-position: center 20%;
     }
   }
 `;

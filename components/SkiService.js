@@ -11,6 +11,9 @@ const skiImg = "/images/skiService/ski.png";
 const SkiService = ({ cenyNarty }) => {
   const [activeGears, setActiveGears] = useState(false);
   const [activeDetail, setActiveDetail] = useState("");
+
+  const cenyNarty2 = cenyNarty.filter((item) => item !== null);
+
   useEffect(() => {
     Aos.init({ duration: 1000, disable: "mobile" });
   }, []);
@@ -46,7 +49,7 @@ const SkiService = ({ cenyNarty }) => {
         <section className="infoContainer">
           <h3>Usługi Serwisowe</h3>
           <ul className={activeGears && "gearsActive"}>
-            {cenyNarty.map((oneSki, index) => {
+            {cenyNarty2.map((oneSki, index) => {
               const { name, price, details } = oneSki;
               return (
                 <div key={index} className="oneServiceWrapper">

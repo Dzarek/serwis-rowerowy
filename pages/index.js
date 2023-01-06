@@ -112,6 +112,6 @@ export async function getStaticProps() {
       treningi,
       blog,
     },
-    revalidate: 60,
+    revalidate: 120,
   };
 }

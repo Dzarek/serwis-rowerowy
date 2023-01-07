@@ -17,7 +17,7 @@ export default function Home({
   imagesRower,
   przegladRower,
   cenyRower,
-  cenyNarty,
+  // cenyNarty,
   treningi,
   blog,
 }) {
@@ -41,7 +41,7 @@ export default function Home({
         cenyRower={cenyRower}
         imagesRower={imagesRower}
       />
-      <SkiService cenyNarty={cenyNarty} />
+      {/* <SkiService cenyNarty={cenyNarty} /> */}
       {/* <Accesories /> */}
       <AboutUs />
       <Workout treningi={treningi} />

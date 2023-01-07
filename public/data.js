@@ -5,7 +5,10 @@ import {
   MdMail,
   MdHome,
 } from "react-icons/md";
-import { TiSpannerOutline, TiSpanner } from "react-icons/ti";
+import {
+  //  TiSpannerOutline,
+  TiSpanner,
+} from "react-icons/ti";
 import { GiNewspaper } from "react-icons/gi";
 export const navlinks = [
   {
@@ -18,11 +21,11 @@ export const navlinks = [
     link: "bikeService",
     icon: <TiSpanner />,
   },
-  {
-    name: "Serwis Narciarski",
-    link: "skiService",
-    icon: <TiSpannerOutline />,
-  },
+  // {
+  //   name: "Serwis Narciarski",
+  //   link: "skiService",
+  //   icon: <TiSpannerOutline />,
+  // },
   // {
   //   name: "Akcesoria",
   //   link: "accesories",

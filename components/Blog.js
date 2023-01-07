@@ -16,6 +16,12 @@ import { FaSmileWink } from "react-icons/fa";
 const Blog = ({ blog }) => {
   const [showArticle, setShowArticle] = useState(false);
   const [showAllArticles, setShowAllArticles] = useState(false);
+
+  const blog2 = blog.filter((item) => item !== null);
+  const blog3 = blog2.sort((a, b) => {
+    return b.id - a.id;
+  });
+
   useEffect(() => {
     Aos.init({ duration: 1000, disable: "mobile" });
   }, []);
@@ -46,7 +52,7 @@ const Blog = ({ blog }) => {
         arrowLeft={<MdOutlineArrowBackIos className="arrow" />}
         arrowRight={<MdOutlineArrowForwardIos className="arrow" />}
       >
-        {blog.map((article, index) => {
+        {blog3.map((article, index) => {
           const { title, image, date } = article;
           return (
             <div
@@ -87,7 +93,7 @@ const Blog = ({ blog }) => {
             onClick={() => setShowAllArticles(false)}
           />
           <div className="articles">
-            {blog.map((article, index) => {
+            {blog3.map((article, index) => {
               const { title, image, date } = article;
               return (
                 <div

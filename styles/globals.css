@@ -54,7 +54,7 @@ body {
     --headerNavFont: 'Rubik Dirt', serif;
     width: 100vw;
     min-height: 100vh;
-    /* background-color: var(--appBgColor); */
+    background-color: #111;
     color: var(--primaryColor);
     font-family: var(--textFont);
     position: relative;
@@ -63,11 +63,11 @@ body {
     background-attachment: fixed;
 }
 
-/* @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .app {
         background-size: initial;
     }
-} */
+}
 
 
 .mainPage {

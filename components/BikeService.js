@@ -204,6 +204,7 @@ const Wrapper = styled.div`
     }
     img {
       width: 17vw;
+      height: 13vw;
       object-fit: cover;
       border-radius: 5px;
       box-shadow: 2px 2px 5px 0 #111;
@@ -212,6 +213,7 @@ const Wrapper = styled.div`
     @media screen and (max-width: 800px) {
       img {
         width: 90%;
+        height: 33vh;
         object-fit: cover;
         border-radius: 5px;
         box-shadow: 2px 2px 5px 0 #111;

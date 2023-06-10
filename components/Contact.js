@@ -35,7 +35,7 @@ const KontaktPage = ({ setVisibleCookie }) => {
           <section className="contactSocialMedia">
             <h3>Kontakt bezpośredni</h3>
             <div className="socialMediaWrapper">
-              <a href="tel:+48798698605">
+              <a href="tel:+48798867716">
                 Telefon: <span>798 867 716</span>
               </a>
               <a href="mailto:piotr.j.sajdak@gmail.com">
@@ -63,7 +63,7 @@ const KontaktPage = ({ setVisibleCookie }) => {
               </h4>
             </div>
             <div className="socialMediaWrapperM">
-              <a href="tel:+48798698605">
+              <a href="tel:+48798867716">
                 <MdOutlinePhoneAndroid /> <span>798 867 716</span>
               </a>
               <a href="mailto:piotr.j.sajdak@gmail.com">

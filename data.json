@@ -299,5 +299,116 @@
         "Nieszablonowe i rzadkie rozwiązania na serwisie zawsze wzbudzają zachwyt i zaciekawienie. Tym razem zagościła u nas piasta wielobiegowa norweskiej marki Kindernay Mechanizm zamontowany jest w „klatce” która umożliwia sprawne żąglowanie między kołami, piasta wyposażona w sprzęgło które czyni indeksację subtelną a całość sterowana jest hydraulicznie za pomocą aluminiowej manetki o niebanalnym kształcie. Zestaw ten montowaliśmy w mocno customowym rowerze elektrycznym niemieckiej manufaktury Exess co stworzyło sprzęt do walki z najcięższym górskim terenem."
       ]
     }
-  ]
+  ],
+  "ebike": [
+    {
+      "id": 1,
+      "title": "zapoznaj się z regulaminem",
+      "info": [
+        "Tutaj znajdziesz regulamin wynajmu roweru elektrycznego.",
+        "Przeczytaj go i przejdź do następnego kroku."
+      ]
+    },
+    {
+      "id": 2,
+      "title": "aktualna cena: 250 zł/dzień",
+      "info": [
+        "DEVINCI E-Troy GX M(wzrost 170-180cm) lub L (180-190cm)",
+        "250 zł/dzień",
+        "Pobieramy kaucję zwrotną w wysokości 500 zł za rower. Można zapłacić przelewem na konto, gotówką lub kartą przy odbiorze roweru. Kaucja jest zwracana tą samą formą płatności.",
+        "*Jednodniowe wypożyczenie roweru obejmuje godziny 8:00-19:00"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "rezerwacja roweru",
+      "info": [
+        "Rezerwacji roweru dokonasz telefonicznie lub na miejscu.",
+        "Rozmiar dobierzemy po podaniu wzrostu i wagi dla każdej osoby wynajmującej rower."
+      ]
+    },
+    {
+      "id": 4,
+      "title": "opłać rezerwację roweru",
+      "info": [
+        "Po otrzymaniu od nas potwierdzenia dostępności rowerów w wybranym przez Ciebie rozmiarze i terminie możesz opłacić przelewem swoją rezerwację wraz z kaucją podając w tytule przelewu numer otrzymanej od nas rezerwacji.",
+        "Możesz zapłacić także kartą lub gotówką na miejscu."
+      ]
+    },
+    {
+      "id": 5,
+      "title": "odbierz sprzęt",
+      "info": [
+        "Rowery możesz bezpłatnie odebrać w wypożyczalni w VeloWay Pracownia Rowerów Piotr Sajdak, ul. Długa 48, 33-170 Tuchów.",
+        "Rowery możemy dla Ciebie dowieźć w wybrane miejsce w cenie 30 zł w promieniu 20 km (+2 zł za każdy dodatkowy kilometr).",
+        "Sprzęt przekażemy po potwierdzeniu Twojej tożsamości (miej ze sobą dokument ze zdjęciem), podpisaniu umowy i przekazaniu kaucji.",
+        "Odbiór sprzętu równoznaczny jest z akceptacją całości Regulaminu."
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Zwrot rowerów",
+      "info": [
+        "Rowery możesz zwrócić w godzinach pracy wypożyczalni. lub zgodnie z ustalonym wcześniej terminem.",
+        "Pamiętaj, aby zadzwonić wcześniej i uprzedzić o godzinie zwrotu!"
+      ]
+    }
+  ],
+  "ebikeregulation": {
+    "maininfo": "Regulamin określa warunki korzystania, zakres praw i odpowiedzialności osób korzystających z rowerów będących własnością firmy VeloWay Pracownia Rowerów Piotr Sajdak z siedzibą ul. Długa 48, 33-170 Tuchów, NIP 993 06 90 883, zwanej dalej Wypożyczalnią.",
+    "postanowienia": [
+      "Wypożyczalnia rowerów elektrycznych i akcesoriów rowerowych prowadzona jest przez Piotra Sajdaka prowadzącego działalność gospodarczą pod firmą VeloWay Pracownia Rowerów Piotr Sajdak z siedzibą przy ul. Długa 48, 33-170 Tuchów (zwaną dalej „Wypożyczalnią” lub „VeloWay Pracownia Rowerów”).",
+      "Niniejszy Regulamin określa zasady i warunki korzystania ze sprzętu Wypożyczalni.",
+      "Osoba wypożyczająca sprzęt od Wypożyczalni czyli Klient zawiera z Wypożyczalnią umowę cywilnoprawną, zgodnie z warunkami określonymi w umowie, której integralną częścią jest niniejszy regulamin. Klientem wypożyczalni może być wyłącznie osoba, która zaakceptuje podpisem niniejszy Regulamin.",
+      "Akceptacja niniejszego Regulaminu oraz wypożyczenie roweru elektrycznego jest równoznaczne z oświadczeniem o stanie zdrowia umożliwiającym bezpieczne poruszanie się rowerem oraz wiedzą w zakresie bezpiecznego jego użytkowania oraz znajomością przepisów ruchu drogowego.",
+      "Wypożyczalnia funkcjonować będzie w godzinach od poniedziałku do piątku 10.00 - 17.00."
+    ],
+    "procedura": [
+      "Rezerwacja może być dokonana telefonicznie lub na miejscu.",
+      "Klient akceptuje warunki oferty poprzez dokonanie wpłaty kaucji gotówką lub na podany w ofercie numer rachunku bankowego. Bank: Santander Bank Polska SA Nr konta: 26 1090 2590 0000 0001 5167 1348",
+      "W tytule przelewu kaucji podać należy imię i nazwisko rezerwującego . W celu potwierdzenia rezerwacji, kaucja musi być wpłacona (wraz z przesłaniem potwierdzenia wpłaty na adres e-mail: piotr.j.sajdak@gmail.com) w ciągu 2 dni roboczych od dnia otrzymania potwierdzenia rezerwacji. Jeżeli rezerwacja dokonywana jest później niż 7 dni przed dniem wypożyczenia sprzętu i wyposażenia, płatność i wysłanie potwierdzenia przelewu kaucji musi nastąpić tego samego dnia.",
+      "Brak wpłaty kaucji w podanym terminie i kwocie upoważnia Wypożyczającego do  anulowania rezerwacji i uznania jej dokonania za nieaktualne.",
+      "Opłata za wypożyczenie Sprzętu oraz kaucja gwarancyjna pobierana jest z góry (najpóźniej w momencie odbioru Sprzętu), zgodnie z udostępnionym cennikiem w wypożyczalni oraz na stronie internetowej Wypożyczalni.",
+      "Zmiany w zakresie rezerwacji wymagają uzgodnienia i potwierdzenia mailowego pomiędzy Klientem a Wypożyczalnią.",
+      "Klient ma prawo zrezygnować z rezerwacji bez ponoszenia żadnych kosztów w terminie do 5 dni przed planowanym rozpoczęciem umowy wypożyczenia, po zgłoszeniu tego faktu i potwierdzeniu mailowym pomiędzy Klientem a Wypożyczalnią. Wówczas kaucja podlega zwrotowi w 100%. Rezygnacja z rezerwacji w terminie krótszym niż 5 dni od planowanej daty zawarcia umowy stanowi przesłankę do zatrzymania połowy kwoty kaucji przez Wypożyczalnię tytułem kosztów niewykorzystanych świadczeń zamówionych przez Klienta.",
+      "Jeżeli Wypożyczalnia z przyczyn niezależnych od Klienta nie jest w stanie dopełnić warunków rezerwacji i anuluje rezerwację, zwraca Klientowi pobraną kaucję w pełnej wysokości.",
+      "Wypożyczalnia nie dokonuje zwrotu kosztów wypożyczenia sprzętu, jeżeli Klient z przyczyn leżących po stronie Klienta lub wynikających z jego woli lub w wyniku działania siły wyższej nie wykorzystał w całości czasu wypożyczenia sprzętu."
+    ],
+    "zasady": [
+      "Osobom będącym pod wpływem alkoholu lub innych środków odurzających rowery nie będą wypożyczane.",
+      "Aby wypożyczyć rower należy: przedstawić dowód osobisty oraz inny dokument ze zdjęciem, być osobą pełnoletnią, podpisać umowę na wypożyczenie roweru akceptując warunki przedstawione w regulaminie wypożyczalni, wpłacić kaucję na pokrycie szkód związanych z użytkowaniem roweru, wnieść opłatę za wypożyczenie roweru.",
+      "Na jeden dokument można wypożyczyć jeden rower wraz z ładowarką. Osoba nie posiadająca ww. dokumentów może dokonać wypożyczenia poprzez zabezpieczenie finansowe odpowiadające wartości sprzętu (tzw. depozyt), który ustala wypożyczalnia.",
+      "Zabrania się przekazywania roweru osobom trzecim.",
+      "Przed wypożyczeniem roweru elektrycznego Klient jest zobowiązany: • sprawdzić stan techniczny pojazdu, wypożyczany rower jest czysty i sprawny technicznie i w takim samym stanie powinien zostać zwrócony do wypożyczalni. • potwierdzić należyty poziom naładowania roweru umożliwiający z niego korzystanie,• upewnić się czy warunki pogodowe pozwalają na bezpieczne poruszanie się, • jakiekolwiek zauważone uszkodzenie roweru elektrycznego lub jego wyposażenia należy zgłosić pracownikowi Wypożyczalni, • zapoznać się z obsługą i użytkowaniem roweru elektrycznego.",
+      "Klient jest osobiście odpowiedzialny za wypożyczony rower i ponosi pełną odpowiedzialność za powstałe szkody od momentu wypożyczenia roweru do czasu jego zwrotu.",
+      "Odpowiedzialność za osoby niepełnoletnie, użytkujące wypożyczony sprzęt w okresie trwania umowy wypożyczenia, ponosi Klient, podpisujący umowę wypożyczenia.",
+      "Klient oświadcza, że posiada niezbędną wiedzę na temat eksploatacji sprzętu i zobowiązuje się do dbałości oraz wykorzystania go w bezpieczny i zgodny z przeznaczeniem sposób.",
+      "9.Klient jest zobowiązany do dbałości o wypożyczony sprzęt, w szczególności: a) pozostawianie wypożyczonego sprzętu pod odpowiednim nadzorem, z zabezpieczeniem i w bezpiecznych miejscach. b) dbałości o oczyszczenie i wysuszenie wypożyczonego sprzętu w przypadku złych warunków atmosferycznych lub jazdy przez trudny teren.",
+      "Klient oraz pozostałe osoby użytkujące wypożyczony sprzęt są odpowiedzialne za wszelkie zdarzenia spowodowane użytkowaniem wypożyczonego sprzętu, w tym za zdarzenia wynikłe z naruszenia przepisów obowiązującego prawa przy korzystaniu z wypożyczonego sprzętu.",
+      "Klient zawierając umowę wypożyczenia oświadcza, że będzie użytkował wypożyczony sprzęt zgodnie z przepisami prawa, w tym przepisami ruchu drogowego, oraz z zachowaniem należytej dbałości o wypożyczone elementy.",
+      "Rowery można zwrócić w godzinach od 8.00-20.00 zgodnie z wcześniej ustalonym terminem.",
+      "Koszty kradzieży, zagubienia, utraty, zniszczenia, przywłaszczenia, uszkodzenia sprzętu objętego przedmiotem umowy w trakcie trwania umowy wypożyczenia pokrywa Klient.",
+      "W przypadku, gdy przy odbiorze stwierdzi się niekompletność, uszkodzenie sprzętu, jego poważne zabrudzenie lub inne wady wpływające na obniżenie jego wartości rynkowej, Wypożyczalnia ma prawo potrącić z kaucji koszty naprawy, wymiany, czyszczenia sprzętu, po cenach serwisanta. Wartość wymiany, naprawy potrącana jest z kaucji, a za usługę Klient otrzymuje fakturę. Jeżeli koszt napraw, wymiany sprzętu przekracza wartość kaucji, Wypożyczalnia ma prawo do roszczenia wobec Klienta z tytułu rekompensaty na zasadach określonych w Kodeksie Cywilnym. Wycena kosztów napraw innych/pozostałych uszkodzeń ustalana będzie indywidualnie na podstawie uśrednionej wartości rynkowej części zamiennej oraz usługi, której zakup lub wykonanie będzie konieczne do przywrócenia roweru do stanu używalności.",
+      "Wypożyczalnia zwraca kaucję Klientowi, chyba że zaistnieją przesłanki do potrącenia części kaucji z tytułu zdarzeń. Wszelkie zwroty pieniężne będą przekazywane wyłącznie na konto bankowe, z którego dokonano płatności lub gotówką jeżeli wpłata została dokonana w takiej formie.",
+      "W przypadku awarii sprzętu, wynikającej z uszkodzenia spowodowanego przez Klienta niewłaściwą eksploatacją, zaniedbaniem, Klient jest obowiązany niezwłocznie powiadomić o tym fakcie wypożyczalnię.",
+      "Klient nie może czynić jakichkolwiek zmian, przeróbek, modyfikacji, ulepszeń ani napraw w rowerze elektrycznym. W razie dokonania przez Klienta zmian, przeróbek, modyfikacji, ulepszeń lub napraw w rowerze, Wypożyczalnia nie jest zobowiązana do zwrotu Klientowi wartości zmian, przeróbek, modyfikacji, ulepszeń lub napraw. Wypożyczalnia może jednak żądać od Klienta przywrócenia stanu poprzedniego.",
+      "W przypadku kradzieży całości lub części sprzętu, objętego przedmiotem niniejszej umowy, Klient jest zobowiązany do niezwłocznego powiadomienia Policji oraz Wypożyczalni numer telefonu: +48 798867716.",
+      "W przypadku niezwrócenia wypożyczonego Sprzętu w określonym umową terminie, braku zgłoszenia chęci przedłużenia czasu wypożyczenia i braku akceptacji przez Wypożyczalnię, taka sytuacja może zostać uznana za kradzież przez Klienta Sprzętu i Wypożyczalnia zastrzega sobie prawo do podjęcia wszelkich przewidzianych prawem kroków w celu ochrony swoich praw, w tym do poinformowania organów ścigania.",
+      "Jednodniowe wynajęcie roweru obejmuje czas od 8:00 – 19:00.",
+      "W przypadku uszkodzenia lub kradzieży roweru elektrycznego lub sprzętu powierzonego klient jest zobowiązany pokryć powstałe szkody w całości, zgodnie z następującym cennikiem: • koszt roweru elektrycznego DEVINCI E-Troy GX wynosi 24.600 zł brutto, • koszt ładowarki 700 zł brutto",
+      "Klient ma świadomość, że jeżdżenie na rowerze związane jest z ryzykiem sportowym. Konsekwencje uprawiania sportów rowerowych mogą podlegać na doznaniu urazów ciała, ryzyku chorób, a nawet śmierci klienta lub osoby trzeciej. Klient mimo iż ma pełną świadomość ryzyka samodzielnie podejmuje decyzję o wypożyczeniu sprzętu i zrzeka się wszelkich roszczeń wobec wypożyczalni z tytułu wypadków, poniesionych szkód lub obrażeń powstałych w trakcie korzystania z wypożyczonego roweru.",
+      "Inne nie ujęte w niniejszym regulaminie kwestie regulują stosowne akty prawa polskiego w szczególności z dnia 23 kwietnia 1964r. Kodeks Cywilny (Dz. U. z 1971r. Nr 27 poz. 252 z późn. zm.).",
+      "Sądem rozpatrującym ewentualne spory jest sąd właściwy do miejsca wykonania umowy.",
+      "Akceptacja niniejszego Regulaminu oraz wypożyczenie Sprzętu są równoznaczne z: oświadczeniem o stanie zdrowia umożliwiającym bezpieczne poruszanie się na rowerze; umiejętnością jazdy na rowerze; posiadaniem wymaganych przepisami prawa uprawnień oraz znajomością przepisów ruchu drogowego."
+    ],
+    "rodo": [
+      "Administratorem w rozumieniu art. 4 pkt. 7 Rozporządzenie Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektyw 95/46/WE (dalej Rozporządzenie) w odniesieniu do danych Klientów jest Piotr Sajdak prowadzący działalność gospodarczą pod nazwą VeloWay Pracownia Rowerów Piotr Sajdak (dalej Administrator).",
+      "Administrator przetwarza następujące dane osobowe: imię, nazwisko, numer i seria dowodu osobistego, adres zamieszkania, nr PESEL oraz wizerunek.",
+      "Dane osobowe będą przetwarzane wyłącznie w celach związanych z zawarciem i realizacją umowy wypożyczenia roweru elektrycznego oraz w celach związanych z zapewnieniem bezpieczeństwa mienia i osób.",
+      "Administrator informuje, że przetwarzanie danych osobowych odbywa się na podstawie art. 6 ust. 1 lit. b) Rozporządzenia tj. przetwarzanie jest niezbędne do wykonania umowy, której stroną jest osoba, której dane dotyczą oraz na podstawie art. 6 ust.1 lit. f) Rozporządzenia tj. przetwarzanie jest niezbędne do celów wynikających z prawnie uzasadnionych interesów realizowanych przez Administratora, tj. zapewnienia bezpieczeństwa mienia i osób.",
+      "Administrator przechowuje dane osobowe Klientów przez okres 2 lat, nie dłużej jednak niż jest to konieczne do wykonania i rozliczenia umowy, dochodzenia roszczeń, w tym wykonywania uprawnień z tytułu reklamacji. Administrator przechowuje wizerunek przez okres 2 lat, nie dłużej niż jest to konieczne dla zapewnienia bezpieczeństwa mienia i osób. Po tym okresie dane osobowe Klientów zostaną usunięte.",
+      "Klientowi przysługuje prawo do żądania od Administratora dostępu do swoich danych osobowych, ich sprostowania, usunięcia lub ograniczenia przetwarzania, prawo do wniesienia sprzeciwu wobec przetwarzania, prawo do przenoszenia danych, prawo wniesienia skargi do organu nadzorczego. Wszelkie żądania, prośby, powiadomienia, zapytania dotyczące przetwarzania danych osobowych, Klienci mogą kierować pisemnie na adres VeloWay Pracownia Rowerów Piotr Sajdak, ul. Długa 48, 33-170 Tuchów.",
+      "Administrator informuje, iż przetwarza dane osobowe zgodnie z przepisami Rozporządzenia, w tym stosuje odpowiednie środki techniczne i organizacyjne w celu zapewnienia bezpieczeństwa danych i odpowiedniej poufności, w tym ochrony przed nieuprawnionym dostępem do nich."
+    ]
+  }
 }

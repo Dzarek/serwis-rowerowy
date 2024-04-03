@@ -21,9 +21,12 @@ const MyForm = () => {
     if (category === "serwis rowerowy") {
       setSubCategories(subCategoriesBike);
     }
-    if (category === "serwis narciarski") {
-      setSubCategories(subCategoriesSki);
+    if (category === "wypożyczalnia") {
+      setSubCategories(subCategoriesEBike);
     }
+    // if (category === "serwis narciarski") {
+    //   setSubCategories(subCategoriesSki);
+    // }
     // if (category === "akcesoria") {
     //   setSubCategories(subCategoriesAccesories);
     // }
@@ -84,7 +87,8 @@ const MyForm = () => {
   const categories = [
     "---",
     "serwis rowerowy",
-    "serwis narciarski",
+    // "serwis narciarski",
+    "wypożyczalnia",
     // "akcesoria",
     "treningi",
     "inne",
@@ -109,7 +113,7 @@ const MyForm = () => {
       </option>
     );
   });
-  const subCategoriesSki = ["---", "narty", "snowboard", "inne"].map(
+  const subCategoriesEBike = ["---", "rezerwacja", "inne"].map(
     (item, index) => {
       return (
         <option key={index} value={item}>
@@ -118,6 +122,15 @@ const MyForm = () => {
       );
     }
   );
+  // const subCategoriesSki = ["---", "narty", "snowboard", "inne"].map(
+  //   (item, index) => {
+  //     return (
+  //       <option key={index} value={item}>
+  //         {item}
+  //       </option>
+  //     );
+  //   }
+  // );
   // const subCategoriesAccesories = ["---", "rowerowe", "narciarskie"].map(
   //   (item, index) => {
   //     return (

@@ -88,7 +88,7 @@ const Wrapper = styled.div`
     z-index: 9999999999999;
     animation: showHeader 2s linear 1 forwards;
     @keyframes showHeader {
-      60% {
+      20% {
         opacity: 1;
       }
       99% {
@@ -106,7 +106,8 @@ const Wrapper = styled.div`
     top: 10%;
     left: 4%;
     width: 25vw;
-    opacity: 0.6;
+    /* opacity: 0.6; */
+    opacity: 0.8;
     @media screen and (max-width: 800px) {
       top: 7%;
       left: 50%;
@@ -126,7 +127,8 @@ const Wrapper = styled.div`
       font-size: 1.8rem;
       font-size: 2.2rem;
       text-decoration: none;
-      color: #ccc;
+      /* color: #ccc; */
+      color: #eee;
       margin: 1.2vh 0;
       text-transform: uppercase;
       letter-spacing: 3px;
@@ -138,7 +140,8 @@ const Wrapper = styled.div`
         color: var(--secondaryColor99);
       }
       :hover {
-        color: var(--secondaryColor4);
+        /* color: var(--secondaryColor4); */
+        letter-spacing: 5px;
       }
     }
     @media screen and (max-width: 800px) {

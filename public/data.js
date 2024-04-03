@@ -4,11 +4,9 @@ import {
   MdPerson,
   MdMail,
   MdHome,
+  MdElectricBike,
 } from "react-icons/md";
-import {
-  //  TiSpannerOutline,
-  TiSpanner,
-} from "react-icons/ti";
+import { TiSpannerOutline, TiSpanner } from "react-icons/ti";
 import { GiNewspaper } from "react-icons/gi";
 export const navlinks = [
   {
@@ -20,6 +18,11 @@ export const navlinks = [
     name: "Serwis Rowerowy",
     link: "bikeService",
     icon: <TiSpanner />,
+  },
+  {
+    name: "Wypożyczalnia E-BIKE",
+    link: "rentbike",
+    icon: <MdElectricBike />,
   },
   // {
   //   name: "Serwis Narciarski",
@@ -324,5 +327,60 @@ export const plans = [
       "Analiza treningu na podstawie danych z miernika mocy i pulsometru",
     ],
     price: "550 zł/m",
+  },
+];
+
+export const ebike = [
+  {
+    id: 1,
+    title: "zapoznaj się z regulaminem",
+    info: [
+      "Tutaj znajdziesz regulamin wynajmu roweru elektrycznego.",
+      "Przeczytaj go i przejdź do następnego kroku.",
+    ],
+  },
+  {
+    id: 2,
+    title: "aktualna cena: 250 zł/dzień",
+    info: [
+      "DEVINCI E-Troy GX M(wzrost 170-180cm) lub L (180-190cm)",
+      "250 zł/dzień",
+      "Pobieramy kaucję zwrotną w wysokości 500 zł za rower. Można zapłacić przelewem na konto, gotówką lub kartą przy odbiorze roweru. Kaucja jest zwracana tą samą formą płatności.",
+      "*Jednodniowe wypożyczenie roweru obejmuje godziny 8:00-19:00",
+    ],
+  },
+  {
+    id: 3,
+    title: "rezerwacja roweru",
+    info: [
+      "Rezerwacji roweru dokonasz telefonicznie lub na miejscu.",
+      "Rozmiar dobierzemy po podaniu wzrostu i wagi dla każdej osoby wynajmującej rower.",
+    ],
+  },
+  {
+    id: 4,
+    title: "opłać rezerwację roweru",
+    info: [
+      "Po otrzymaniu od nas potwierdzenia dostępności rowerów w wybranym przez Ciebie rozmiarze i terminie możesz opłacić przelewem swoją rezerwację wraz z kaucją podając w tytule przelewu numer otrzymanej od nas rezerwacji.",
+      "Możesz zapłacić także kartą lub gotówką na miejscu.",
+    ],
+  },
+  {
+    id: 5,
+    title: "odbierz sprzęt",
+    info: [
+      "Rowery możesz bezpłatnie odebrać w wypożyczalni w VeloWay Pracownia Rowerów Piotr Sajdak, ul. Długa 48, 33-170 Tuchów.",
+      "Rowery możemy dla Ciebie dowieźć w wybrane miejsce w cenie 30 zł w promieniu 20 km (+2 zł za każdy dodatkowy kilometr).",
+      "Sprzęt przekażemy po potwierdzeniu Twojej tożsamości (miej ze sobą dokument ze zdjęciem), podpisaniu umowy i przekazaniu kaucji.",
+      "Odbiór sprzętu równoznaczny jest z akceptacją całości Regulaminu.",
+    ],
+  },
+  {
+    id: 6,
+    title: "Zwrot rowerów",
+    info: [
+      "Rowery możesz zwrócić w godzinach pracy wypożyczalni. lub zgodnie z ustalonym wcześniej terminem.",
+      "Pamiętaj, aby zadzwonić wcześniej i uprzedzić o godzinie zwrotu!",
+    ],
   },
 ];

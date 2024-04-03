@@ -5,13 +5,15 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import BikeService from "../components/BikeService";
-import SkiService from "../components/SkiService";
+// import SkiService from "../components/SkiService";
 // import Accesories from "../components/Accesories";
 import AboutUs from "../components/AboutUs";
 import Workout from "../components/Workout";
 import Blog from "../components/Blog";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+
+import RentBike from "../components/RentBike";
 
 export default function Home({
   imagesRower,
@@ -20,6 +22,8 @@ export default function Home({
   // cenyNarty,
   treningi,
   blog,
+  ebike,
+  ebikeregulation,
 }) {
   return (
     <>
@@ -43,6 +47,7 @@ export default function Home({
       />
       {/* <SkiService cenyNarty={cenyNarty} /> */}
       {/* <Accesories /> */}
+      <RentBike ebike={ebike} ebikeregulation={ebikeregulation} />
       <AboutUs />
       <Workout treningi={treningi} />
       <Blog blog={blog} />
@@ -59,6 +64,8 @@ export async function getStaticProps() {
   let cenyNarty;
   let treningi;
   let blog;
+  let ebike;
+  let ebikeregulation;
   const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath);
   const localData = JSON.parse(jsonData);
@@ -102,6 +109,16 @@ export async function getStaticProps() {
   } else {
     blog = localData.blog;
   }
+  if (data.ebike) {
+    ebike = data.ebike;
+  } else {
+    ebike = localData.ebike;
+  }
+  if (data.ebikeregulation) {
+    ebikeregulation = data.ebikeregulation;
+  } else {
+    ebikeregulation = localData.ebikeregulation;
+  }
 
   return {
     props: {
@@ -111,6 +128,8 @@ export async function getStaticProps() {
       cenyNarty,
       treningi,
       blog,
+      ebike,
+      ebikeregulation,
     },
     revalidate: 60,
   };

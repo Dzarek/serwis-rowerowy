@@ -236,13 +236,13 @@ const Wrapper = styled.div`
     width: 100%;
     a {
       text-decoration: none;
-      font-size: 1.5rem;
-      margin-bottom: 0.9vh;
+      font-size: 1.3rem;
+      margin-bottom: 1vh;
       color: #222;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-left: 20%;
+      margin-left: 15%;
       transition: 0.4s;
       cursor: pointer;
       svg {
@@ -250,10 +250,10 @@ const Wrapper = styled.div`
         color: var(--navLinkColorHover);
       }
       :hover {
-        margin-left: 25%;
+        margin-left: 20%;
       }
       &.active {
-        margin-left: 25%;
+        margin-left: 20%;
       }
     }
   }
@@ -270,12 +270,12 @@ const Wrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    width: 65%;
+    width: 70%;
     justify-content: space-between;
     a,
     div {
       .icon {
-        font-size: 2rem;
+        font-size: 1.8rem;
         cursor: pointer;
       }
     }
@@ -325,6 +325,7 @@ const Wrapper2 = styled.div`
     left: 0;
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     background: #fff;
     z-index: 999999;
     transition: 0.4s;
@@ -349,7 +350,7 @@ const Wrapper2 = styled.div`
       width: 100%;
       text-decoration: none;
       font-size: 1.4rem;
-      margin-bottom: 1vh;
+      margin-bottom: 1.2vh;
       color: #222;
       display: flex;
       align-items: center;

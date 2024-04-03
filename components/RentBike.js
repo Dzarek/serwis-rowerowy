@@ -29,7 +29,10 @@ const RentBike = ({ ebike, ebikeregulation }) => {
     <>
       <Wrapper className="mainPage" id="rentbike">
         <div className="title">
-          <h1>Wypożyczalnia E-BIKE</h1>
+          <h1 className="h1Desktop">Wypożyczalnia E-BIKE</h1>
+          <h1 className="h1Mobile">
+            Wypożyczalnia <br /> E-BIKE
+          </h1>
           <div data-aos="titleWidth"></div>
         </div>
         <p className="bikeMainInfo">
@@ -164,8 +167,16 @@ const Wrapper = styled.div`
         width: 400px;
       }
     }
+    @media screen and (min-width: 801px) {
+      .h1Mobile {
+        display: none;
+      }
+    }
     @media screen and (max-width: 800px) {
-      h1 {
+      .h1Desktop {
+        display: none;
+      }
+      .h1Mobile {
         font-size: 1.7rem;
       }
     }
@@ -206,6 +217,9 @@ const Wrapper = styled.div`
     /* margin-top: 5vh; */
     width: 40vw;
     flex-wrap: wrap;
+    @media screen and (min-width: 1700px) {
+      width: 30vw;
+    }
     @media screen and (max-width: 800px) {
       display: none;
     }
@@ -215,7 +229,7 @@ const Wrapper = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      padding: 5px;
+      padding: 10px;
       width: 12vw;
       height: 12vw;
       text-align: center;
@@ -226,9 +240,19 @@ const Wrapper = styled.div`
       overflow: hidden;
       text-transform: lowercase;
       cursor: pointer;
+      @media screen and (min-width: 1700px) {
+        width: 10vw;
+        height: 10vw;
+      }
+      h4 {
+        font-size: 1rem;
+        @media screen and (min-width: 1700px) {
+          font-size: 1.1rem;
+        }
+      }
       span {
         font-size: 2rem;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
       :hover {
         border: 3px solid var(--secondaryColor);
@@ -258,9 +282,13 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     align-self: stretch;
+    @media screen and (min-width: 1700px) {
+      width: 35vw;
+    }
     @media screen and (max-width: 800px) {
       display: none;
     }
+
     h2 {
       margin-bottom: 5vh;
       color: var(--secondaryColor);
@@ -394,6 +422,7 @@ const Wrapper = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
+        list-style: none;
         li {
           text-align: center;
           font-size: 1.1rem;

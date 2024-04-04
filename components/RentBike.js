@@ -37,9 +37,9 @@ const RentBike = ({ ebike, ebikeregulation }) => {
         </div>
         <p className="bikeMainInfo">
           Wypożyczamy rowery górskie premium Marki DEVINCI E-Troy GX w
-          rozmiarach M i L. <br /> W górach zasięg roweru elektrycznego to
-          30-100 km, w zależności od poziomu wspomagania i pokonywanego
-          przewyższenia.
+          rozmiarach M i L. Rowery napędzane niezawodnym silnikiem Shimano EP8.
+          Zapas energii zapewnia bateria o pojemności 725Wh pozwalająca na
+          zasięg roweru 30-100km.
         </p>
         <div className="imageContentMobile">
           <img

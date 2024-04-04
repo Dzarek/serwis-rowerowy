@@ -203,7 +203,7 @@ const Wrapper = styled.div`
     }
     @media screen and (min-width: 1700px) {
       width: 90%;
-      margin: 0 auto;
+      margin: 10vh auto 0;
     }
     h3 {
       width: 100%;

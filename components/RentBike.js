@@ -218,7 +218,7 @@ const Wrapper = styled.div`
     width: 40vw;
     flex-wrap: wrap;
     @media screen and (min-width: 1700px) {
-      width: 30vw;
+      width: 35vw;
     }
     @media screen and (max-width: 800px) {
       display: none;
@@ -241,8 +241,9 @@ const Wrapper = styled.div`
       text-transform: lowercase;
       cursor: pointer;
       @media screen and (min-width: 1700px) {
-        width: 10vw;
-        height: 10vw;
+        width: 9vw;
+        height: 9vw;
+        margin: 1vw;
       }
       h4 {
         font-size: 1rem;

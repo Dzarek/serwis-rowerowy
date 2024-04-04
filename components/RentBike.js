@@ -197,8 +197,13 @@ const Wrapper = styled.div`
     margin-top: 10vh;
     flex-wrap: wrap;
     position: relative;
+
     @media screen and (max-width: 800px) {
       flex-direction: column;
+    }
+    @media screen and (min-width: 1700px) {
+      width: 90%;
+      margin: 0 auto;
     }
     h3 {
       width: 100%;
@@ -207,6 +212,9 @@ const Wrapper = styled.div`
       margin-bottom: 10vh;
       @media screen and (max-width: 800px) {
         margin-bottom: 5vh;
+      }
+      @media screen and (min-width: 1700px) {
+        font-size: 1.6rem;
       }
     }
   }
@@ -240,6 +248,7 @@ const Wrapper = styled.div`
       overflow: hidden;
       text-transform: lowercase;
       cursor: pointer;
+      user-select: none;
       @media screen and (min-width: 1700px) {
         width: 9vw;
         height: 9vw;
@@ -344,6 +353,9 @@ const Wrapper = styled.div`
       width: 30vw;
       border-radius: 5px;
       margin: 0 5vw;
+      @media screen and (min-width: 1700px) {
+        width: 25vw;
+      }
     }
   }
   .imageContentMobile {

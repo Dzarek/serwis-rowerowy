@@ -78,7 +78,7 @@ const AllBikeOffer = ({ setShowAllBikeOffer, cenyRower }) => {
 };
 
 const Wrapper = styled.div`
-  background: var(--bikeBg);
+  /* background: var(--bikeBg); */
   background-image: url("/images/mainBg.jpg");
   background-size: cover;
   background-attachment: fixed;

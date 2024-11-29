@@ -132,13 +132,13 @@ const Wrapper = styled.div`
     top: 0;
     left: 0;
     background-image: url(${bgImg});
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-position: center;
-
+    background-size: cover;
     opacity: 0.2;
     @media screen and (min-width: 801px) {
       /* background-position: center; */
-      background-size: cover;
+      background-attachment: fixed;
     }
   }
   header {
